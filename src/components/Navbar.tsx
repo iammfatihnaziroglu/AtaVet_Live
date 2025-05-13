@@ -81,6 +81,9 @@ export default function Navbar() {
           <Link href="/hizmetler" className="text-foreground hover:text-primary transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
             Hizmetlerimiz
           </Link>
+          <Link href="/oykulerimiz" className="text-foreground hover:text-primary transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+            Öykülerimiz
+          </Link>
           <Link href="/hakkimizda" className="text-foreground hover:text-primary transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
             Hakkımızda
           </Link>
@@ -195,6 +198,16 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           >
             <span>Hizmetlerimiz</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </Link>
+          <Link 
+            href="/oykulerimiz" 
+            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <span>Öykülerimiz</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
