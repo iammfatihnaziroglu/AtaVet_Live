@@ -1,4 +1,4 @@
-# AtaVet
+# AtaVet Website (development in progress..)
 
 AtaVet is a modern veterinary clinic website built with Next.js 15, TypeScript, and Tailwind CSS 4. The project is optimized for performance, scalability, and responsive design, providing a smooth and accessible user experience across all devices.
 
