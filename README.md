@@ -1,12 +1,12 @@
 # AtaVet Website (development in progress..)
 
-AtaVet is a modern veterinary clinic website built with Next.js 15, TypeScript, and Tailwind CSS 4. The project is optimized for performance, scalability, and responsive design, providing a smooth and accessible user experience across all devices.
+AtaVet is a modern veterinary clinic website built with Next.js 15, TypeScript, and Tailwind CSS 4.1 . The project is optimized for performance, scalability, and responsive design, providing a smooth and accessible user experience across all devices.
 
 ## Technology Stack
 
 - **Next.js 15** – A React framework for building server-rendered and statically generated applications  
 - **TypeScript** – Strongly typed JavaScript for better code quality and maintainability  
-- **Tailwind CSS 4** – A utility-first CSS framework for building custom designs quickly and efficiently
+- **Tailwind CSS 4.1** – A utility-first CSS framework for building custom designs quickly and efficiently
 
 ## Features
 
