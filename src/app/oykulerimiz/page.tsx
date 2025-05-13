@@ -322,43 +322,47 @@ export default function OykulerimizPage() {
                     transition={{ duration: 0.4, delay: 0.05 * (story.id % 9) }}
                     whileHover={{ y: -5, transition: { duration: 0.2 } }}
                   >
-                    <div 
-                      className="relative h-48 overflow-hidden"
-                      onMouseEnter={() => setHoveredStory(story.id)}
-                      onMouseLeave={() => setHoveredStory(null)}
-                    >
-                      <img 
-                        src={story.image} 
-                        alt={story.title} 
-                        className={`w-full h-full object-cover transition-all duration-500 ${
-                          hoveredStory === story.id ? 'scale-110' : 'scale-100'
-                        }`}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent transition-opacity duration-300 group-hover:opacity-80"></div>
-                      
-                      <div className="absolute top-0 left-0 right-0 p-3 flex justify-between items-start">
-                        <div className={`px-3 py-1.5 rounded-lg text-xs font-medium shadow-sm bg-gradient-to-r ${categoryColors[story.primaryCategory as Category]} text-white flex items-center gap-1.5`}>
-                          <span>{categoryIcons[story.primaryCategory as Category]}</span>
-                          <span>{categoryLabels[story.primaryCategory as Category].split(' ')[0]}</span>
+                    <Link href={story.link} className="flex flex-col h-full">
+                      <div 
+                        className="relative h-48 overflow-hidden"
+                        onMouseEnter={() => setHoveredStory(story.id)}
+                        onMouseLeave={() => setHoveredStory(null)}
+                      >
+                        <img 
+                          src={story.image} 
+                          alt={story.title} 
+                          className={`w-full h-full object-cover transition-all duration-500 ${
+                            hoveredStory === story.id ? 'scale-110' : 'scale-100'
+                          }`}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent transition-opacity duration-300 group-hover:opacity-80"></div>
+                        
+                        <div className="absolute top-0 left-0 right-0 p-3 flex justify-between items-start">
+                          <div className={`px-3 py-1.5 rounded-lg text-xs font-medium shadow-sm bg-gradient-to-r ${categoryColors[story.primaryCategory as Category]} text-white flex items-center gap-1.5`}>
+                            <span>{categoryIcons[story.primaryCategory as Category]}</span>
+                            <span>{categoryLabels[story.primaryCategory as Category].split(' ')[0]}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    
-                    <div className="p-5 flex-grow">
-                      <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-1 group-hover:text-primary transition-colors">{story.title}</h3>
-                      <p className="text-sm text-foreground/70 mb-4 line-clamp-2">
-                        {story.description}
-                      </p>
-                    </div>
-                    
-                    <div className="px-5 pb-5">
-                      <Link 
-                        href={story.link} 
-                        className="block w-full text-center py-2.5 px-3 bg-secondary/70 dark:bg-foreground/10 hover:bg-primary hover:text-white text-primary font-medium text-sm rounded-lg transition-colors duration-300 border border-light-gray/10 dark:border-light-gray/5"
-                      >
-                        Hikayeyi Oku
-                      </Link>
-                    </div>
+                      
+                      <div className="p-5 flex-grow">
+                        <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-1 group-hover:text-primary transition-colors">{story.title}</h3>
+                        <p className="text-sm text-foreground/70 mb-4 line-clamp-2">
+                          {story.description}
+                        </p>
+                      </div>
+                      
+                      <div className="px-5 pb-5 mt-auto">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-foreground/60">Hikayeyi Oku</span>
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                   </motion.div>
                 ))
               ) : (
