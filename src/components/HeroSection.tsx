@@ -67,7 +67,7 @@ export default function HeroSection() {
                 <span className="text-sm text-foreground/70">Mutlu Müşteri</span>
               </div>
               <div className="flex flex-col items-center sm:items-start">
-                <span className="text-3xl font-bold text-primary">24/7</span>
+                <span className="text-3xl font-bold text-primary">7/24</span>
                 <span className="text-sm text-foreground/70">Acil Destek</span>
               </div>
               <div className="flex flex-col items-center sm:items-start">

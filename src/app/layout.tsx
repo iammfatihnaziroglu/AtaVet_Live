@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Pathway_Gothic_One  } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import VerticalPetNav from "@/components/VerticalPetNav";
 
 const pathway = Pathway_Gothic_One({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="min-h-screen pt-16 animate-fade-in">{children}</main>
+        <VerticalPetNav />
         <Footer />
       </body>
     </html>

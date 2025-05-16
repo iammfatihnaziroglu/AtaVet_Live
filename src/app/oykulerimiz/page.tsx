@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 interface Story {
   id: number;
@@ -17,10 +18,33 @@ interface Story {
 type Category = 'hepsi' | 'kedi' | 'kopek' | 'kus' | 'balik' | 'kemirgen' | 'egzotik';
 
 export default function OykulerimizPage() {
+  const searchParams = useSearchParams();
   const [hoveredStory, setHoveredStory] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category>('hepsi');
   const [filteredStories, setFilteredStories] = useState<Story[]>([]);
   const [isFilterAnimating, setIsFilterAnimating] = useState(false);
+
+  // Handle URL parameter for animal filter
+  useEffect(() => {
+    const animalParam = searchParams.get('animal');
+    if (animalParam) {
+      // Map the URL parameter to the corresponding category
+      const categoryMap: Record<string, Category> = {
+        'kediler': 'kedi',
+        'kopekler': 'kopek',
+        'kuslar': 'kus',
+        'baliklar': 'balik',
+        'kemirgenler': 'kemirgen',
+        'tavsan': 'kemirgen',
+        'diger': 'egzotik'
+      };
+      
+      const mappedCategory = categoryMap[animalParam] as Category;
+      if (mappedCategory) {
+        setSelectedCategory(mappedCategory);
+      }
+    }
+  }, [searchParams]);
 
   const stories: Story[] = [
     {
