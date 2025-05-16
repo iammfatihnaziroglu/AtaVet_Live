@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -11,7 +11,7 @@ type StoryData = {
   story: Story;
 }
 
-export default function StoryDetail() {
+function StoryDetailContent() {
   const params = useParams();
   const slug = params.slug as string;
   
@@ -116,26 +116,26 @@ export default function StoryDetail() {
   }, [story]);
 
   // Lightbox işlevleri
-  const openLightbox = (index: number) => {
+  const openLightbox = useCallback((index: number) => {
     setCurrentImageIndex(index);
     setLightboxOpen(true);
     document.body.style.overflow = 'hidden';
-  };
+  }, []);
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
     document.body.style.overflow = 'auto';
-  };
+  }, []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (!story?.galleryImages) return;
     setCurrentImageIndex((prev) => (prev + 1) % story.galleryImages!.length);
-  };
+  }, [story?.galleryImages]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     if (!story?.galleryImages) return;
     setCurrentImageIndex((prev) => (prev - 1 + story.galleryImages!.length) % story.galleryImages!.length);
-  };
+  }, [story?.galleryImages]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -147,7 +147,7 @@ export default function StoryDetail() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxOpen]);
+  }, [lightboxOpen, nextImage, prevImage, closeLightbox]);
 
   // Yükleme durumu
   if (isLoading) {
@@ -697,5 +697,13 @@ export default function StoryDetail() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function StoryDetail() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Yükleniyor...</div>}>
+      <StoryDetailContent />
+    </Suspense>
   );
 }

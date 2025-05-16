@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,9 +62,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 transition duration-300 hover:opacity-90">
           <div className="relative w-24 h-24">
-            <img 
+            <Image 
               src="/atavetLogo.svg" 
               alt="AtaVet Logo" 
+              width={96}
+              height={96}
               className="w-full h-full object-contain mt-[3px]"
             />
           </div>

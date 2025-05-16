@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -17,7 +17,7 @@ interface Story {
 
 type Category = 'hepsi' | 'kedi' | 'kopek' | 'kus' | 'balik' | 'kemirgen' | 'egzotik';
 
-export default function OykulerimizPage() {
+function OykulerimizContent() {
   const searchParams = useSearchParams();
   const [hoveredStory, setHoveredStory] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category>('hepsi');
@@ -46,7 +46,7 @@ export default function OykulerimizPage() {
     }
   }, [searchParams]);
 
-  const stories: Story[] = [
+  const stories = useMemo<Story[]>(() => [
     {
       id: 1,
       title: "Patili Dostlarımızın İyileşme Hikayeleri",
@@ -128,7 +128,7 @@ export default function OykulerimizPage() {
       categories: ['kedi', 'kopek', 'kus', 'balik', 'egzotik', 'kemirgen'],
       primaryCategory: 'hepsi'
     }
-  ];
+  ], []);
 
   useEffect(() => {
     setIsFilterAnimating(true);
@@ -144,7 +144,7 @@ export default function OykulerimizPage() {
     }, 300);
     
     return () => clearTimeout(timer);
-  }, [selectedCategory]);
+  }, [selectedCategory, stories]);
 
   const categoryLabels: Record<Category, string> = {
     hepsi: 'Tüm Hikayeler',
@@ -532,5 +532,13 @@ export default function OykulerimizPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function OykulerimizPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Yükleniyor...</div>}>
+      <OykulerimizContent />
+    </Suspense>
   );
 } 

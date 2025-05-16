@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,11 +8,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/atavetLogo.svg" 
-                alt="AtaVet Logo" 
-                className="w-20 h-20 object-contain"
-              />
+              <Link href="/" className="mb-6 md:mb-0">
+                <Image 
+                  src="/atavetLogo.svg" 
+                  alt="AtaVet Logo" 
+                  width={140} 
+                  height={50}
+                  className="h-12 w-auto"
+                />
+              </Link>
               <div className="flex flex-col mt-[3px]">
                 <span className="text-4xl font-bold text-[#E31E24] font-pathway">ATAVET</span>
                 <span className="text-md uppercase tracking-wider text-[#E31E24] font-pathway">VETERİNER KLİNİĞİ</span>
@@ -144,7 +149,7 @@ export default function Footer() {
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-sm text-background/80">
-            © {new Date().getFullYear()} AtaVet. Tüm hakları saklıdır.
+            © {new Date().getFullYear()} M.Fatih. Tüm hakları saklıdır.
           </p>
         </div>
       </div>
