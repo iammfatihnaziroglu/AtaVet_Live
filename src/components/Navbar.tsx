@@ -60,8 +60,8 @@ export default function Navbar() {
       }}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3 transition duration-300 hover:opacity-90">
-          <div className="relative w-24 h-24">
+        <Link href="/" className="flex items-center gap-2 transition duration-300 hover:opacity-90">
+          <div className="relative w-16 h-16 md:w-24 md:h-24">
             <Image 
               src="/atavetLogo.svg" 
               alt="AtaVet Logo" 
@@ -71,8 +71,8 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col mt-[7px]">
-            <span className="text-5xl font-bold text-primary font-pathway">ATAVET</span>
-            <span className="text-md uppercase tracking-wider text-primary font-pathway">VETERİNER KLİNİĞİ</span>
+            <span className="text-3xl md:text-5xl font-bold text-primary font-pathway">ATAVET</span>
+            <span className="text-sm md:text-md uppercase tracking-wider text-primary font-pathway">VETERİNER KLİNİĞİ</span>
           </div>
         </Link>
 
@@ -181,83 +181,76 @@ export default function Navbar() {
             : '-translate-y-2 opacity-0 pointer-events-none'
         }`}
         style={{
-          backgroundColor: `rgba(var(--rgb-background), 0.95)`,
+          backgroundColor: `rgba(var(--rgb-background), 0.98)`,
         }}
       >
-        <div className="container mx-auto px-4 py-3 flex flex-col divide-y divide-light-gray/20">
+        <div className="container mx-auto px-4 py-2 flex flex-col divide-y divide-light-gray/20">
           <Link 
             href="/" 
-            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            className="py-3 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>Ana Sayfa</span>
+            <span className="text-lg">Ana Sayfa</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </Link>
           <Link 
             href="/hizmetler" 
-            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            className="py-3 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>Hizmetlerimiz</span>
+            <span className="text-lg">Hizmetlerimiz</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </Link>
           <Link 
             href="/oykulerimiz" 
-            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            className="py-3 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>Öykülerimiz</span>
+            <span className="text-lg">Öykülerimiz</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </Link>
           <Link 
             href="/hakkimizda" 
-            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            className="py-3 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>Hakkımızda</span>
+            <span className="text-lg">Hakkımızda</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </Link>
           <Link 
             href="/iletisim" 
-            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            className="py-3 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>İletişim</span>
+            <span className="text-lg">İletişim</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </Link>
           <Link 
             href="/sss" 
-            className="py-3.5 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
+            className="py-3 flex items-center justify-between text-foreground hover:text-primary transition-all duration-300 hover:pl-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            <span>SSS</span>
+            <span className="text-lg">SSS</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
               <path d="m9 18 6-6-6-6"/>
             </svg>
           </Link>
-          <div className="pt-3 pb-1">
+          <div className="pt-3 pb-2">
             <Link 
               href="/randevu" 
-              className="w-full btn-primary inline-flex items-center justify-center hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+              className="btn-primary w-full text-center py-3 text-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                <path d="M9 14h6"></path>
-                <path d="M9 18h6"></path>
-                <path d="M12 10h.01"></path>
-              </svg>
               Randevu Al
             </Link>
           </div>
