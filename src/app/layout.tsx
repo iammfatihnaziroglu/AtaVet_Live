@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VerticalPetNav from "@/components/VerticalPetNav";
+import HorizontalPetNav from "@/components/HorizontalPetNav";
 
 const pathway = Pathway_Gothic_One({
   subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen pt-16 animate-fade-in">{children}</main>
         <VerticalPetNav />
+        <HorizontalPetNav />
         <Footer />
       </body>
     </html>

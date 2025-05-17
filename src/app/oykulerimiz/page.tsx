@@ -190,7 +190,7 @@ function OykulerimizContent() {
           <div className="flex items-center justify-between mb-8 md:mb-10">
             <div>
               <h1 className="text-5xl md:text-6xl font-bold text-primary font-pathway">ÖYKÜLERİMİZ</h1>
-              <div className="w-16 h-1 bg-primary mt-2 rounded-full"></div>
+              <div className="w-full h-1  bg-gradient-to-l from-transparent via-primary/50 to-transparent brightness-200 mt-2 rounded-full"></div>
             </div>
             <Link 
               href="/iletisim" 

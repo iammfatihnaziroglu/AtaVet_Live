@@ -122,7 +122,7 @@ export default function Navbar() {
               </svg>
             )}
           </button>
-          <Link href="/randevu" className="btn-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+          <Link href="/iletisim" className="btn-primary hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
             Randevu Al
           </Link>
         </div>

@@ -78,7 +78,7 @@ export default function HeroSection() {
             
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <Link href="/randevu" className="btn-primary text-center flex items-center justify-center py-2 sm:py-2.5 md:py-3 text-sm sm:text-base">
+              <Link href="/iletisim" className="btn-primary text-center flex items-center justify-center py-2 sm:py-2.5 md:py-3 text-sm sm:text-base">
                 <span className="mr-1.5">Hemen Randevu Al</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
