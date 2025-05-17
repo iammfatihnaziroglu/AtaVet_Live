@@ -79,42 +79,42 @@ export default function ServicesSection() {
 
   return (
     <section id="hizmetler" className="section bg-background">
-      <div className="container mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Hizmetlerimiz</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 md:mb-12 animate-fade-in">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Hizmetlerimiz</h2>
+          <p className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto">
             Evcil hayvanlarınızın sağlığı ve mutluluğu için kapsamlı hizmetler sunuyoruz.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className="bg-secondary p-8 rounded-2xl transition-all hover:shadow-lg hover:bg-neutral group border border-light-gray animate-fade-in"
+              className="bg-secondary p-5 md:p-8 rounded-xl md:rounded-2xl transition-all hover:shadow-lg hover:bg-neutral group border border-light-gray animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-primary mb-4 group-hover:scale-110 transition-transform">
-                {service.icon}
+              <div className="text-primary mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  {service.icon.props.children}
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-foreground/70 mb-4">{service.description}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{service.title}</h3>
+              <p className="text-sm md:text-base text-foreground/70 mb-3 md:mb-4">{service.description}</p>
               <Link 
                 href={`/hizmetler#${service.id}`} 
-                className="text-primary font-medium hover:underline inline-flex items-center"
+                className="text-sm md:text-base text-primary font-medium hover:underline inline-flex items-center"
               >
                 Detaylı Bilgi 
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width="16" 
-                  height="16" 
+                  className="w-3.5 h-3.5 md:w-4 md:h-4 ml-1"
                   viewBox="0 0 24 24" 
                   fill="none" 
                   stroke="currentColor" 
                   strokeWidth="2" 
                   strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  className="ml-1"
+                  strokeLinejoin="round"
                 >
                   <path d="M5 12h14"></path>
                   <path d="M12 5l7 7-7 7"></path>
@@ -124,16 +124,16 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        <div className="mt-12 text-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
-          <Link href="/hizmetler" className="btn-primary">
+        <div className="mt-8 md:mt-12 text-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
+          <Link href="/hizmetler" className="btn-primary text-sm md:text-base py-2 md:py-3 px-4 md:px-6">
             Tüm Hizmetlerimizi Görüntüle
           </Link>
         </div>
       </div>
       
       {/* Animated paw icons */}
-      <div className="absolute -bottom-4 right-[15%] w-8 h-8 opacity-20 animate-pulse" style={{ animationDelay: '1.2s' }}>
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute -bottom-4 right-[15%] w-6 h-6 md:w-8 md:h-8 opacity-20 animate-pulse" style={{ animationDelay: '1.2s' }}>
+        <svg className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g fill="#E31E24">
             <path d="M6 12.5C6.83 12.5 7.5 11.83 7.5 11C7.5 10.17 6.83 9.5 6 9.5C5.17 9.5 4.5 10.17 4.5 11C4.5 11.83 5.17 12.5 6 12.5Z"/>
             <path d="M10 8.5C10.83 8.5 11.5 7.83 11.5 7C11.5 6.17 10.83 5.5 10 5.5C9.17 5.5 8.5 6.17 8.5 7C8.5 7.83 9.17 8.5 10 8.5Z"/>
@@ -143,8 +143,8 @@ export default function ServicesSection() {
           </g>
         </svg>
       </div>
-      <div className="absolute top-12 left-[5%] w-10 h-10 opacity-10 animate-pulse" style={{ animationDelay: '0.7s' }}>
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute top-12 left-[5%] w-8 h-8 md:w-10 md:h-10 opacity-10 animate-pulse" style={{ animationDelay: '0.7s' }}>
+        <svg className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g fill="#E31E24">
             <path d="M6 12.5C6.83 12.5 7.5 11.83 7.5 11C7.5 10.17 6.83 9.5 6 9.5C5.17 9.5 4.5 10.17 4.5 11C4.5 11.83 5.17 12.5 6 12.5Z"/>
             <path d="M10 8.5C10.83 8.5 11.5 7.83 11.5 7C11.5 6.17 10.83 5.5 10 5.5C9.17 5.5 8.5 6.17 8.5 7C8.5 7.83 9.17 8.5 10 8.5Z"/>

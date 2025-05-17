@@ -63,63 +63,79 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="pt-24 pb-16 bg-secondary">
+    <div className="pt-20 pb-12 bg-gradient-to-b from-secondary/50 to-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center">Sık Sorulan Sorular</h1>
-          <p className="text-lg text-foreground/70 mb-12 text-center">
-            Evcil hayvan bakımı ve hizmetlerimiz hakkında en çok sorulan sorular ve yanıtları
-          </p>
+        <div className="max-w-3xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-10">
+            <div className="inline-block px-8 py-4 mb-2">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">Sık Sorulan Sorular</h1>
+            </div>
+            <div className="w-full md:w-[800px] h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent rounded-full mb-6"></div>
+            <p className="text-base md:text-md text-foreground/70 opacity-80">
+              Evcil hayvan bakımı ve hizmetlerimiz hakkında en çok sorulan sorular ve yanıtları
+            </p>
+          </div>
 
-          <div className="space-y-4">
+          {/* FAQ Section */}
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
               <div 
                 key={faq.id} 
-                className="bg-background border border-light-gray rounded-lg overflow-hidden"
+                className="bg-white dark:bg-foreground/5 border border-light-gray/20 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <button
-                  className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-neutral/30"
+                  className="w-full text-left px-4 py-3 flex justify-between items-center hover:bg-neutral/5 transition-colors"
                   onClick={() => toggleFaq(index)}
                 >
-                  <h3 className="text-lg font-semibold">{faq.question}</h3>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width="24" 
-                    height="24" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    className={`transition-transform ${openIndex === index ? 'transform rotate-180' : ''}`}
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
+                  <h3 className="text-base font-medium pr-4">{faq.question}</h3>
+                  <div className="flex-shrink-0">
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                      className={`transition-transform duration-300 ${openIndex === index ? 'transform rotate-180 text-primary' : 'text-foreground/50'}`}
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
                 </button>
                 {openIndex === index && (
-                  <div className="px-6 py-4 bg-neutral/20 border-t border-light-gray">
-                    <p className="text-foreground/80">{faq.answer}</p>
+                  <div className="px-4 py-3 bg-neutral/5 border-t border-light-gray/20">
+                    <p className="text-sm text-foreground/80 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <h3 className="text-xl font-bold mb-4">Başka Sorunuz mu Var?</h3>
-            <p className="text-foreground/70 mb-6">
+          {/* Contact Section */}
+          <div className="mt-12 text-center bg-white dark:bg-foreground/5 rounded-xl p-6 shadow-sm">
+            <h3 className="text-lg font-semibold mb-3">Başka Sorunuz mu Var?</h3>
+            <p className="text-sm text-foreground/70 mb-6">
               Aradığınız cevabı bulamadıysanız, bizimle iletişime geçmekten çekinmeyin.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+902461234567" className="btn-secondary flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex flex-col gap-3">
+              <a 
+                href="tel:+902461234567" 
+                className="btn-secondary flex items-center justify-center gap-2 py-2.5 text-sm"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
                 +90 246 123 4567
               </a>
-              <a href="/iletisim" className="btn-primary flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <a 
+                href="/iletisim" 
+                className="btn-primary flex items-center justify-center gap-2 py-2.5 text-sm"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>

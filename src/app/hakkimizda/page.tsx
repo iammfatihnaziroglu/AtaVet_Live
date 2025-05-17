@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Hikayemiz</h2>
             <p className="text-foreground/70 mb-4">
-              AtaVet, Veteriner Hekim Dr. Ahmet Karakoç tarafından 2016 yılında kurulmuştur. Küçük bir muayenehane olarak başlayan kliniğimiz, sunduğu kaliteli hizmet ve hasta odaklı yaklaşımı sayesinde bölgenin en güvenilir veteriner kliniklerinden biri haline gelmiştir.
+              AtaVet, Kurucu Veteriner Hekim Tayfur Şener tarafından 2016 yılında kurulmuştur. Küçük bir muayenehane olarak başlayan kliniğimiz, sunduğu kaliteli hizmet ve hasta odaklı yaklaşımı sayesinde bölgenin en güvenilir veteriner kliniklerinden biri haline gelmiştir.
             </p>
             <p className="text-foreground/70 mb-4">
               Yıllar içinde ekibimizi genişlettik, modern ekipmanlarla donatılmış yeni binamıza taşındık ve hizmet yelpazemizi geliştirdik. Bugün 3 veteriner hekim ve 5 yardımcı personelle hizmet vermekte ve yılda 5000&apos;den fazla evcil hayvana sağlık hizmeti sunmaktayız.
@@ -74,44 +74,72 @@ export default function AboutPage() {
 
         {/* Team */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-8 text-center">Ekibimiz</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-background rounded-xl overflow-hidden shadow-sm text-center border border-light-gray">
-              <div className="bg-neutral h-64 flex items-center justify-center">
-                <div className="text-primary text-7xl opacity-20">DR</div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Ekibimiz</h2>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white dark:bg-foreground/5 rounded-2xl overflow-hidden shadow-lg border border-light-gray/10 dark:border-light-gray/5 hover:shadow-xl transition-all duration-300">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
+                <div className="h-80 bg-neutral flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[url('/images/team-bg.jpg')] bg-cover bg-center opacity-10"></div>
+                  <div className="relative z-10">
+                    <div className="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary text-6xl font-bold">TS</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold">Dr. Ahmet Karakoç</h3>
-                <p className="text-primary mb-2">Kurucu Veteriner Hekim</p>
-                <p className="text-foreground/70 text-sm">
-                  2010 yılında Ankara Üniversitesi Veteriner Fakültesi&apos;nden mezun oldu. Küçük hayvan cerrahisi üzerine uzmanlık eğitimi aldı. 12 yıllık mesleki deneyime sahip.
-                </p>
-              </div>
-            </div>
+              
+              <div className="p-8">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold mb-2">Tayfur Şener</h3>
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Kurucu Veteriner Hekim
+                  </div>
+                </div>
 
-            <div className="bg-background rounded-xl overflow-hidden shadow-sm text-center border border-light-gray">
-              <div className="bg-neutral h-64 flex items-center justify-center">
-                <div className="text-primary text-7xl opacity-20">DR</div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold">Dr. Ayşe Yılmaz</h3>
-                <p className="text-primary mb-2">Veteriner Hekim</p>
-                <p className="text-foreground/70 text-sm">
-                  2014 yılında İstanbul Üniversitesi Veteriner Fakültesi&apos;nden mezun oldu. İç hastalıkları ve kedi hastalıkları konusunda uzmanlaştı. 8 yıllık mesleki deneyime sahip.
-                </p>
-              </div>
-            </div>
+                <div className="prose prose-sm dark:prose-invert max-w-none">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime reprehenderit quo odio odit. Minus culpa esse qui ea, fuga consequatur possimus hic mollitia ipsam laborum ex suscipit eum beatae quam.
+                  </p>
+                  <p className="text-foreground/80 leading-relaxed mt-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eveniet nobis officiis ea esse assumenda dolores, voluptate error exercitationem ipsa est rerum consectetur? Facere mollitia possimus esse nesciunt quod quasi?
+                  </p>
+                </div>
 
-            <div className="bg-background rounded-xl overflow-hidden shadow-sm text-center border border-light-gray">
-              <div className="bg-neutral h-64 flex items-center justify-center">
-                <div className="text-primary text-7xl opacity-20">DR</div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold">Dr. Mehmet Özkan</h3>
-                <p className="text-primary mb-2">Veteriner Hekim</p>
-                <p className="text-foreground/70 text-sm">
-                  2018 yılında Selçuk Üniversitesi Veteriner Fakültesi&apos;nden mezun oldu. Köpek hastalıkları ve ortopedi konusunda uzmanlaştı. 4 yıllık mesleki deneyime sahip.
-                </p>
+                <div className="mt-8 flex flex-wrap gap-4 justify-center">
+                  <div className="flex items-center gap-2 bg-secondary/30 dark:bg-foreground/10 px-4 py-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span className="text-sm text-foreground/80">Veteriner Hekimliği</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-secondary/30 dark:bg-foreground/10 px-4 py-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span className="text-sm text-foreground/80">Cerrahi Uzmanı</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-secondary/30 dark:bg-foreground/10 px-4 py-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span className="text-sm text-foreground/80">İç Hastalıkları</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -182,41 +210,52 @@ export default function AboutPage() {
             </iframe>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mt-8">
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 p-3 rounded-full text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <a 
+              href="https://www.google.com/maps?q=Isparta+Merkez,+Mehmet+Tönge+Cd.+No:15" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-4 group hover:text-[#E31E24] transition-colors"
+            >
+              <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:scale-105">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
-              <div>
-                <h3 className="font-semibold">Adres</h3>
-                <p className="text-foreground/70">Isparta Merkez, Mehmet Tönge Cd. No:15</p>
+              <div className="text-center">
+                <h3 className="font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">Adres</h3>
+                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">Isparta Merkez, Mehmet Tönge Cd. No:15</p>
               </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 p-3 rounded-full text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            </a>
+            <a 
+              href="tel:+902461234567" 
+              className="flex items-center justify-center gap-4 group hover:text-[#E31E24] transition-colors"
+            >
+              <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:scale-105">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
               </div>
-              <div>
-                <h3 className="font-semibold">Telefon</h3>
-                <p className="text-foreground/70">+90 246 123 4567</p>
+              <div className="text-center">
+                <h3 className="font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">Telefon</h3>
+                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">+90 246 123 4567</p>
               </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 p-3 rounded-full text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            </a>
+            <a 
+              href="mailto:info@atavet.com" 
+              className="flex items-center justify-center gap-4 group hover:text-[#E31E24] transition-colors"
+            >
+              <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:scale-105">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
               </div>
-              <div>
-                <h3 className="font-semibold">E-posta</h3>
-                <p className="text-foreground/70">info@atavet.com</p>
+              <div className="text-center">
+                <h3 className="font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">E-posta</h3>
+                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">info@atavet.com</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

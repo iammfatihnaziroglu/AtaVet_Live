@@ -187,85 +187,84 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* Google Reviews */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold mb-8 text-center">Müşteri Yorumları</h2>
-          <div className="bg-secondary p-6 rounded-2xl border border-light-gray">
-            <div className="flex items-center justify-between mb-6">
+        <div className="mt-12 sm:mt-20">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Müşteri Yorumları</h2>
+          <div className="bg-secondary p-4 sm:p-6 rounded-lg sm:rounded-2xl border border-light-gray">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0 mb-4 sm:mb-6">
               <div className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E31E24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#E31E24" className="sm:w-6 sm:h-6">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                 </svg>
-                <span className="font-bold">4.8</span>
-                <span className="text-foreground/70">Google Değerlendirmeleri (120+ Yorum)</span>
+                <span className="font-bold text-sm sm:text-base">4.8</span>
+                <span className="text-foreground/70 text-xs sm:text-base">Google Değerlendirmeleri (120+ Yorum)</span>
               </div>
               <a 
                 href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary font-medium hover:underline"
+                className="text-primary font-medium hover:underline text-sm sm:text-base"
               >
                 Tüm Yorumları Gör
               </a>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-background p-4 rounded-xl border border-light-gray">
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
+              <div className="bg-background p-3 sm:p-4 rounded-lg sm:rounded-xl border border-light-gray">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-neutral flex items-center justify-center text-primary font-bold">M</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-neutral flex items-center justify-center text-primary font-bold text-sm sm:text-base">M</div>
                   <div>
-                    <h4 className="font-semibold">Mustafa Yılmaz</h4>
+                    <h4 className="font-semibold text-sm sm:text-base">Mustafa Yılmaz</h4>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#E31E24">
+                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#E31E24" className="sm:w-4 sm:h-4">
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                         </svg>
                       ))}
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-foreground/70">
+                <p className="text-xs sm:text-sm text-foreground/70">
                   &ldquo;Kedimiz Boncuk&apos;un tedavisi için AtaVet&apos;i tercih ettik ve çok memnun kaldık. Dr. Ahmet Bey&apos;in ilgisi ve uzmanlığı sayesinde kedimiz kısa sürede iyileşti. Tüm evcil hayvan sahiplerine tavsiye ederim.&rdquo;
                 </p>
               </div>
               
-              <div className="bg-background p-4 rounded-xl border border-light-gray">
+              <div className="bg-background p-3 sm:p-4 rounded-lg sm:rounded-xl border border-light-gray">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-neutral flex items-center justify-center text-primary font-bold">A</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-neutral flex items-center justify-center text-primary font-bold text-sm sm:text-base">A</div>
                   <div>
-                    <h4 className="font-semibold">Ayşe Demir</h4>
+                    <h4 className="font-semibold text-sm sm:text-base">Ayşe Demir</h4>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#E31E24">
+                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#E31E24" className="sm:w-4 sm:h-4">
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                         </svg>
                       ))}
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-foreground/70">
+                <p className="text-xs sm:text-sm text-foreground/70">
                   &ldquo;Köpeğimiz Max&apos;in acil durumu için gece yarısı aradığımızda hemen yanıt aldık ve kliniğe gittiğimizde tedaviye başlandı. Profesyonel ve şefkatli yaklaşımları için AtaVet ekibine çok teşekkür ederiz.&rdquo;
                 </p>
               </div>
               
-              <div className="bg-background p-4 rounded-xl border border-light-gray">
+              <div className="bg-background p-3 sm:p-4 rounded-lg sm:rounded-xl border border-light-gray">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-neutral flex items-center justify-center text-primary font-bold">E</div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-neutral flex items-center justify-center text-primary font-bold text-sm sm:text-base">E</div>
                   <div>
-                    <h4 className="font-semibold">Emre Koç</h4>
+                    <h4 className="font-semibold text-sm sm:text-base">Emre Koç</h4>
                     <div className="flex">
                       {[...Array(4)].map((_, i) => (
-                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#E31E24">
+                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#E31E24" className="sm:w-4 sm:h-4">
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                         </svg>
                       ))}
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E31E24" strokeWidth="2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E31E24" strokeWidth="2" className="sm:w-4 sm:h-4">
                         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                       </svg>
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-foreground/70">
+                <p className="text-xs sm:text-sm text-foreground/70">
                   &ldquo;Tavşanımızın bakımı için düzenli olarak AtaVet&apos;e gidiyoruz. Hem fiyatlar makul hem de hizmet kalitesi yüksek. Tek sorun bazen randevu almak için birkaç gün beklemek gerekebiliyor.&rdquo;
                 </p>
               </div>

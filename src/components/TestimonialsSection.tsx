@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
-  const slidesPerView = 3;
+  const slidesPerView = 3; // Masaüstü için 3 kart
   const totalSlides = Math.ceil(testimonials.length / slidesPerView);
 
   // Calculate average rating
@@ -268,9 +268,10 @@ export default function TestimonialsSection() {
                     .map((testimonial) => (
                       <div 
                         key={testimonial.id} 
-                        className="bg-background rounded-2xl shadow-md border border-light-gray overflow-hidden animate-fade-in hover:shadow-lg transition-all"
+                        className="bg-background rounded-2xl shadow-md border border-light-gray overflow-hidden animate-fade-in hover:shadow-lg transition-all md:block hidden"
                         style={{ animationDelay: `${(testimonial.id % slidesPerView) * 0.1}s` }}
                       >
+                        {/* Masaüstü kart içeriği */}
                         {/* Pet image with gradient overlay */}
                         <div className="h-48 w-full relative">
                           <Image 
@@ -329,6 +330,67 @@ export default function TestimonialsSection() {
                         </div>
                       </div>
                     ))}
+                  {/* Mobil için tek kart */}
+                  <div 
+                    className="bg-background rounded-2xl shadow-md border border-light-gray overflow-hidden animate-fade-in hover:shadow-lg transition-all block md:hidden"
+                  >
+                    {testimonials[currentIndex] && (
+                      <>
+                        <div className="h-48 w-full relative">
+                          <Image 
+                            src={testimonials[currentIndex].petImage}
+                            alt={`${testimonials[currentIndex].petName}, ${testimonials[currentIndex].pet}`}
+                            fill
+                            sizes="100vw"
+                            className="object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                          <div className="absolute bottom-4 left-4 right-4">
+                            <div className="flex items-center justify-between">
+                              <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 text-xs font-medium text-primary">
+                                {testimonials[currentIndex].petName} ({testimonials[currentIndex].pet})
+                              </div>
+                              <div className="flex bg-white/90 backdrop-blur-sm rounded-lg p-1">
+                                {[...Array(5)].map((_, i) => (
+                                  <svg key={i} xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" 
+                                      fill={i < testimonials[currentIndex].rating ? "#E31E24" : "#e0e0e0"}>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                  </svg>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="p-6">
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
+                              <Image 
+                                src={testimonials[currentIndex].ownerImage}
+                                alt={testimonials[currentIndex].name}
+                                width={48}
+                                height={48}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold">{testimonials[currentIndex].name}</h4>
+                              <div className="text-xs text-foreground/60">{testimonials[currentIndex].date}</div>
+                            </div>
+                          </div>
+                          
+                          <div className="relative">
+                            <svg className="absolute -top-2 -left-1 w-6 h-6 text-primary/20" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16.032-.52.112-1.01.24-.496.127-.99.253-1.486.38-.498.127-.995.254-1.492.38-.498.128-.995.217-1.49.27l-.38-1.364c.435-.13.87-.254 1.308-.37.114-.033.228-.065.342-.097l.153-.04c.992-.26 1.978-.52 2.355-.892.183-.178.328-.39.434-.636.12-.28.182-.59.182-.92 0-.365-.132-.673-.397-.922-.267-.25-.678-.374-1.235-.374-.705 0-1.25.224-1.634.67-.29.336-.506.848-.65 1.535l-2.046-.569c.214-1.06.705-1.877 1.473-2.45.827-.63 1.863-.94 3.103-.94 1.073 0 1.962.208 2.667.627.706.42 1.06.99 1.06 1.714 0 .31-.067.615-.2.914-.134.3-.364.546-.69.736-.498.284-1.16.516-1.986.695.065.052.13.106.196.162.427.36.764.833 1.01 1.417.243.584.365 1.235.365 1.954zm7.54 0c0-.88-.23-1.618-.69-2.217-.326-.42-.775-.692-1.344-.814-.57-.124-1.1-.13-1.586-.016-.15.033-.5.113-.997.242-.5.127-.995.254-1.492.38-.498.127-.995.254-1.492.38-.498.128-.995.217-1.49.27l-.38-1.364c.435-.13.87-.254 1.308-.37.114-.033.228-.065.342-.097l.153-.04c.992-.26 1.978-.52 2.355-.892.183-.178.328-.39.434-.636.12-.28.182-.59.182-.92 0-.365-.132-.673-.397-.922-.266-.25-.678-.374-1.235-.374-.705 0-1.254.224-1.648.67-.297.348-.508.86-.644 1.535l-2.045-.569c.214-1.06.705-1.877 1.473-2.45.82-.63 1.855-.94 3.097-.94 1.08 0 1.97.208 2.673.627.706.42 1.06.99 1.06 1.714 0 .31-.067.615-.2.914-.134.3-.364.546-.69.736-.498.284-1.16.516-1.986.695.065.052.13.106.196.162.427.36.764.833 1.01 1.417.243.584.365 1.235.365 1.954z" />
+                            </svg>
+                            <p className="text-foreground/80 text-sm pl-5">
+                              {testimonials[currentIndex].text}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

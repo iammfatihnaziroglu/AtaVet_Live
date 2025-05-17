@@ -506,23 +506,23 @@ function OykulerimizContent() {
             </div>
             
             <div className="md:w-1/2">
-              <div className="relative h-full min-h-[280px]">
+              <div className="relative h-[200px] md:h-full min-h-[280px] hidden md:block">
                 <img 
                   src="/images/stories/share-story.jpg" 
                   alt="Hikayeni Paylaş" 
                   className="w-full h-full object-cover"
                 />
                 
-                <div className="absolute right-3 top-4 bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-md max-w-[200px] hidden md:block">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <div className="absolute right-2 top-2 md:right-3 md:top-4 bg-white/80 backdrop-blur-sm p-2 md:p-3 rounded-lg shadow-md max-w-[160px] md:max-w-[200px] hidden md:block">
+                  <div className="flex items-center gap-2 mb-1 md:mb-2">
+                    <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 md:w-4 md:h-4">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">AtaVet Ailesi</h4>
-                      <p className="text-xs text-foreground/70">Hikayenizi bekliyor</p>
+                      <h4 className="text-xs md:text-sm font-medium text-foreground">AtaVet Ailesi</h4>
+                      <p className="text-[10px] md:text-xs text-foreground/70">Hikayenizi bekliyor</p>
                     </div>
                   </div>
                 </div>
