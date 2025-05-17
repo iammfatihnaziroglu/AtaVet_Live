@@ -40,7 +40,7 @@ export default function HorizontalPetNav() {
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 z-50 md:hidden transition-all duration-300 ${isFooterVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-      <div className="bg-white/80 dark:bg-foreground/10 backdrop-blur-md shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.1)] border-t border-gray-100">
+      <div className={`transition-all duration-300 ${isMenuOpen ? 'bg-foreground/20 backdrop-blur-md border-t border-gray-100' : ''} shadow-[0_-4px_20px_-4px_rgba(0,0,0,0.1)] `}>
         <div className="container mx-auto px-2">
           {/* Ana Menü Butonu */}
           <div className="flex -mb-1 justify-center py-1.5">
