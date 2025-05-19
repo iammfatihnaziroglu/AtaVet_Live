@@ -1,6 +1,27 @@
+'use client';
+
+import { useEffect } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { scrollToSection } from './smoothScroll';
 
 export default function ServicesPage() {
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      setTimeout(() => {
+        scrollToSection(hash);
+      }, 300);
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
+    }
+  }, [searchParams]);
+
   const services = [
     {
       id: 'muayene',

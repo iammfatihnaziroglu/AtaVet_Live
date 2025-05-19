@@ -165,6 +165,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/hizmetler#muayene"
+                  scroll={false}
                   className="text-background/80 hover:text-[#E31E24] transition-colors"
                 >
                   Genel Muayene
@@ -173,6 +174,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/hizmetler#asilar"
+                  scroll={false}
                   className="text-background/80 hover:text-[#E31E24] transition-colors"
                 >
                   Aşılar
@@ -181,6 +183,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/hizmetler#cerrahi"
+                  scroll={false}
                   className="text-background/80 hover:text-[#E31E24] transition-colors"
                 >
                   Cerrahi Operasyonlar
@@ -189,6 +192,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/hizmetler#bakim"
+                  scroll={false}
                   className="text-background/80 hover:text-[#E31E24] transition-colors"
                 >
                   Bakım ve Tıraş
@@ -197,6 +201,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/hizmetler#laboratuvar"
+                  scroll={false}
                   className="text-background/80 hover:text-[#E31E24] transition-colors"
                 >
                   Laboratuvar Hizmetleri

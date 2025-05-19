@@ -97,17 +97,17 @@ body {
 }
 
 a, button, input, select, textarea {
-  cursor: url("/cursors/paw-cursor.svg") 16 16, pointer;
+  cursor: url("/cursors/active-paw-cursor.svg") 16 16, pointer;
 }
 
 /* Click event cursor */
 a:active, button:active {
-  cursor: url("/cursors/paw-cursor.svg") 16 16, pointer;
+  cursor: url("/cursors/active-paw-cursor.svg") 16 16, pointer;
   transform: scale(0.97);
 }
 
 .dark-theme a:active, .dark-theme button:active {
-  cursor: url("/cursors/paw-cursor.svg") 16 16, pointer;
+  cursor: url("/cursors/active-paw-cursor.svg") 16 16, pointer;
   transform: scale(0.97);
 }
 
