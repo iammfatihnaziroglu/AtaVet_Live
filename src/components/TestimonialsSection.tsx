@@ -10,7 +10,7 @@ export default function TestimonialsSection() {
       id: 1,
       name: 'Ahmet Yılmaz',
       petName: 'Paşa',
-      text: 'Kedim Paşa için AtaVet\'i tercih ettim ve çok memnun kaldım. Personelin ilgisi ve doktorların uzmanlığı gerçekten etkileyici. Paşa\'nın tedavisi çok başarılı oldu.',
+      text: 'Kedim Paşa\'nın böbrek yetmezliği için AtaVet\'te özel bir diyet ve tedavi programı uygulandı. Dr. Ayşe Hanım\'ın yakın takibi ve özenli bakımı sayesinde Paşa\'nın değerleri normale döndü ve şimdi çok daha enerjik.',
       rating: 5,
       pet: 'Kedi',
       ownerImage: '/images/stories/pet-owner-1.jpg',
@@ -19,9 +19,9 @@ export default function TestimonialsSection() {
     },
     {
       id: 2,
-      name: 'Ayşe Demir',
+      name: 'Zeynep Demir',
       petName: 'Max',
-      text: 'Köpeğim Max\'in aşılarını düzenli olarak AtaVet\'te yaptırıyoruz. Her ziyaretimizde gösterilen özen ve profesyonellik için teşekkür ederim.',
+      text: 'Köpeğim Max\'in kalça displazisi için AtaVet\'te fizik tedavi ve rehabilitasyon hizmetleri aldık. 3 aylık tedavi sonucunda Max şimdi rahatça koşup oynayabiliyor. Profesyonel yaklaşımları ve sevgi dolu ortamları için teşekkür ediyorum.',
       rating: 5,
       pet: 'Köpek',
       ownerImage: '/images/stories/pet-owner-2.jpg',
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
       id: 3,
       name: 'Mehmet Kaya',
       petName: 'Şila',
-      text: 'Kedim Şila\'nın diş tedavisi için AtaVet\'i tercih ettik. Süreç boyunca gösterilen ilgi ve alınan sonuçlar mükemmeldi. Kesinlikle tavsiye ediyorum.',
+      text: 'Kedim Şila\'nın diş enfeksiyonu ciddi bir hal almıştı. AtaVet\'te diş taşı temizliği ve gerekli diş çekimleri yapıldı. Operasyon sonrası bakım sürecinde de sürekli bilgilendirilmemiz bizi çok rahatlattı. Şila şimdi çok daha sağlıklı besleniyor.',
       rating: 4,
       pet: 'Kedi',
       ownerImage: '/images/stories/avatar-1.jpg',
@@ -41,9 +41,9 @@ export default function TestimonialsSection() {
     },
     {
       id: 4,
-      name: 'Zeynep Öztürk',
+      name: 'Ebru Öztürk',
       petName: 'Rocky',
-      text: 'Köpeğim Rocky\'nin acil durumu için gece yarısı AtaVet\'i aradım. Hemen müdahale ettiler ve hayatını kurtardılar. 7/24 hizmetleri için minnettarım.',
+      text: 'Köpeğim Rocky\'nin aniden başlayan epilepsi nöbetleri için gece yarısı AtaVet acil servisini aradım. Hemen müdahale ettiler ve doğru teşhisle uygun ilaç tedavisine başladık. 6 aydır nöbet geçirmiyor ve yaşam kalitesi arttı.',
       rating: 5,
       pet: 'Köpek',
       ownerImage: '/images/stories/avatar-2.jpg',
@@ -54,18 +54,18 @@ export default function TestimonialsSection() {
       id: 5,
       name: 'Murat Demir',
       petName: 'Yeşil',
-      text: 'İguanamız Yeşil için doğru bakımı bilmediğimizi fark ettik. AtaVet\'teki Dr. Emre sayesinde, iguanamız için doğru ortam ve beslenme düzenini öğrendik. Şimdi Yeşil çok daha sağlıklı ve enerjik.',
+      text: 'İguanamız Yeşil\'de metabolik kemik hastalığı belirtileri görülünce AtaVet\'e başvurduk. Dr. Emre\'nin önerdiği UV ışık sistemi, kalsiyum takviyesi ve beslenme düzeni sayesinde kemik yapısı güçlendi ve hareket kabiliyeti geri kazandı.',
       rating: 5,
-      pet: 'Iguana',
+      pet: 'İguana',
       ownerImage: '/images/stories/avatar-3.jpg',
       petImage: '/images/stories/exotic-pets.jpg',
       date: '1 hafta önce'
     },
     {
       id: 6,
-      name: 'Ayşe Kaya',
+      name: 'Selin Kaya',
       petName: 'Pamuk',
-      text: 'Pamuk\'un dişlerindeki sorunu çözdükleri için AtaVet ekibine çok teşekkür ederim. Dr. Mert\'in kemirgen hayvanlar konusundaki bilgisi ve sabrı sayesinde Pamuk artık çok daha iyi beslenebiliyor.',
+      text: 'Tavşanımız Pamuk\'un diş problemleri yemek yemesini engelliyordu. AtaVet\'te uzman kemirgen doktoru özel kesim ve törpüleme işlemiyle dişlerini düzenledi. Artık düzenli kontrollerle bu sorunu yönetebiliyoruz ve Pamuk tekrar sağlıklı bir şekilde beslenebiliyor.',
       rating: 5,
       pet: 'Tavşan',
       ownerImage: '/images/stories/pet-owner-2.jpg',
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
       id: 7,
       name: 'Cem Yıldırım',
       petName: 'Boncuk',
-      text: 'Muhabbet kuşum Boncuk\'un kanat sorunu için AtaVet\'i ziyaret ettik. Uzman ekip ve sevgi dolu yaklaşımları sayesinde kuşumuz eski sağlığına kavuştu. Kuş sahiplerine kesinlikle tavsiye ederim!',
+      text: 'Muhabbet kuşum Boncuk\'un kanat travması için AtaVet\'e başvurduk. Kırık tedavisi sonrası özel rehabilitasyon süreci uygulandı. 2 ay içinde tekrar uçmaya başladı. Kuş sağlığı konusunda uzman bir klinik olmaları büyük şans.',
       rating: 5,
       pet: 'Kuş',
       ownerImage: '/images/stories/avatar-1.jpg',
@@ -87,7 +87,7 @@ export default function TestimonialsSection() {
       id: 8,
       name: 'Deniz Korkmaz',
       petName: 'Portakal',
-      text: 'Japon balığımız Portakal\'ın sağlık sorunları için profesyonel destek aldık. AtaVet\'in su canlıları konusundaki uzmanlığı gerçekten şaşırtıcı. Akvaryum dostlarınız için en doğru adres!',
+      text: 'Japon balığımız Portakal\'ın yüzme kesesi sorunları ve mantarlaşma başlangıcı vardı. AtaVet\'in su canlıları uzmanı doğru teşhis ve tedavi süreciyle Portakal\'ı sağlığına kavuşturdu. Ayrıca akvaryum bakımı konusunda aldığımız eğitim paha biçilemez.',
       rating: 4,
       pet: 'Balık',
       ownerImage: '/images/stories/avatar-2.jpg',
@@ -96,9 +96,9 @@ export default function TestimonialsSection() {
     },
     {
       id: 9,
-      name: 'Selin Aydın',
+      name: 'Merve Aydın',
       petName: 'Duman',
-      text: 'Kedimiz Duman\'ın check-up\'ı için her yıl düzenli olarak AtaVet\'e geliyoruz. Detaylı muayene, sıcak karşılama ve takip süreci için teşekkürler. İyi ki varsınız!',
+      text: 'Kedimiz Duman\'ın idrar yolu enfeksiyonu için AtaVet\'te yapılan tedavi ve sonrasında önerilen özel mamalarla tamamen iyileşti. Düzenli kontroller ve önleyici bakım önerileriyle şimdi çok daha sağlıklı bir yaşam sürüyor.',
       rating: 5,
       pet: 'Kedi',
       ownerImage: '/images/stories/pet-owner-1.jpg',
@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
       id: 10,
       name: 'Bora Tekin',
       petName: 'Karamel',
-      text: 'Köpeğimiz Karamel\'in cilt alerjisi için uzun süredir tedavi görüyoruz. Dr. Ahmet\'in yakın ilgisi ve doğru teşhisi sayesinde artık çok daha iyi durumda. Tüm ekibe teşekkürler!',
+      text: 'Köpeğimiz Karamel\'in atopik dermatit kaynaklı cilt alerjisi için uzun süredir tedavi görüyoruz. Dr. Ahmet\'in özel geliştirdiği beslenme programı ve lokal tedaviler sayesinde artık kaşıntısı kontrol altında ve tüyleri yeniden sağlıklı şekilde çıkıyor.',
       rating: 5,
       pet: 'Köpek',
       ownerImage: '/images/stories/avatar-3.jpg',
@@ -118,9 +118,9 @@ export default function TestimonialsSection() {
     },
     {
       id: 11,
-      name: 'Sevgi Yılmaz',
+      name: 'İrem Yılmaz',
       petName: 'Tomiş',
-      text: 'Hamsterımız Tomiş\'in bakımı konusunda çok değerli bilgiler aldık. Doğru kafes düzeni ve beslenme programı sayesinde artık çok daha mutlu. Küçük dostlarınız için harika bir klinik!',
+      text: 'Hamsterımız Tomiş\'in göz enfeksiyonu için AtaVet\'e gittik. Küçük bir hayvan için bile gösterdikleri özen inanılmazdı. Göz damlası tedavisi ve uygun kafes düzenlemeleriyle enfeksiyon tamamen geçti. Küçük dostlarınız için de profesyonel bakım sunuyorlar.',
       rating: 5,
       pet: 'Hamster',
       ownerImage: '/images/stories/pet-owner-2.jpg',
@@ -131,13 +131,46 @@ export default function TestimonialsSection() {
       id: 12,
       name: 'Okan Demir',
       petName: 'Loki',
-      text: 'AtaVet hem profesyonel hizmet kalitesi hem de hayvanlara gösterilen sevgi açısından harika. Köpeğimiz Loki\'nin dişlerine bakan diş hekimi Dr. Selin\'e ayrıca teşekkür ederiz.',
+      text: 'Köpeğimiz Loki\'nin diş eti hastalığı için AtaVet\'in diş uzmanı Dr. Selin\'e başvurduk. Detaylı temizlik ve tedavi sonrası evde bakım önerileriyle kısa sürede ağız sağlığı düzeldi. Artık düzenli dental kontroller yaptırıyoruz.',
       rating: 4,
       pet: 'Köpek',
       ownerImage: '/images/stories/avatar-1.jpg',
       petImage: '/images/stories/insta-4.jpg',
       date: '2 hafta önce'
     },
+    {
+      id: 13,
+      name: 'Burak Şahin',
+      petName: 'Ninja',
+      text: 'Kaplumbağamız Ninja\'nın kabuk enfeksiyonu için AtaVet\'e götürdüğümüzde durumu endişe vericiydi. Uygulanan antibiyotik tedavisi ve kabuk bakım protokolü sayesinde enfeksiyon tamamen temizlendi. Sürüngen sağlığı konusunda uzman olmaları büyük avantaj.',
+      rating: 5,
+      pet: 'Kaplumbağa',
+      ownerImage: '/images/stories/avatar-2.jpg',
+      petImage: '/images/stories/exotic-pets.jpg',
+      date: '3 hafta önce'
+    },
+    {
+      id: 14,
+      name: 'Gizem Akman',
+      petName: 'Şeker',
+      text: 'Papağanımız Şeker\'in gagasındaki deformasyon için AtaVet\'e başvurduk. Gaga bakımı ve düzeltmesi yapıldı, beslenme düzeni yeniden düzenlendi. Şeker artık daha rahat yemek yiyebiliyor ve gagası sağlıklı bir şekilde uzuyor.',
+      rating: 5,
+      pet: 'Papağan',
+      ownerImage: '/images/stories/pet-owner-1.jpg',
+      petImage: '/images/stories/bird-stories.jpg',
+      date: '1 ay önce'
+    },
+    {
+      id: 15,
+      name: 'Ali Kandemir',
+      petName: 'Minnoş',
+      text: 'Kedimiz Minnoş\'un tiroid hastalığı teşhisi konduğunda çok endişelenmiştik. AtaVet\'te başlanan ilaç tedavisi ve düzenli kontroller sayesinde hastalık kontrol altına alındı. Daha enerjik ve formda bir kedi oldu tekrar.',
+      rating: 5,
+      pet: 'Kedi',
+      ownerImage: '/images/stories/avatar-3.jpg',
+      petImage: '/images/stories/insta-3.jpg',
+      date: '2 hafta önce'
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -302,19 +335,13 @@ export default function TestimonialsSection() {
                         {/* Content section */}
                         <div className="p-6">
                           {/* User info */}
-                          <div className="flex items-center gap-4 mb-4">
-                            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
-                              <Image 
-                                src={testimonial.ownerImage}
-                                alt={testimonial.name}
-                                width={48}
-                                height={48}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
+                          <div className="flex items-center justify-between mb-4">
                             <div>
-                              <h4 className="font-semibold">{testimonial.name}</h4>
+                              <h4 className="font-semibold text-primary">{testimonial.name}</h4>
                               <div className="text-xs text-foreground/60">{testimonial.date}</div>
+                            </div>
+                            <div className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-medium">
+                              {testimonial.pet}
                             </div>
                           </div>
                           
@@ -326,6 +353,21 @@ export default function TestimonialsSection() {
                             <p className="text-foreground/80 text-sm pl-5">
                               {testimonial.text}
                             </p>
+                          </div>
+                          
+                          {/* Pet info */}
+                          <div className="flex items-center mt-4 pt-3 border-t border-light-gray/50 justify-between">
+                            <div className="text-sm font-medium">
+                              {testimonial.petName}
+                            </div>
+                            <div className="flex">
+                              {[...Array(5)].map((_, i) => (
+                                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" 
+                                    fill={i < testimonial.rating ? "#E31E24" : "#e0e0e0"} className="ml-0.5">
+                                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                </svg>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -363,29 +405,37 @@ export default function TestimonialsSection() {
                         </div>
                         
                         <div className="p-6">
-                          <div className="flex items-center gap-4 mb-4">
-                            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20">
-                              <Image 
-                                src={testimonials[currentIndex].ownerImage}
-                                alt={testimonials[currentIndex].name}
-                                width={48}
-                                height={48}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
+                          <div className="flex items-center justify-between mb-4">
                             <div>
-                              <h4 className="font-semibold">{testimonials[currentIndex].name}</h4>
+                              <h4 className="font-semibold text-primary">{testimonials[currentIndex].name}</h4>
                               <div className="text-xs text-foreground/60">{testimonials[currentIndex].date}</div>
+                            </div>
+                            <div className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-medium">
+                              {testimonials[currentIndex].pet}
                             </div>
                           </div>
                           
                           <div className="relative">
                             <svg className="absolute -top-2 -left-1 w-6 h-6 text-primary/20" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16.032-.52.112-1.01.24-.496.127-.99.253-1.486.38-.498.127-.995.254-1.492.38-.498.128-.995.217-1.49.27l-.38-1.364c.435-.13.87-.254 1.308-.37.114-.033.228-.065.342-.097l.153-.04c.992-.26 1.978-.52 2.355-.892.183-.178.328-.39.434-.636.12-.28.182-.59.182-.92 0-.365-.132-.673-.397-.922-.267-.25-.678-.374-1.235-.374-.705 0-1.25.224-1.634.67-.29.336-.506.848-.65 1.535l-2.046-.569c.214-1.06.705-1.877 1.473-2.45.827-.63 1.863-.94 3.103-.94 1.073 0 1.962.208 2.667.627.706.42 1.06.99 1.06 1.714 0 .31-.067.615-.2.914-.134.3-.364.546-.69.736-.498.284-1.16.516-1.986.695.065.052.13.106.196.162.427.36.764.833 1.01 1.417.243.584.365 1.235.365 1.954zm7.54 0c0-.88-.23-1.618-.69-2.217-.326-.42-.775-.692-1.344-.814-.57-.124-1.1-.13-1.586-.016-.15.033-.5.113-.997.242-.5.127-.995.254-1.492.38-.498.127-.995.254-1.492.38-.498.128-.995.217-1.49.27l-.38-1.364c.435-.13.87-.254 1.308-.37.114-.033.228-.065.342-.097l.153-.04c.992-.26 1.978-.52 2.355-.892.183-.178.328-.39.434-.636.12-.28.182-.59.182-.92 0-.365-.132-.673-.397-.922-.266-.25-.678-.374-1.235-.374-.705 0-1.254.224-1.648.67-.297.348-.508.86-.644 1.535l-2.045-.569c.214-1.06.705-1.877 1.473-2.45.82-.63 1.855-.94 3.097-.94 1.08 0 1.97.208 2.673.627.706.42 1.06.99 1.06 1.714 0 .31-.067.615-.2.914-.134.3-.364.546-.69.736-.498.284-1.16.516-1.986.695.065.052.13.106.196.162.427.36.764.833 1.01 1.417.243.584.365 1.235.365 1.954z" />
+                              <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16.032-.52.112-1.01.24-.496.127-.99.253-1.486.38-.498.127-.995.254-1.492.38-.498.128-.995.217-1.49.27l-.38-1.364c.435-.13.87-.254 1.308-.37.114-.033.228-.065.342-.097l.153-.04c.992-.26 1.978-.52 2.355-.892.183-.178.328-.39.434-.636.12-.28.182-.59.182-.92 0-.365-.132-.673-.397-.922-.266-.25-.678-.374-1.235-.374-.705 0-1.25.224-1.634.67-.297.348-.508.86-.644 1.535l-2.045-.569c.214-1.06.705-1.877 1.473-2.45.82-.63 1.855-.94 3.097-.94 1.08 0 1.97.208 2.673.627.706.42 1.06.99 1.06 1.714 0 .31-.067.615-.2.914-.134.3-.364.546-.69.736-.498.284-1.16.516-1.986.695.065.052.13.106.196.162.427.36.764.833 1.01 1.417.243.584.365 1.235.365 1.954z" />
                             </svg>
                             <p className="text-foreground/80 text-sm pl-5">
                               {testimonials[currentIndex].text}
                             </p>
+                          </div>
+                          
+                          <div className="flex items-center mt-4 pt-3 border-t border-light-gray/50 justify-between">
+                            <div className="text-sm font-medium">
+                              {testimonials[currentIndex].petName}
+                            </div>
+                            <div className="flex">
+                              {[...Array(5)].map((_, i) => (
+                                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" 
+                                    fill={i < testimonials[currentIndex].rating ? "#E31E24" : "#e0e0e0"} className="ml-0.5">
+                                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                </svg>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </>
