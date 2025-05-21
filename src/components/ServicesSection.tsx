@@ -91,9 +91,17 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className="bg-secondary p-5 md:p-8 rounded-xl md:rounded-2xl transition-all hover:shadow-lg hover:bg-neutral group border border-light-gray animate-fade-in"
+              className="bg-secondary p-5 md:p-8 rounded-xl md:rounded-2xl transition-all hover:shadow-lg hover:bg-neutral group border border-light-gray animate-fade-in relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <Link 
+                href={`/hizmetler#${service.id}`}
+                className="absolute inset-0 z-10"
+                aria-label={`${service.title} hakkında detaylı bilgi`}
+              >
+                <span className="sr-only">Detaylı Bilgi</span>
+              </Link>
+              
               <div className="text-primary mb-3 md:mb-4 group-hover:scale-110 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   {service.icon.props.children}
@@ -101,14 +109,12 @@ export default function ServicesSection() {
               </div>
               <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{service.title}</h3>
               <p className="text-sm md:text-base text-foreground/70 mb-3 md:mb-4">{service.description}</p>
-              <Link 
-                href={`/hizmetler#${service.id}`} 
-                className="text-sm md:text-base text-primary font-medium hover:underline inline-flex items-center"
-              >
-                Detaylı Bilgi 
+              
+              <div className="inline-flex items-center text-sm md:text-base text-primary font-medium relative z-0">
+                <span>Detaylı Bilgi</span>
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  className="w-3.5 h-3.5 md:w-4 md:h-4 ml-1"
+                  className="w-3.5 h-3.5 md:w-4 md:h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300"
                   viewBox="0 0 24 24" 
                   fill="none" 
                   stroke="currentColor" 
@@ -119,7 +125,9 @@ export default function ServicesSection() {
                   <path d="M5 12h14"></path>
                   <path d="M12 5l7 7-7 7"></path>
                 </svg>
-              </Link>
+              </div>
+
+              <div className="absolute -right-12 -bottom-12 w-24 h-24 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-all duration-300"></div>
             </div>
           ))}
         </div>

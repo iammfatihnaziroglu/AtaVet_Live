@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { categoryThemes } from '@/data/categoryThemes';
 import { Story } from '@/types/story';
+import Image from 'next/image';
 
 type StoryData = {
   story: Story;
@@ -247,10 +248,12 @@ function StoryDetailContent() {
                 transition={{ duration: 0.7 }}
               >
                 <div className="relative rounded-xl overflow-hidden shadow-xl border border-light-gray/10 dark:border-light-gray/5 group h-[280px] md:h-[360px] lg:h-[400px]">
-                  <img 
+                  <Image 
                     src={story.heroImage || story.image} 
                     alt={story.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    width={800}
+                    height={600}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent"></div>
                 </div>
@@ -298,18 +301,22 @@ function StoryDetailContent() {
                       <div key={index} className="bg-white/5 dark:bg-foreground/5 rounded-xl overflow-hidden shadow-xl border border-light-gray/10 dark:border-light-gray/5">
                         <div className="grid md:grid-cols-2 gap-4 p-4">
                           <div className="relative group overflow-hidden rounded-lg">
-                            <img 
+                            <Image 
                               src={item.before} 
                               alt={`${story.title} - Öncesi ${index + 1}`} 
                               className="w-full h-[280px] object-cover"
+                              width={600}
+                              height={300}
                             />
                           </div>
                           
                           <div className="relative group overflow-hidden rounded-lg">
-                            <img 
+                            <Image 
                               src={item.after} 
                               alt={`${story.title} - Sonrası ${index + 1}`} 
                               className="w-full h-[280px] object-cover"
+                              width={600}
+                              height={300}
                             />
                           </div>
                         </div>
@@ -329,10 +336,12 @@ function StoryDetailContent() {
                   <div className="flex items-start gap-4">
                     {story.testimonial.ownerImage && (
                       <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-light-gray/20">
-                        <img 
+                        <Image 
                           src={story.testimonial.ownerImage} 
                           alt={story.testimonial.petOwner}
-                          className="w-full h-full object-cover" 
+                          className="w-full h-full object-cover"
+                          width={56}
+                          height={56}
                         />
                       </div>
                     )}
@@ -367,10 +376,12 @@ function StoryDetailContent() {
                         className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square"
                         onClick={() => openLightbox(index)}
                       >
-                        <img 
+                        <Image 
                           src={img} 
                           alt={`${story.title} - Görsel ${index + 1}`} 
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          width={300}
+                          height={300}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
                           <div className="text-white text-xs bg-foreground/30 backdrop-blur-sm py-1 px-2 rounded">Görüntüyü büyüt</div>
@@ -517,10 +528,12 @@ function StoryDetailContent() {
                         className="flex gap-3 group hover:bg-secondary/10 p-2 rounded-lg"
                       >
                         <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-light-gray/10">
-                          <img 
+                          <Image 
                             src={relatedStory.image} 
                             alt={relatedStory.title}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            width={80}
+                            height={80}
                           />
                         </div>
                         <div>
@@ -651,10 +664,12 @@ function StoryDetailContent() {
           onClick={closeLightbox}
         >
           <div className="relative max-w-5xl max-h-[90vh] w-full">
-            <img 
+            <Image 
               src={story.galleryImages[currentImageIndex]} 
               alt={`${story.title} - Görsel ${currentImageIndex + 1}`} 
               className="w-full h-auto max-h-[65vh] object-contain mx-auto"
+              width={1200}
+              height={800}
             />
             
             <button 

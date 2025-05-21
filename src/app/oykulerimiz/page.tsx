@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
 interface Story {
   id: number;
@@ -249,10 +250,12 @@ function OykulerimizContent() {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img 
+                <Image 
                   src="/images/stories/pet-stories-hero.jpg" 
                   alt="Hayvan Hikayeleri" 
                   className="w-full h-[280px] md:h-[320px] object-cover"
+                  width={800}
+                  height={500}
                 />
                 
                 <div className="absolute top-3 right-4">
@@ -352,12 +355,14 @@ function OykulerimizContent() {
                         onMouseEnter={() => setHoveredStory(story.id)}
                         onMouseLeave={() => setHoveredStory(null)}
                       >
-                        <img 
+                        <Image 
                           src={story.image} 
                           alt={story.title} 
                           className={`w-full h-full object-cover transition-all duration-500 ${
                             hoveredStory === story.id ? 'scale-110' : 'scale-100'
                           }`}
+                          width={500}
+                          height={384}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent transition-opacity duration-300 group-hover:opacity-80"></div>
                         
@@ -507,10 +512,12 @@ function OykulerimizContent() {
             
             <div className="md:w-1/2">
               <div className="relative h-[200px] md:h-full min-h-[280px] hidden md:block">
-                <img 
+                <Image 
                   src="/images/stories/share-story.jpg" 
                   alt="Hikayeni Paylaş" 
                   className="w-full h-full object-cover"
+                  width={800}
+                  height={600}
                 />
                 
                 <div className="absolute right-2 top-2 md:right-3 md:top-4 bg-white/80 backdrop-blur-sm p-2 md:p-3 rounded-lg shadow-md max-w-[160px] md:max-w-[200px] hidden md:block">

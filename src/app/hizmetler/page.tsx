@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { scrollToSection } from './smoothScroll';
 
-export default function ServicesPage() {
+function ServicesContent() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -294,5 +294,13 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ServicesPage() {
+  return (
+    <Suspense fallback={<div className="pt-24 pb-16 container mx-auto px-4 text-center">Yükleniyor...</div>}>
+      <ServicesContent />
+    </Suspense>
   );
 } 
