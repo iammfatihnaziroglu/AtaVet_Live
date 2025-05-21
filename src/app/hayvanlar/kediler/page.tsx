@@ -30,7 +30,11 @@ export default function CatsPage() {
       description: 'Evcil dostlarımızın rütine uygun aşılar ve parazit kontrollerini sağlıklı bir şekilde takibini sağlıyoruz.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          <path d="M5 5L19 19"></path>
+          <path d="M11.5 6.5L17.5 12.5"></path>
+          <path d="M7.5 12.5L10.5 15.5"></path>
+          <circle cx="3.5" cy="3.5" r="1"></circle>
+          <circle cx="20.5" cy="20.5" r="1"></circle>
         </svg>
       )
     },

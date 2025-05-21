@@ -80,7 +80,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.tiktok.com/@atavetisparta"
+                href="https://www.tiktok.com/@ispartaatavet"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"

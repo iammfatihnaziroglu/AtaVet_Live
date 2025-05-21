@@ -249,7 +249,7 @@ export default function ContactSection() {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.tiktok.com/@atavetisparta" 
+                  href="https://www.tiktok.com/@ispartaatavet" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 transition-colors"
