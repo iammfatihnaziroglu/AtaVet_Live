@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense, useMemo } from 'react';
+import { useState, useEffect, Suspense, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -57,8 +57,8 @@ function OykulerimizContent() {
     },
     {
       id: 2,
-      title: "Sokak Hayvanlarına Yardım Elimiz",
-      description: "Sokak hayvanlarına yaptığımız yardımlar ve onların mutlu son hikayeleri.",
+      title: "Şans'ın Hikayesi",
+      description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
       image: "/images/stories/street-animals.jpg",
       link: "/oykulerimiz/sokak-hayvanlarina-yardim-elimiz",
       categories: ['kedi', 'kopek'],
@@ -99,15 +99,6 @@ function OykulerimizContent() {
       link: "/oykulerimiz/egzotik-hayvan-hikayeleri",
       categories: ['egzotik'],
       primaryCategory: 'egzotik'
-    },
-    {
-      id: 9,
-      title: "Veterinerlerimizin Anıları",
-      description: "Veteriner hekimlerimizin meslek hayatlarında karşılaştıkları ilginç ve duygu dolu hikayeler.",
-      image: "/images/stories/vet-memories.jpg",
-      link: "/oykulerimiz/veterinerlerimizin-anilari",
-      categories: ['kedi', 'kopek', 'egzotik'],
-      primaryCategory: 'hepsi'
     }
   ], []);
 
@@ -387,6 +378,34 @@ function OykulerimizContent() {
           </AnimatePresence>
         </div>
         
+        {/* Story Gallery Slider */}
+        <div className="mb-20">
+          <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-lg border border-light-gray/10 dark:border-light-gray/5 overflow-hidden relative">
+            <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl transform rotate-45"></div>
+            <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl"></div>
+            
+            <div className="relative z-10 p-6 md:p-8">
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-medium text-sm px-3 py-1.5 rounded-lg mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Öykü Galerisi</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+                  Patili Dostlarımızın <span className="text-primary">Anları</span>
+                </h2>
+                <p className="text-foreground/70 mt-2">Evcil dostlarımızın en özel ve unutulmaz anlarından oluşan fotoğraf galerisi</p>
+              </div>
+              
+              {/* Gallery Slider */}
+              <StoryGallerySlider />
+            </div>
+          </div>
+        </div>
+        
         {/* Share Your Story Section */}
         <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-lg border border-light-gray/10 dark:border-light-gray/5 overflow-hidden mb-10 relative">
           <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl transform rotate-45"></div>
@@ -507,6 +526,171 @@ function OykulerimizContent() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function StoryGallerySlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+  
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/images/stories/recovery-stories.jpg",
+      alt: "Patili Dostlarımızın İyileşme Hikayeleri",
+      caption: "Max ve sahibi arasındaki bağ, tedavi sürecinin en önemli parçası oldu"
+    },
+    {
+      id: 2,
+      src: "/images/stories/street-animals.jpg",
+      alt: "Şans'ın Hikayesi",
+      caption: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı..."
+    },
+    {
+      id: 3,
+      src: "/images/stories/clinic-stars.jpg",
+      alt: "Kliniğimizin Yıldızları",
+      caption: "Her ay seçtiğimiz özel hastalarımızın hikayeleri ve onların eğlenceli anıları"
+    },
+    {
+      id: 4,
+      src: "/images/stories/growing-pets.jpg",
+      alt: "Minik Dostlarımız Büyüyor",
+      caption: "Yavru hayvanlarımızın ilk günlerinden itibaren gelişimlerini anlatan hikayeler"
+    },
+    {
+      id: 5,
+      src: "/images/stories/pet-stories-hero.jpg",
+      alt: "AtaVet Hayvan Hikayeleri",
+      caption: "AtaVet olarak, her gün yeni hayvan dostlarımızın hayatlarına dokunmanın gururunu yaşıyoruz"
+    }
+  ];
+
+  // Setup auto-play effect
+  useEffect(() => {
+    if (isPlaying) {
+      autoPlayRef.current = setInterval(() => {
+        nextSlide();
+      }, 5000); // Change slide every 5 seconds
+    }
+    
+    return () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
+  }, [isPlaying, currentIndex]);
+
+  const nextSlide = () => {
+    setCurrentIndex(prev => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(prev => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  return (
+    <div className="relative">
+      <div className="relative overflow-hidden rounded-xl h-[450px] md:h-[550px] bg-[#EDE1E1]/25">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <div className="relative w-full h-full flex items-center justify-center p-2 md:p-4">
+              <Image
+                src={galleryImages[currentIndex].src}
+                alt={galleryImages[currentIndex].alt}
+                className="max-h-full max-w-full object-contain"
+                width={1200}
+                height={800}
+                priority
+              />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-foreground/90 to-transparent">
+              <p className="text-white text-sm md:text-base font-medium">{galleryImages[currentIndex].caption}</p>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Buttons */}
+        <button 
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary hover:bg-white transition-all duration-300 z-10"
+          aria-label="Önceki resim"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        
+        <button 
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary hover:bg-white transition-all duration-300 z-10"
+          aria-label="Sonraki resim"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+      
+      {/* Control Bar */}
+      <div className="bg-white dark:bg-foreground/10 backdrop-blur-sm shadow-sm border border-light-gray/10 rounded-lg p-3 mt-4 flex items-center justify-between">
+        {/* Thumbnails */}
+        <div className="flex items-center gap-2">
+          {galleryImages.map((image, index) => (
+            <button
+              key={image.id}
+              onClick={() => goToSlide(index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex 
+                  ? 'bg-primary scale-125' 
+                  : 'bg-foreground/30 hover:bg-foreground/50'
+              }`}
+              aria-label={`Resim ${index + 1}`}
+            />
+          ))}
+        </div>
+        
+        {/* Playback Controls */}
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={togglePlayPause}
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label={isPlaying ? "Durdur" : "Oynat"}
+          >
+            {isPlaying ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="6" y="4" width="4" height="16"/>
+                <rect x="14" y="4" width="4" height="16"/>
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            )}
+          </button>
+          
+          <span className="text-xs text-foreground/70 bg-secondary/30 dark:bg-foreground/10 px-2 py-1 rounded">
+            {currentIndex + 1} / {galleryImages.length}
+          </span>
         </div>
       </div>
     </div>

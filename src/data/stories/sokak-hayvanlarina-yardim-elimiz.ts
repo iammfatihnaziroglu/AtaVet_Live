@@ -1,11 +1,11 @@
 export const story = {
   id: 2,
-  title: "Sokak Hayvanlarına Yardım Elimiz",
-  description: "Sokak hayvanlarına yaptığımız yardımlar ve onların mutlu son hikayeleri.",
+  title: "Şans'ın Hikayesi",
+  description: "Bir adım ölümden, bir ömür sevgiye: Şans’ın ikinci şansı...",
   fullContent: `
-    <p>AtaVet Veteriner Kliniği olarak, sadece sahipli hayvanlara değil, sokaktaki can dostlarımıza da elimizi uzatmak görevimizdir. Kliniğimizin düzenli olarak yürüttüğü sokak hayvanlarına yardım projeleri, birçok patili dostumuzun hayatını kurtarırken, bazılarına da sıcak bir yuva bulmamızı sağladı.</p>
+    <p>Şans kliniğimize dördüncü kattan düşmesi sonucu acil olarak geldi. İlk acil muayenesi ve gerekli tedavisi ivedilikle yapıldı.</p>
     
-    <p>Soğuk bir kış günü kliniğimizin önünde bulduğumuz ve 'Umut' adını verdiğimiz yavru kedi, sokak hayvanlarına yardım hikayelerimizin en özellerinden biri. Hipotermiden kurtardığımız Umut, tedavisinin ardından kliniğimizde büyüdü ve bir süre sonra sevgi dolu bir aileye sahiplendirildi.</p>
+    <p>Yapılan muayane ve laborutvar tetkikleri sonucu. Damak yarı.</p>
     
     <p>Her hafta düzenli olarak bölgemizdeki sokak hayvanlarına mama ve sağlık taraması hizmeti sunuyoruz. Bu çalışmalarımız sayesinde, onlarca sokak hayvanı hastalıklardan korunurken, acil müdahale gerektiren vakaları da hızla tedavi edebiliyoruz.</p>
     
