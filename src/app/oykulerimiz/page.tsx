@@ -16,7 +16,7 @@ interface Story {
   primaryCategory: string;
 }
 
-type Category = 'hepsi' | 'kedi' | 'kopek' | 'kus' | 'balik' | 'kemirgen' | 'egzotik';
+type Category = 'hepsi' | 'kedi' | 'kopek' | 'egzotik';
 
 function OykulerimizContent() {
   const searchParams = useSearchParams();
@@ -33,10 +33,8 @@ function OykulerimizContent() {
       const categoryMap: Record<string, Category> = {
         'kediler': 'kedi',
         'kopekler': 'kopek',
-        'kuslar': 'kus',
-        'baliklar': 'balik',
-        'kemirgenler': 'kemirgen',
-        'tavsan': 'kemirgen',
+        'kuslar': 'egzotik',
+        'tavsan': 'egzotik',
         'diger': 'egzotik'
       };
       
@@ -72,7 +70,7 @@ function OykulerimizContent() {
       description: "Her ay seçtiğimiz özel hastalarımızın hikayeleri ve onların eğlenceli anıları.",
       image: "/images/stories/clinic-stars.jpg",
       link: "/oykulerimiz/klinigimizin-yildizlari",
-      categories: ['kedi', 'kopek', 'kus', 'balik', 'egzotik', 'kemirgen'],
+      categories: ['kedi', 'kopek', 'egzotik'],
       primaryCategory: 'kedi'
     },
     {
@@ -90,35 +88,17 @@ function OykulerimizContent() {
       description: "Kliniğimize gelen kuş dostlarımızın ilginç ve eğlenceli hikayeleri.",
       image: "/images/stories/bird-stories.jpg", 
       link: "/oykulerimiz/sasirtici-kus-dostlarimiz",
-      categories: ['kus'],
-      primaryCategory: 'kus'
-    },
-    {
-      id: 6,
-      title: "Egzotik Hayvan Hikayeleri",
-      description: "Sürüngenlerden küçük memelilere egzotik dostlarımızın ilginç tedavi süreçleri.",
-      image: "/images/stories/exotic-pets.jpg",
-      link: "/oykulerimiz/egzotik-hayvan-hikayeleri",
       categories: ['egzotik'],
       primaryCategory: 'egzotik'
     },
     {
-      id: 7,
-      title: "Akvaryum Dostlarımızın Maceraları",
-      description: "Su altı dünyasının renkli sakinlerinin ilgi çekici hikayeleri ve bakım önerileri.",
-      image: "/images/stories/fish-stories.jpg", 
-      link: "/oykulerimiz/akvaryum-dostlarimizin-maceralari",
-      categories: ['balik'],
-      primaryCategory: 'balik'
-    },
-    {
-      id: 8,
-      title: "Kemirgen Dostlarımızın Dünyası",
-      description: "Hamster, tavşan ve guinea pig gibi kemirgen dostlarımızın sevimli anıları.",
-      image: "/images/stories/rodent-stories.jpg",
-      link: "/oykulerimiz/kemirgen-dostlarimizin-dunyasi",
-      categories: ['kemirgen'],
-      primaryCategory: 'kemirgen'
+      id: 6,
+      title: "Egzotik Hayvan Hikayeleri",
+      description: "Sürüngenlerden küçük memelilere ve kuşlara kadar tüm egzotik dostlarımızın ilginç tedavi süreçleri.",
+      image: "/images/stories/exotic-pets.jpg",
+      link: "/oykulerimiz/egzotik-hayvan-hikayeleri",
+      categories: ['egzotik'],
+      primaryCategory: 'egzotik'
     },
     {
       id: 9,
@@ -126,7 +106,7 @@ function OykulerimizContent() {
       description: "Veteriner hekimlerimizin meslek hayatlarında karşılaştıkları ilginç ve duygu dolu hikayeler.",
       image: "/images/stories/vet-memories.jpg",
       link: "/oykulerimiz/veterinerlerimizin-anilari",
-      categories: ['kedi', 'kopek', 'kus', 'balik', 'egzotik', 'kemirgen'],
+      categories: ['kedi', 'kopek', 'egzotik'],
       primaryCategory: 'hepsi'
     }
   ], []);
@@ -151,9 +131,6 @@ function OykulerimizContent() {
     hepsi: 'Tüm Hikayeler',
     kedi: 'Kedi Öyküleri',
     kopek: 'Köpek Öyküleri',
-    kus: 'Kuş Öyküleri',
-    balik: 'Akvaryum Öyküleri',
-    kemirgen: 'Kemirgen Öyküleri',
     egzotik: 'Egzotik Öyküleri'
   };
 
@@ -161,19 +138,13 @@ function OykulerimizContent() {
     hepsi: '🐾',
     kedi: '🐱',
     kopek: '🐶',
-    kus: '🦜',
-    balik: '🐠',
-    kemirgen: '🐹',
-    egzotik: '🦎'
+    egzotik: '🦜'
   };
   
   const categoryColors: Record<Category, string> = {
     hepsi: 'from-primary to-primary/80',
     kedi: 'from-pink-500 to-pink-600',
     kopek: 'from-amber-500 to-amber-600',
-    kus: 'from-blue-500 to-blue-600',
-    balik: 'from-cyan-500 to-cyan-600',
-    kemirgen: 'from-orange-500 to-orange-600',
     egzotik: 'from-green-500 to-green-600'
   };
 
