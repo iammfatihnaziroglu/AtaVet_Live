@@ -3,14 +3,19 @@ export const story = {
   title: "Şans'ın Hikayesi",
   description: "Bir adım ölümden, bir ömür sevgiye: Şans’ın ikinci şansı...",
   fullContent: `
-    <p>Şans kliniğimize dördüncü kattan düşmesi sonucu acil olarak geldi. İlk acil muayenesi ve gerekli tedavisi ivedilikle yapıldı.</p>
+    <p>Şans, 4. kattan düşerek kliniğimize getirildiğinde durumu çok ciddiydi. Damak yarığı, solunum depresyonu, beyin ve akciğer ödemi vardı. Hemen yoğun bakıma alındı. Solunum desteği sağlandı, beslenme sondası takılarak sıvı gıdalarla beslendi.
+</p>
     
-    <p>Yapılan muayane ve laborutvar tetkikleri sonucu. Damak yarı.</p>
+    <p>
+72 saatlik gözlem sürecinde durumu stabil seyretti. Ardından damak yarığı operasyonu başarıyla gerçekleştirildi. Şans, kısa sürede toparlandı. Solunumu düzeldi, kendi başına beslenmeye başladı.
+</p>
     
-    <p>Her hafta düzenli olarak bölgemizdeki sokak hayvanlarına mama ve sağlık taraması hizmeti sunuyoruz. Bu çalışmalarımız sayesinde, onlarca sokak hayvanı hastalıklardan korunurken, acil müdahale gerektiren vakaları da hızla tedavi edebiliyoruz.</p>
-    
-    <p>Sizler de sokak hayvanlarına yardım etmek istiyorsanız, kliniğimize bağış yapabilir veya gönüllü olarak projelerimize katılabilirsiniz. Unutmayın, küçük yardımlar bile bir canın hayatını kurtarabilir.</p>
-  `,
+    <p>
+Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına kavuştu ve taburcu oldu.
+
+Şans, bize dayanıklılığın ve umudun ne demek olduğunu bir kez daha hatırlattı.
+</p>
+    `,
   image: "/images/stories/street-animals.jpg",
   heroImage: "/images/stories/street-animals-hero.jpg",
   author: "Dr. Zeynep Kaya",
@@ -33,9 +38,9 @@ export const story = {
     }
   ],
   testimonial: {
-    text: "Umut'u sahiplendiğimizde ona aile olmanın mutluluğunu yaşadık. AtaVet ekibi, onu hayata bağladı ve bize teslim ederken bütün bakım ihtiyaçları konusunda bizi bilgilendirdi.",
-    petOwner: "Mehmet ve Selin Demir",
-    petName: "Umut",
+    text: "Sevgili Atavet ailesine, Şans’a ikinci bir hayat sundukları için minnettarız. Bu zorlu süreçte gösterdiğiniz ilgi, sabır ve sevgi için sonsuz teşekkür ederiz. İyi ki varsınız.",
+    petOwner: "Mehmet ve Selin",
+    petName: "Şans",
     ownerImage: "/images/stories/pet-owner-2.jpg"
   }
 }; 
