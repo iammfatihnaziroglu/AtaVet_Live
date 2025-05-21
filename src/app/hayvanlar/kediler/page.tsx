@@ -13,8 +13,8 @@ export default function CatsPage() {
       )
     },
     {
-      title: 'Beslenme Danışmanlığı',
-      description: 'Kedinizin yaşına, ırkına ve sağlık durumuna göre özel beslenme planları oluşturuyoruz. Doğru beslenme, kedinizin uzun ve sağlıklı bir yaşam sürmesi için temel faktördür.',
+      title: 'Cerrahi Operasyonlar',
+      description: 'Kedilerde kısırlaştırma, yumuşak doku, ortopedi ve duyu organları cerrahisi gibi operasyonları en steril ve donanımlı bir şekilde yapıyoruz.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
@@ -26,8 +26,8 @@ export default function CatsPage() {
       )
     },
     {
-      title: 'Davranış Rehberliği',
-      description: 'Kedi davranışları konusunda rehberlik ve eğitim hizmetlerimizle, problematik davranışları anlama ve çözme konusunda size destek oluyoruz.',
+      title: 'Aşılama ve Parazit Kontrolü',
+      description: 'Evcil dostlarımızın rütine uygun aşılar ve parazit kontrollerini sağlıklı bir şekilde takibini sağlıyoruz.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>

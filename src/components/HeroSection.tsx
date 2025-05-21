@@ -28,7 +28,7 @@ export default function HeroSection() {
                 >
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
-                7+ Yıllık Deneyim
+                5+ Yıllık Deneyim
               </span>
               <span className="inline-flex items-center bg-neutral text-foreground px-2 py-0.5 sm:px-2.5 sm:py-0.5 md:px-3 md:py-1 rounded-full text-[10px] sm:text-xs md:text-sm font-semibold animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <svg 
@@ -63,7 +63,7 @@ export default function HeroSection() {
             {/* Features */}
             <div className="grid grid-cols-3 gap-1.5 sm:gap-2 md:gap-5 mb-4 sm:mb-6 md:mb-10 animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <div className="flex flex-col items-center">
-                <span className="text-lg sm:text-xl md:text-3xl font-bold text-primary">1500+</span>
+                <span className="text-lg sm:text-xl md:text-3xl font-bold text-primary">500+</span>
                 <span className="text-[9px] sm:text-xs md:text-sm text-foreground/70 text-center">Mutlu Müşteri</span>
               </div>
               <div className="flex flex-col items-center">
@@ -129,8 +129,7 @@ export default function HeroSection() {
                 
                 {/* Floating badges */}
                 <div className="absolute top-1 left-1 sm:top-2 sm:left-2 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 rounded-full shadow-md animate-slide-right" style={{ animationDelay: '0.6s' }}>
-                  <span className="text-primary font-bold text-[10px] sm:text-xs md:text-base">AtaVet</span>
-                  <span className="text-foreground ml-0.5 sm:ml-1 dark:text-black text-[10px] sm:text-xs md:text-base">Kliniği</span>
+                  <span className="text-primary font-bold text-[10px] sm:text-xs md:text-base tracking-wider">ATAVET</span>
                 </div>
                 
                 <div className="absolute -bottom-1 right-1 sm:-bottom-2 sm:right-2 bg-primary text-white px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 rounded-xl shadow-md animate-slide-left" style={{ animationDelay: '0.8s' }}>

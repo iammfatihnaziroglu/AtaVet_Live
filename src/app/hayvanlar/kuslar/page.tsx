@@ -73,21 +73,21 @@ export default function BirdsPage() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-6">Kuş Sağlığı ve Bakımı</h1>
+          <h1 className="text-4xl font-bold mb-6">Egzotik Sağlığı ve Bakımı</h1>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            AtaVet olarak, kuşunuzun sağlığı ve mutluluğu için özel tasarlanmış kapsamlı hizmetler sunuyoruz.
+            AtaVet olarak, egzotik hayvanlarınızın sağlığı ve mutluluğu için özel tasarlanmış kapsamlı hizmetler sunuyoruz.
           </p>
         </div>
 
         {/* Hero Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Kuşunuz İçin En İyi Bakım</h2>
+            <h2 className="text-3xl font-bold mb-4">Egzotik Hayvanlarınız İçin En İyi Bakım</h2>
             <p className="text-foreground/70 mb-6">
-              Kuşlar, narin yapıları ve özel ihtiyaçlarıyla benzersiz evcil hayvanlardır. AtaVet&apos;te, her kuş türünün kendine özgü sağlık ihtiyaçlarını anlıyor ve ona göre özelleştirilmiş bakım sunuyoruz. 
+              Egzotik hayvanlar, narin yapıları ve özel ihtiyaçlarıyla benzersiz evcil hayvanlardır. AtaVet&apos;te, her kuş türünün kendine özgü sağlık ihtiyaçlarını anlıyor ve ona göre özelleştirilmiş bakım sunuyoruz. 
             </p>
             <p className="text-foreground/70 mb-6">
-              Düzenli veteriner kontrolleri, doğru beslenme ve koruyucu bakım ile kuşunuzun uzun, sağlıklı ve mutlu bir yaşam sürmesini sağlayabilirsiniz.
+              Düzenli veteriner kontrolleri, doğru beslenme ve koruyucu bakım ile egzotik hayvanınızın uzun, sağlıklı ve mutlu bir yaşam sürmesini sağlayabilirsiniz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/randevu" className="btn-primary text-center">

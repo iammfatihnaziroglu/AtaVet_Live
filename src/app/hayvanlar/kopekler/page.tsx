@@ -166,7 +166,7 @@ export default function DogsPage() {
               <div className="border-b border-light-gray pb-4">
                 <h3 className="text-xl font-semibold mb-2">Köpeğim için hangi aşılar gereklidir?</h3>
                 <p className="text-foreground/70">
-                  Köpekler için temel aşılar arasında kuduz, karma aşı (Distemper, Hepatit, Parvovirüs, Parainfluenza), leptospiroz ve kennel cough bulunur. Köpeğinizin yaşı, yaşam tarzı ve sağlık durumuna göre veterinerimiz size özel bir aşı programı oluşturacaktır.
+                  Köpekler için temel aşılar arasında Kuduz, Karma aşı (Distemper, Hepatit, Parvovirüs, Parainfluenza), Leptospiroz ve Bronşin (Kennel Cough), Corona virüs ve Lyme bulunur. Köpeğinizin yaşı, yaşam tarzı ve sağlık durumuna göre veteriner hekimimiz size özel bir aşı programı oluşturacaktır.
                 </p>
               </div>
               <div className="border-b border-light-gray pb-4">

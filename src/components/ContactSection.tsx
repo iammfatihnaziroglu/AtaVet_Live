@@ -132,7 +132,9 @@ export default function ContactSection() {
                   >
                     <h4 className="text-base md:text-lg font-semibold group-hover/link:text-primary transition-colors">Adres</h4>
                     <p className="text-sm md:text-base text-foreground/70 group-hover/link:text-primary transition-colors">
-                      Isparta Merkez, Mehmet Tönge Cd. No:15
+                      Ayazmana Mah. 124. Cadde No.63-65/1 
+                      <br />
+                      Isparta/Merkez
                     </p>
                   </a>
                 </div>
@@ -157,7 +159,7 @@ export default function ContactSection() {
                   >
                     <h4 className="text-base md:text-lg font-semibold group-hover/link:text-primary transition-colors">Telefon</h4>
                     <p className="text-sm md:text-base text-foreground/70 group-hover/link:text-primary transition-colors">
-                      +90 246 123 4567
+                      +90 542 601 12 32
                     </p>
                   </a>
                 </div>
@@ -178,12 +180,12 @@ export default function ContactSection() {
                 </a>
                 <div className="flex-1">
                   <a 
-                    href="mailto:info@atavet.com"
+                    href="mailto:vettsener@gmail.com"
                     className="group/link"
                   >
                     <h4 className="text-base md:text-lg font-semibold group-hover/link:text-primary transition-colors">E-posta</h4>
                     <p className="text-sm md:text-base text-foreground/70 group-hover/link:text-primary transition-colors">
-                      info@atavet.com
+                      vettsener@gmail.com
                     </p>
                   </a>
                 </div>
@@ -215,10 +217,10 @@ export default function ContactSection() {
                     Çalışma Saatleri
                   </h4>
                   <p className="text-sm md:text-base text-foreground/70">
-                    Pazartesi - Cumartesi: 09:00 - 18:00
+                    Pazartesi - Cumartesi: 09:30 - 20:00
                   </p>
                   <p className="text-sm md:text-base text-foreground/70">
-                    Pazar: Kapalı (Acil Durum Hattı Açık)
+                    Pazar: 10:00 - 19:00
                   </p>
                 </div>
               </div>
