@@ -80,10 +80,10 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.tiktok.com/@atavetisparta"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="TikTok"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ export default function Footer() {
                   strokeLinejoin="round"
                   className="text-background/80 hover:text-[#E31E24] transition-colors"
                 >
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"></path>
                 </svg>
               </a>
             </div>
@@ -215,7 +215,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://maps.google.com/?q=Isparta+Merkez,+Mehmet+Tönge+Cd.+No:15"
+                  href="https://www.google.com.tr/maps/place/ATAVET+Veteriner+Klini%C4%9Fi/@37.7557922,30.570474,17z/data=!3m1!4b1!4m6!3m5!1s0x14c5b588aece1129:0x125daa561440e1da!8m2!3d37.755788!4d30.5730489!16s%2Fg%2F11wj5nch51?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 group hover:text-[#E31E24] transition-colors"
@@ -236,13 +236,13 @@ export default function Footer() {
                     <circle cx="12" cy="10" r="3"></circle>
                   </svg>
                   <span className="text-background/80 group-hover:text-[#E31E24]">
-                    Isparta Merkez, Mehmet Tönge Cd. No:15
+                  Ayazmana Mah. 124. Cadde No.63-65/1 Isparta/Merkez
                   </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+902461234567"
+                  href="tel:+905426011232"
                   className="flex items-center gap-3 group hover:text-[#E31E24] transition-colors"
                 >
                   <svg
@@ -259,12 +259,12 @@ export default function Footer() {
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
-                  <span className="text-background/80 group-hover:text-[#E31E24]">+90 246 123 4567</span>
+                  <span className="text-background/80 group-hover:text-[#E31E24]">+90 542 601 12 32</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@atavet.com"
+                  href="mailto:vettsener@gmail.com"
                   className="flex items-center gap-3 group hover:text-[#E31E24] transition-colors"
                 >
                   <svg
@@ -282,7 +282,7 @@ export default function Footer() {
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
-                  <span className="text-background/80 group-hover:text-[#E31E24]">info@atavet.com</span>
+                  <span className="text-background/80 group-hover:text-[#E31E24]">vettsener@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-center gap-3">

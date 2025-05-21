@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function DogsPage() {
   const dogInfo = [
     {
-      title: 'Genel Muayene',
-      description: 'Köpekler için özel sağlık kontrolleri, aşılar ve koruyucu bakım hizmetlerimiz bulunmaktadır. Düzenli veteriner ziyaretleri, köpeğinizin sağlığını korumak için çok önemlidir.',
+      title: 'Sağlık Kontrolü',
+      description: 'Köpekler için özel sağlık kontrolleri, aşılar ve koruyucu bakım hizmetlerimiz bulunmaktadır. Düzenli veteriner ziyaretleri, kedinizin sağlığını korumak için çok önemlidir.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -13,8 +13,8 @@ export default function DogsPage() {
       )
     },
     {
-      title: 'Beslenme Danışmanlığı',
-      description: 'Köpeğinizin ırkına, yaşına ve aktivite düzeyine göre özel beslenme planları oluşturuyoruz. Doğru beslenme, köpeğinizin sağlıklı ve aktif bir yaşam sürmesi için temel faktördür.',
+      title: 'Cerrahi Operasyonlar',
+      description: 'Köpeklerde kısırlaştırma, yumuşak doku, ortopedi ve duyu organları cerrahisi gibi operasyonları en steril ve donanımlı bir şekilde yapıyoruz.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
@@ -26,8 +26,8 @@ export default function DogsPage() {
       )
     },
     {
-      title: 'Eğitim ve Davranış',
-      description: 'Köpek davranışları konusunda rehberlik ve eğitim hizmetlerimizle, problematik davranışları anlama ve çözme konusunda size destek oluyoruz.',
+      title: 'Aşılama ve Parazit Kontrolü',
+      description: 'Köpek dostlarımızın rütine uygun aşılar ve parazit kontrollerini sağlıklı bir şekilde takibini sağlıyoruz.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>

@@ -75,7 +75,7 @@ export default function ContactSection() {
                 <path d="M16 18h.01"></path>
               </svg>
               <div className="flex gap-3">
-                <h2 className="text-3xl md:text-4xl font-semibold text-black tracking-wide">
+                <h2 className="text-3xl md:text-4xl font-semibold text-foreground tracking-wide">
                   Randevu Al
                 </h2>
               </div>
@@ -125,16 +125,14 @@ export default function ContactSection() {
                 </a>
                 <div className="flex-1">
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=Isparta+Merkez,+Mehmet+Tönge+Cd.+No:15" 
+                    href="https://www.google.com.tr/maps/place/ATAVET+Veteriner+Klini%C4%9Fi/@37.7557922,30.570474,17z/data=!3m1!4b1!4m6!3m5!1s0x14c5b588aece1129:0x125daa561440e1da!8m2!3d37.755788!4d30.5730489!16s%2Fg%2F11wj5nch51?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group/link"
                   >
                     <h4 className="text-base md:text-lg font-semibold group-hover/link:text-primary transition-colors">Adres</h4>
-                    <p className="text-sm md:text-base text-foreground/70 group-hover/link:text-primary transition-colors">
-                      Ayazmana Mah. 124. Cadde No.63-65/1 
-                      <br />
-                      Isparta/Merkez
+                    <p className="text-sm md:text-base tracking-tight text-foreground/70 group-hover/link:text-primary transition-colors">
+                      Ayazmana Mah. 124. Cadde No.63-65/1 Isparta/Merkez
                     </p>
                   </a>
                 </div>
@@ -145,7 +143,7 @@ export default function ContactSection() {
                 style={{ animationDelay: "0.2s" }}
               >
                 <a 
-                  href="tel:+902461234567"
+                  href="tel:+905426011232"
                   className="bg-neutral p-2 md:p-3 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:w-6 md:h-6">
@@ -154,7 +152,7 @@ export default function ContactSection() {
                 </a>
                 <div className="flex-1">
                   <a 
-                    href="tel:+902461234567"
+                    href="tel:+905426011232"
                     className="group/link"
                   >
                     <h4 className="text-base md:text-lg font-semibold group-hover/link:text-primary transition-colors">Telefon</h4>
@@ -248,6 +246,16 @@ export default function ContactSection() {
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@atavetisparta" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"></path>
                   </svg>
                 </a>
               </div>
