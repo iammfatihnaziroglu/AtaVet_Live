@@ -188,20 +188,20 @@ function StoryDetailContent() {
   const categoryTheme = categoryThemes[categoryType];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background -mt-20">
       {/* Hero Section */}
-      <div className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-red-500/30 via-red-500/40 to-background overflow-hidden mt-14">
+      <div className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-red-500/30 via-red-500/40 to-background overflow-hidden ">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/80 opacity-40"></div>
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 py-20">
-          <div className="max-w-7xl mx-auto">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 py-14">
+          <div className="max-w-7xl mx-auto mt-28">
             {/* Back Button */}
             <Link 
               href="/oykulerimiz" 
-              className="inline-flex items-center gap-2 text-red-600 hover:text-foreground/90 transition-colors duration-300 mb-8 group"
+              className="inline-flex items-center gap-2 text-red-600 hover:text-foreground/90 transition-colors duration-300 pt-5 group"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 group-hover:scale-110 transition-transform duration-300">
                 <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
@@ -209,7 +209,7 @@ function StoryDetailContent() {
               <span className="font-medium group-hover:scale-110">Tüm Hikayeler</span>
             </Link>
 
-            <div className="grid lg:grid-cols-2 gap-2 items-center">
+            <div className="grid lg:grid-cols-2 gap-2 items-center -mt-10">
               {/* Content Side */}
               <div className="order-2 lg:order-1">
                 <div className="space-y-5">
@@ -257,12 +257,12 @@ function StoryDetailContent() {
 
               {/* Image Side */}
               <motion.div
-                className="order-1 lg:order-2"
+                className="order-1 lg:order-2 ml-5"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-[4/4] rounded-2xl overflow-hidden shadow-2xl">
                   <Image 
                     src={story.heroImage || story.image} 
                     alt={story.title}
@@ -270,7 +270,6 @@ function StoryDetailContent() {
                     width={1200}
                     height={900}
                     priority
-                    
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>

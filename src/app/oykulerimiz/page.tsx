@@ -67,11 +67,11 @@ function OykulerimizContent() {
     },
     {
       id: 3,
-      title: "Patili Dostlarımızın İyileşme Hikayeleri",
-      description: "Kliniğimizde tedavi ettiğimiz hayvanlarımızın dramatik iyileşme hikâyelerini okuyun.",
-      image: "/images/stories/recovery-stories.jpg",
-      link: "/oykulerimiz/patili-dostlarimizin-iyilesme-hikayeleri",
-      categories: ['kedi', 'kopek'],
+      title: "Dex’in Hikayesi",
+      description: "Dex’in Sessiz Savaşı: Küçük Bir Tümör, Büyük Bir Zafer",
+      image: "/atavet-img/dex-1.webp",
+      link: "/oykulerimiz/dexin-hikayesi",
+      categories: ['kopek'],
       primaryCategory: 'kopek'
     },
     {

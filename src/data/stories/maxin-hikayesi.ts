@@ -1,5 +1,5 @@
 export const story = {
-  id: 3,
+  id: 1,
   title: "Max'in Hikayesi",
   description: "Küçük Max, büyük bir savaşı kazandı.",
   fullContent: `
@@ -28,9 +28,16 @@ Küçük Max, büyük bir savaşı kazandı.
     "/atavet-img/max-3.webp",
     "/atavet-img/max-1.webp"
   ],
+  beforeAfterImages: [
+    { 
+      before: "/atavet-img/max-2.webp", 
+      after: "/atavet-img/max-1.webp",
+      caption: "Max isimli dostumuzun kliniğimize ilk geldiği zamanki ve iyileştikten sonraki halleri."
+    }
+  ],
   testimonial: {
     text: "Max’in ilk belirtilerini gördüğümüzde çok endişelendik. Onu kaybetmekten korkuyorduk. Atavet ailesi sayesinde zamanında ve doğru tedaviyle bugün Max hâlâ bizimle. Her adımda yanımızda oldular, bizi bilgilendirdiler ve ona can oldular.",
-    petOwner: "Atakan",
+    petOwner: "Atakan Bey",
     petName: "Max",
     ownerImage: "/atavet-img/max-1.webp"
   }
