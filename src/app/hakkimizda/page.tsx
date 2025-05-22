@@ -12,8 +12,13 @@ export default function AboutPage() {
 
         {/* Our Story */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div className="bg-primary/10 rounded-2xl h-80 flex items-center justify-center">
-            <div className="text-7xl font-bold text-primary/30">AtaVet</div>
+          <div className="bg-primary/10 rounded-2xl h-52 md:h-72 xl:h-72 overflow-hidden relative">
+            <img 
+              src="/atavet-img/tayfursener.webp"
+              alt="Veteriner Hekim Tayfur Şener"
+              className="w-full  object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
           </div>
           <div>
             <h2 className="text-3xl font-bold mb-6">Hikayemiz</h2>
