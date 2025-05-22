@@ -77,7 +77,7 @@ function OykulerimizContent() {
     {
       id: 4,
       title: "Lili'nin Hikayesi",
-      description: "Lili’nin Sessiz İsyanı: Midesindeki Fırtına",
+      description: "Lili'nin Sessiz İsyanı: Midesindeki Fırtına",
       image: "/atavet-img/lili-1.webp",
       link: "/oykulerimiz/lilinin-hikayesi",
       categories: ['kedi'],
@@ -86,7 +86,7 @@ function OykulerimizContent() {
     {
       id: 5,
       title: "Kakao ve Fıstık'ın Hikayesi",
-      description: "Kakao ve Fıstık’ın İlk Kliniği Ziyareti: Sağlıklı Bir Başlangıç",
+      description: "Kakao ve Fıstık'ın İlk Kliniği Ziyareti: Sağlıklı Bir Başlangıç",
       image: "/atavet-img/kakaovefistik-1.webp", 
       link: "/oykulerimiz/kakaovefistigin-hikayesi",
       categories: ['kopek'],
@@ -95,7 +95,7 @@ function OykulerimizContent() {
     {
       id: 6,
       title: "Paşa'nın Hikayesi",
-      description: "Paşa’nın Cilt Savaşı: Bir Mantara Karşı Kazanılan Zafer",
+      description: "Paşa'nın Cilt Savaşı: Bir Mantara Karşı Kazanılan Zafer",
       image: "/atavet-img/pasa-1.webp",
       link: "/oykulerimiz/pasanin-hikayesi",
       categories: ['kedi'],
@@ -541,33 +541,33 @@ function StoryGallerySlider() {
   const galleryImages = [
     {
       id: 1,
-      src: "/images/stories/recovery-stories.jpg",
-      alt: "Patili Dostlarımızın İyileşme Hikayeleri",
-      caption: "Max ve sahibi arasındaki bağ, tedavi sürecinin en önemli parçası oldu"
+      src: "/atavet-img/kopek-1.webp",
+      alt: "Sevimli Köpek Dostumuz",
+      caption: "Sağlıklı ve mutlu bir hayat için düzenli veteriner kontrolü önemlidir."
     },
     {
       id: 2,
-      src: "/images/stories/street-animals.jpg",
-      alt: "Şans'ın Hikayesi",
-      caption: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı..."
+      src: "/atavet-img/tavsan-1.webp",
+      alt: "Şirin Tavşan Hastamız",
+      caption: "Egzotik dostlarımız için de özel bakım ve tedavi seçenekleri sunuyoruz."
     },
     {
       id: 3,
-      src: "/images/stories/clinic-stars.jpg",
-      alt: "Kliniğimizin Yıldızları",
-      caption: "Her ay seçtiğimiz özel hastalarımızın hikayeleri ve onların eğlenceli anıları"
+      src: "/atavet-img/horoz-1.webp",
+      alt: "Renkli Horoz Dostumuz",
+      caption: "Kümes hayvanlarının sağlığı için gerekli tüm destek ve tedaviler AtaVet'te"
     },
     {
       id: 4,
-      src: "/images/stories/growing-pets.jpg",
-      alt: "Minik Dostlarımız Büyüyor",
-      caption: "Yavru hayvanlarımızın ilk günlerinden itibaren gelişimlerini anlatan hikayeler"
+      src: "/atavet-img/kus-1.webp",
+      alt: "Minik Kuş Hastamız",
+      caption: "Kanatlı dostlarımızın tedavi ve bakımında uzman kadromuzla yanınızdayız"
     },
     {
       id: 5,
-      src: "/images/stories/pet-stories-hero.jpg",
-      alt: "AtaVet Hayvan Hikayeleri",
-      caption: "AtaVet olarak, her gün yeni hayvan dostlarımızın hayatlarına dokunmanın gururunu yaşıyoruz"
+      src: "/atavet-img/tatlikedi-1.webp",
+      alt: "Sevimli Kedi Dostumuz",
+      caption: "Kedilerin özel sağlık ihtiyaçları için kişiye özel tedavi planları hazırlıyoruz"
     }
   ];
 
