@@ -8,11 +8,39 @@ export default function ContactSection() {
     name: "",
     email: "",
     phone: "",
+    subject: "",
+    date: "",
     petName: "",
     petType: "Kedi",
-    date: "",
     message: "",
   });
+
+  // Get today's date in YYYY-MM-DD format for date input min attribute
+  const today = new Date().toISOString().split('T')[0];
+
+  // Format date to Turkish format (gün Ay yıl)
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return '';
+    const date = new Date(dateStr);
+    const months = [
+      "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+      "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+    ];
+    return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+  };
+
+  // Validate phone number format
+  const isValidPhone = (phone: string) => {
+    const phoneRegex = /^[0-9]{10}$/;  // Exactly 10 digits
+    return phoneRegex.test(phone);
+  };
+
+  // Validate email format if provided
+  const isValidEmail = (email: string) => {
+    if (!email) return true; // Empty email is valid since it's optional
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -20,23 +48,70 @@ export default function ContactSection() {
     >
   ) => {
     const { name, value } = e.target;
+    
+    // For phone input, only allow numbers
+    if (name === 'phone') {
+      const numbersOnly = value.replace(/[^\d]/g, '').slice(0, 10);
+      setFormData((prev) => ({ ...prev, [name]: numbersOnly }));
+      return;
+    }
+    
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here in a real application
-    console.log("Form submitted:", formData);
-    alert(
-      "Randevu talebiniz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz."
-    );
+
+    // Validate phone (required)
+    if (!isValidPhone(formData.phone)) {
+      alert('Lütfen geçerli bir telefon numarası giriniz (10 haneli)');
+      return;
+    }
+
+    // Validate email only if provided
+    if (formData.email && !isValidEmail(formData.email)) {
+      alert('Lütfen geçerli bir e-posta adresi giriniz');
+      return;
+    }
+
+    // Format the message for WhatsApp
+    const message = 
+      `*ATAVET VETERİNER KLİNİĞİ*%0A` +
+      `----------------------------------------%0A%0A` +
+      `*SAHİP BİLGİLERİ*%0A` +
+      `----------------------------------------%0A` +
+      `Ad Soyad: ${formData.name}%0A` +
+      `Telefon: ${formData.phone}%0A` +
+      `${formData.email ? `E-posta: ${formData.email}%0A` : ''}` +
+      `${formData.subject === 'Randevu' && formData.date ? `Randevu: ${formatDate(formData.date)}%0A` : ''}%0A` +
+      `*HASTA BİLGİLERİ*%0A` +
+      `----------------------------------------%0A` +
+      `İsim: ${formData.petName}%0A` +
+      `Tür: ${formData.petType}%0A%0A` +
+      `*NOTLAR*%0A` +
+      `----------------------------------------%0A` +
+      `${formData.message}%0A%0A` +
+      `----------------------------------------%0A` +
+      `www.atavetisparta.com`;
+
+    // WhatsApp phone number
+    const phoneNumber = "905426011232";
+
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+
+    // Reset form
     setFormData({
       name: "",
       email: "",
       phone: "",
+      subject: "",
+      date: "",
       petName: "",
       petType: "Kedi",
-      date: "",
       message: "",
     });
   };
@@ -76,14 +151,13 @@ export default function ContactSection() {
               </svg>
               <div className="flex gap-3">
                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground tracking-wide">
-                  Randevu Al
+                  Randevu, Şikayet ve Önerileriniz
                 </h2>
               </div>
             </div>
           </div>
           <p className="text-lg md:text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Dostunuz için hemen randevu alın. Aşağıdaki formu doldurarak veya
-            telefon numaramızı arayarak bize ulaşabilirsiniz.
+            Aşağıdaki formu doldurarak bize ulaşabilirsiniz
           </p>
         </div>
 
@@ -273,61 +347,26 @@ export default function ContactSection() {
               onSubmit={handleSubmit}
               className="space-y-6 md:space-y-8 bg-secondary p-8 md:p-10 rounded-2xl md:rounded-3xl border border-light-gray shadow-lg h-full"
             >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-center mb-2">
-                  Randevu, Şikayet ve Önerileriniz
-                </h3>
-                <p className="text-foreground/80 text-center">
-                  Aşağıdaki formu doldurarak bize ulaşabilirsiniz
-                </p>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-foreground/70 mb-1">
+                  Ad Soyad *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                  placeholder="Ad Soyad"
+                  required
+                />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-foreground/70 mb-1"
-                  >
-                    Ad Soyad
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
-                    placeholder="Ad Soyad"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-foreground/70 mb-1"
-                  >
-                    E-posta
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
-                    placeholder="E-posta adresiniz"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-foreground/70 mb-1"
-                  >
-                    Telefon
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground/70 mb-1">
+                    Telefon (10 haneli) *
                   </label>
                   <input
                     type="tel"
@@ -335,37 +374,77 @@ export default function ContactSection() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
-                    placeholder="Telefon numaranız"
+                    className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                    placeholder="5XX XXX XX XX"
+                    pattern="[0-9]{10}"
                     required
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="date"
-                    className="block text-sm font-medium text-foreground/70 mb-1"
-                  >
-                    Randevu Tarihi
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground/70 mb-1">
+                    E-posta (İsteğe bağlı)
                   </label>
                   <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    value={formData.date}
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
-                    required
+                    className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                    placeholder="ornek@email.com"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label
-                    htmlFor="petName"
-                    className="block text-sm font-medium text-foreground/70 mb-1"
+                  <label htmlFor="subject" className="block text-sm font-medium text-foreground/70 mb-1">
+                    Konu *
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                    required
                   >
-                    Evcil Hayvan Adı
+                    <option value="">Konu Seçiniz</option>
+                    <option value="Randevu">Randevu</option>
+                    <option value="Şikayet">Şikayet</option>
+                    <option value="Öneri">Öneri</option>
+                    <option value="Diğer">Diğer</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="date" className="block text-sm font-medium text-foreground/70 mb-1">
+                    Randevu Tarihi {formData.subject === 'Randevu' ? '*' : ''}
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={handleChange}
+                      min={today}
+                      className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background disabled:opacity-50 disabled:cursor-not-allowed"
+                      required={formData.subject === 'Randevu'}
+                      disabled={formData.subject !== 'Randevu'}
+                    />
+                    {formData.subject !== 'Randevu' && (
+                      <div className="absolute -bottom-5 left-7 text-xs text-foreground/30">
+                        Konu kısmından &ldquo;Randevu&rdquo; seçiniz
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="petName" className="block text-sm font-medium text-foreground/70 mb-1">
+                    Evcil Hayvan Adı *
                   </label>
                   <input
                     type="text"
@@ -373,41 +452,33 @@ export default function ContactSection() {
                     name="petName"
                     value={formData.petName}
                     onChange={handleChange}
-                    className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                    className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
                     placeholder="Evcil hayvanınızın adı"
                     required
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="petType"
-                    className="block text-sm font-medium text-foreground/70 mb-1"
-                  >
-                    Hayvan Türü
+                  <label htmlFor="petType" className="block text-sm font-medium text-foreground/70 mb-1">
+                    Hayvan Türü *
                   </label>
                   <select
                     id="petType"
                     name="petType"
                     value={formData.petType}
                     onChange={handleChange}
-                    className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                    className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
                     required
                   >
                     <option value="Kedi">Kedi</option>
                     <option value="Köpek">Köpek</option>
-                    <option value="Kuş">Kuş</option>
-                    <option value="Kemirgen">Kemirgen</option>
-                    <option value="Diğer">Diğer</option>
+                    <option value="Egzotik">Egzotik</option>
                   </select>
                 </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-foreground/70 mb-1"
-                >
-                  Mesaj
+              <div className="mt-2">
+                <label htmlFor="message" className="block text-sm font-medium text-foreground/70 mb-1">
+                  Mesajınız *
                 </label>
                 <textarea
                   id="message"
@@ -415,8 +486,9 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 md:px-5 py-3 text-base md:text-lg border border-light-gray rounded-xl focus:ring-2 focus:ring-primary focus:border-primary bg-background"
-                  placeholder="Randevu detayları, şikayetler veya sorularınız"
+                  className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background"
+                  placeholder="Mesajınızı buraya yazın"
+                  required
                 ></textarea>
               </div>
 
@@ -424,13 +496,15 @@ export default function ContactSection() {
                 type="submit"
                 className="btn-primary w-full text-sm md:text-lg py-2.5 md:py-4 rounded-xl font-semibold hover:scale-[1.02] transition-transform"
               >
-                Randevu Talebini Gönder
+                WhatsApp&apos;tan Gönder
               </button>
+              <p className="text-sm text-foreground/50 mt-2">
+                * ile işaretli alanlar zorunludur
+              </p>
             </form>
           </div>
         </div>
       </div>
-
 
       {/* Paw decorations */}
       <div

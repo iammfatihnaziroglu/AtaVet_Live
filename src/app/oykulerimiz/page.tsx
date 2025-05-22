@@ -58,11 +58,11 @@ function OykulerimizContent() {
     },
     {
       id: 2,
-      title: "Şans'ın Hikayesi",
-      description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
-      image: "/atavet-img/sans-3.webp",
-      link: "/oykulerimiz/sansin-hikayesi",
-      categories: ['kedi', 'kopek'],
+      title: "Paşa'nın Hikayesi",
+      description: "Paşa'nın Cilt Savaşı: Bir Mantara Karşı Kazanılan Zafer",
+      image: "/atavet-img/pasa-1.webp",
+      link: "/oykulerimiz/pasanin-hikayesi",
+      categories: ['kedi'],
       primaryCategory: 'kedi'
     },
     {
@@ -94,13 +94,13 @@ function OykulerimizContent() {
     },
     {
       id: 6,
-      title: "Paşa'nın Hikayesi",
-      description: "Paşa'nın Cilt Savaşı: Bir Mantara Karşı Kazanılan Zafer",
-      image: "/atavet-img/pasa-1.webp",
-      link: "/oykulerimiz/pasanin-hikayesi",
+      title: "Şans'ın Hikayesi",
+      description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
+      image: "/atavet-img/sans-1.webp",
+      link: "/oykulerimiz/sansin-hikayesi",
       categories: ['kedi'],
       primaryCategory: 'kedi'
-    }
+    },
   ], []);
 
   useEffect(() => {

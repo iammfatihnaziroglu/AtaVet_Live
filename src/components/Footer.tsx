@@ -288,8 +288,8 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width="22"
+                  height="22"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -302,7 +302,9 @@ export default function Footer() {
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
                 <span className="text-background/80">
-                  Pzt-Cmt: 09:00 - 18:00
+                  Pzt-Cmt: 09:30 - 20:00
+                  <br />
+                  Pazar: 10:00 - 19:00
                 </span>
               </li>
             </ul>
