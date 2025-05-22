@@ -87,7 +87,7 @@ function OykulerimizContent() {
       id: 5,
       title: "Kakao ve Fıstık'ın Hikayesi",
       description: "Kakao ve Fıstık’ın İlk Kliniği Ziyareti: Sağlıklı Bir Başlangıç",
-      image: "/atavet-img/kakao-1.webp", 
+      image: "/atavet-img/kakaovefistik-1.webp", 
       link: "/oykulerimiz/kakaovefistigin-hikayesi",
       categories: ['kopek'],
       primaryCategory: 'kopek'
