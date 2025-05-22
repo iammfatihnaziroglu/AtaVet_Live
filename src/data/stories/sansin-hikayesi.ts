@@ -16,8 +16,8 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
 Şans, bize dayanıklılığın ve umudun ne demek olduğunu bir kez daha hatırlattı.
 </p>
     `,
-  image: "/atavet-img/sans-1.webp",
-  heroImage: "/atavet-img/sans-1.webp",
+  image: "/atavet-img/sans-5.webp",
+  heroImage: "/atavet-img/sans-3.webp",
   author: "Tayfur Şener",
   authorImage: "/images/stories/avatar-2.jpg",
   slug: "sansin-hikayesi",

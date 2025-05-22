@@ -15,24 +15,23 @@ Küçük Max, büyük bir savaşı kazandı.
 
 </p>
      `,
-  image: "/images/stories/clinic-stars.jpg",
-  heroImage: "/images/stories/clinic-stars-hero.jpg",
+  image: "/atavet-img/max-1.webp",
+  heroImage: "/atavet-img/max-1.webp",
   author: "Tayfur Şener",
-  authorImage: "/images/stories/avatar-1.jpg",
+  authorImage: "/atavet-img/max-1.webp",
   slug: "maxin-hikayesi",
   categories: ['kopek'],
   primaryCategory: 'kopek',
   relatedStories: ["patili-dostlarimizin-iyilesme-hikayeleri", "sansin-hikayesi"],
   galleryImages: [
-    "/images/stories/clinic-star-1.jpg",
-    "/images/stories/clinic-star-2.jpg",
-    "/images/stories/clinic-star-3.jpg",
-    "/images/stories/clinic-star-4.jpg"
+    "/atavet-img/max-2.webp",
+    "/atavet-img/max-3.webp",
+    "/atavet-img/max-1.webp"
   ],
   testimonial: {
     text: "Max’in ilk belirtilerini gördüğümüzde çok endişelendik. Onu kaybetmekten korkuyorduk. Atavet ailesi sayesinde zamanında ve doğru tedaviyle bugün Max hâlâ bizimle. Her adımda yanımızda oldular, bizi bilgilendirdiler ve ona can oldular.",
     petOwner: "Atakan",
     petName: "Max",
-    ownerImage: "/images/stories/pet-owner-3.jpg"
+    ownerImage: "/atavet-img/max-1.webp"
   }
 }; 

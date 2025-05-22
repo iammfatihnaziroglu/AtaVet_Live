@@ -270,10 +270,7 @@ function StoryDetailContent() {
                     width={1200}
                     height={900}
                     priority
-                    style={{
-                      objectFit: 'cover',
-                      objectPosition: 'top center'
-                    }}
+                    
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
@@ -667,7 +664,7 @@ function StoryDetailContent() {
                     href="https://tiktok.com/@ispartaatavet" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex flex-col items-center gap-1 py-3 px-2 bg-[#FF0855]/90 hover:bg-[#000000] text-[#000000] dark:text-white hover:text-white rounded-lg transition-colors group"
+                    className="flex flex-col items-center gap-1 py-3 px-2 bg-[#FF0855]/70 hover:bg-[#000000] text-black/80 hover:text-white rounded-lg transition-colors group"
                   >
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">                      <path d="M19.321 5.562a5.124 5.124 0 0 1-0.443-0.258 6.228 6.228 0 0 1-2.137-3.253v-0.001h-3.895v13.534c0 1.924-1.539 3.488-3.432 3.488-1.892 0-3.431-1.564-3.431-3.488 0-1.924 1.539-3.487 3.431-3.487 0.359 0 0.705 0.056 1.03 0.16v-3.996a7.597 7.597 0 0 0-1.03-0.069c-4.134 0-7.488 3.399-7.488 7.392 0 3.994 3.354 7.393 7.488 7.393 4.134 0 7.488-3.399 7.488-7.393l0.015-8.548a10.221 10.221 0 0 0 5.93 1.896v-3.87a6.225 6.225 0 0 1-3.526-0.99z"/>                    </svg>
                     <span className="text-xs font-medium">TikTok</span>
@@ -676,10 +673,10 @@ function StoryDetailContent() {
               </div>
 
               {/* Back to All Stories Button */}
-              <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-md p-6 border border-light-gray/10 dark:border-light-gray/5">
+              <div className="bg-white group dark:bg-foreground/5 rounded-xl shadow-md p-6 border border-light-gray/10 dark:border-light-gray/5">
                 <Link 
                   href="/oykulerimiz" 
-                  className="group flex items-center justify-center gap-2 w-full text-center py-3 px-4 bg-primary/90 hover:bg-primary text-white font-medium rounded-lg transition-colors"
+                  className="flex items-center justify-center gap-2 w-full text-center py-3 px-4 bg-primary/90 group-hover:bg-black/90 text-white italic font-medium rounded-lg transition-colors"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform duration-300">
                     <path d="M19 12H5M5 12L12 19M5 12L12 5"/>

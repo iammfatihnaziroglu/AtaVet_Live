@@ -46,32 +46,33 @@ function OykulerimizContent() {
   }, [searchParams]);
 
   const stories = useMemo<Story[]>(() => [
+    
     {
       id: 1,
-      title: "Patili Dostlarımızın İyileşme Hikayeleri",
-      description: "Kliniğimizde tedavi ettiğimiz hayvanlarımızın dramatik iyileşme hikâyelerini okuyun.",
-      image: "/images/stories/recovery-stories.jpg",
-      link: "/oykulerimiz/patili-dostlarimizin-iyilesme-hikayeleri",
-      categories: ['kedi', 'kopek'],
+      title: "Max'in Hikayesi",
+      description: "Küçük Max, büyük bir savaşı kazandı!",
+      image: "/atavet-img/max-1.webp",
+      link: "/oykulerimiz/maxin-hikayesi",
+      categories: ['kopek'],
       primaryCategory: 'kopek'
     },
     {
       id: 2,
       title: "Şans'ın Hikayesi",
       description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
-      image: "/atavet-img/sans-1.webp",
+      image: "/atavet-img/sans-3.webp",
       link: "/oykulerimiz/sansin-hikayesi",
       categories: ['kedi', 'kopek'],
       primaryCategory: 'kedi'
     },
     {
       id: 3,
-      title: "Max'in Hikayesi",
-      description: "Küçük Max, büyük bir savaşı kazandı!",
-      image: "/images/stories/clinic-stars.jpg",
-      link: "/oykulerimiz/maxin-hikayesi",
-      categories: ['kedi', 'kopek', 'egzotik'],
-      primaryCategory: 'kedi'
+      title: "Patili Dostlarımızın İyileşme Hikayeleri",
+      description: "Kliniğimizde tedavi ettiğimiz hayvanlarımızın dramatik iyileşme hikâyelerini okuyun.",
+      image: "/images/stories/recovery-stories.jpg",
+      link: "/oykulerimiz/patili-dostlarimizin-iyilesme-hikayeleri",
+      categories: ['kedi', 'kopek'],
+      primaryCategory: 'kopek'
     },
     {
       id: 4,
@@ -320,7 +321,7 @@ function OykulerimizContent() {
                         <Image 
                           src={story.image} 
                           alt={story.title} 
-                          className={`w-full h-full object-cover object-top transition-all duration-500 ${
+                          className={`w-full h-full object-cover object-center transition-all duration-500 ${
                             hoveredStory === story.id ? 'scale-110' : 'scale-100'
                           }`}
                           width={500}
