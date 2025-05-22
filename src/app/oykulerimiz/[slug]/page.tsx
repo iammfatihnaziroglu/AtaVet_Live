@@ -190,18 +190,35 @@ function StoryDetailContent() {
   return (
     <div className="min-h-screen bg-background -mt-20">
       {/* Hero Section */}
-      <div className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-red-500/30 via-red-500/40 to-background overflow-hidden ">
+      <div className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-red-500/30 via-red-500/40 to-background overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/80 opacity-40"></div>
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 py-14">
-          <div className="max-w-7xl mx-auto mt-28">
-            {/* Back Button */}
+          <div className="max-w-7xl mx-auto mt-20 md:mt-28">
+            {/* Mobile Navigation */}
+            <div className="flex items-center justify-between gap-2 mb-6 md:hidden">
+              <Link 
+                href="/oykulerimiz" 
+                className="inline-flex items-center gap-1.5 text-white bg-primary/90 hover:bg-primary transition-colors duration-300 py-1.5 px-3 rounded-lg group text-sm"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform duration-300">
+                  <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
+                </svg>
+                <span className="font-medium">Tüm Hikayeler</span>
+              </Link>
+              <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-gradient-to-r ${categoryTheme.gradient} text-white shadow-sm`}>
+                <span>{categoryTheme.icon}</span>
+                <span>{categoryTheme.label}</span>
+              </div>
+            </div>
+
+            {/* Desktop Back Button - Hidden on Mobile */}
             <Link 
               href="/oykulerimiz" 
-              className="inline-flex items-center gap-2 text-red-600 hover:text-foreground/90 transition-colors duration-300 pt-5 pb-10 group"
+              className="hidden md:inline-flex items-center gap-2 text-red-600 hover:text-foreground/90 transition-colors duration-300 pt-5 pb-10 group"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 group-hover:scale-110 transition-transform duration-300">
                 <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
@@ -213,21 +230,21 @@ function StoryDetailContent() {
               {/* Content Side */}
               <div className="order-2 lg:order-1">
                 <div className="space-y-5">
-                  {/* Category Badge */}
-                  <div className="flex items-center gap-2">
-                    <div className=" -mt-24 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-red-600 to-red-700 text-white shadow-sm">
+                  {/* Category Badge - Only visible on desktop */}
+                  <div className="hidden md:flex items-center gap-2">
+                    <div className="-mt-24 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-red-600 to-red-700 text-white shadow-sm">
                       <span>{categoryTheme.icon}</span>
                       <span>{categoryTheme.label}</span>
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white drop-shadow-red-800/60 text-shadow-2xs text-shadow-red-950 drop-shadow-2xl tracking-tight -mt-1">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white drop-shadow-red-800/60 text-shadow-2xs text-shadow-red-950 drop-shadow-2xl tracking-tight mt-2 md:-mt-1">
                     {story.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="text-lg md:text-xl text-foreground/75 tracking-tight leading-relaxed mt-3 ml-1 italic">
+                  <p className="text-base md:text-xl text-foreground/75 tracking-tight leading-relaxed mt-3 ml-1 italic">
                     {story.description}
                   </p>
 
@@ -249,7 +266,7 @@ function StoryDetailContent() {
                     <div className='drop-shadow-md drop-shadow-red-800/25'>
                       <div className="text-xl font-semibold text-gray-900 dark:text-white text-shadow-2xs text-shadow-red-950/50">{story.author}</div>
                       <div className="text-sm text-red-600 dark:text-red-500 font-medium">Kurucu Veteriner Hekim</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400 mt-1 ">AtaVet Veteriner Kliniği</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">AtaVet Veteriner Kliniği</div>
                     </div>
                   </div>
                 </div>
@@ -257,18 +274,18 @@ function StoryDetailContent() {
 
               {/* Image Side */}
               <motion.div
-                className="order-1 lg:order-2 ml-5"
+                className="order-1 lg:order-2 ml-0 md:ml-5"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <div className="relative aspect-[4/4] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-square w-full rounded-2xl overflow-hidden shadow-2xl mt-8 md:mt-0">
                   <Image 
                     src={story.heroImage || story.image} 
                     alt={story.title}
-                    className="object-cover w-full h-full transition-transform duration-700 hover:scale-110 origin-top brightness-105 contrast-105"
+                    className="object-cover w-full h-full transition-transform duration-700 hover:scale-110 origin-center brightness-105 contrast-105"
                     width={1200}
-                    height={900}
+                    height={1200}
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
