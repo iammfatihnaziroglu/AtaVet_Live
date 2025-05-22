@@ -67,8 +67,8 @@ function OykulerimizContent() {
     },
     {
       id: 3,
-      title: "Dex’in Hikayesi",
-      description: "Dex’in Sessiz Savaşı: Küçük Bir Tümör, Büyük Bir Zafer",
+      title: "Dex'in Hikayesi",
+      description: "Dex'in Sessiz Savaşı: Küçük Bir Tümör, Büyük Bir Zafer",
       image: "/atavet-img/dex-1.webp",
       link: "/oykulerimiz/dexin-hikayesi",
       categories: ['kopek'],
@@ -76,7 +76,7 @@ function OykulerimizContent() {
     },
     {
       id: 4,
-      title: "Minik Dostlarımız Büyüyor",
+      title: "Lili'nin Sessiz İsyanı",
       description: "Yavru hayvanlarımızın ilk günlerinden itibaren gelişimlerini anlatan hikayeler.",
       image: "/images/stories/growing-pets.jpg",
       link: "/oykulerimiz/minik-dostlarimiz-buyuyor",
@@ -314,7 +314,7 @@ function OykulerimizContent() {
                   >
                     <Link href={story.link} className="flex flex-col h-full">
                       <div 
-                        className="relative h-48 overflow-hidden"
+                        className="relative h-96 md:h-72 lg:h-80 overflow-hidden"
                         onMouseEnter={() => setHoveredStory(story.id)}
                         onMouseLeave={() => setHoveredStory(null)}
                       >
@@ -604,7 +604,7 @@ function StoryGallerySlider() {
 
   return (
     <div className="relative">
-      <div className="relative overflow-hidden rounded-xl h-[450px] md:h-[550px] bg-[#EDE1E1]/25">
+      <div className="relative overflow-hidden rounded-xl h-[500px] sm:h-[500px] md:h-[550px] bg-[#EDE1E1]/25 shadow-xl border border-light-gray/10">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -618,14 +618,14 @@ function StoryGallerySlider() {
               <Image
                 src={galleryImages[currentIndex].src}
                 alt={galleryImages[currentIndex].alt}
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain rounded-lg"
                 width={1200}
                 height={800}
                 priority
               />
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-foreground/90 to-transparent">
-              <p className="text-white text-sm md:text-base font-medium">{galleryImages[currentIndex].caption}</p>
+            <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 bg-gradient-to-t from-foreground/90 via-foreground/60 to-transparent">
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-md">{galleryImages[currentIndex].caption}</p>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -633,7 +633,7 @@ function StoryGallerySlider() {
         {/* Navigation Buttons */}
         <button 
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary hover:bg-white transition-all duration-300 z-10"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 md:w-10 md:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary hover:bg-white transition-all duration-300 z-10"
           aria-label="Önceki resim"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -643,7 +643,7 @@ function StoryGallerySlider() {
         
         <button 
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary hover:bg-white transition-all duration-300 z-10"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 md:w-10 md:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary hover:bg-white transition-all duration-300 z-10"
           aria-label="Sonraki resim"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -653,16 +653,16 @@ function StoryGallerySlider() {
       </div>
       
       {/* Control Bar */}
-      <div className="bg-white dark:bg-foreground/10 backdrop-blur-sm shadow-sm border border-light-gray/10 rounded-lg p-3 mt-4 flex items-center justify-between">
+      <div className="bg-white dark:bg-foreground/10 backdrop-blur-sm shadow-lg border border-light-gray/10 rounded-lg p-4 mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
         {/* Thumbnails */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           {galleryImages.map((image, index) => (
             <button
               key={image.id}
               onClick={() => goToSlide(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
                 index === currentIndex 
-                  ? 'bg-primary scale-125' 
+                  ? 'bg-primary scale-125 ring-2 ring-primary/30' 
                   : 'bg-foreground/30 hover:bg-foreground/50'
               }`}
               aria-label={`Resim ${index + 1}`}
@@ -671,25 +671,25 @@ function StoryGallerySlider() {
         </div>
         
         {/* Playback Controls */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <button 
             onClick={togglePlayPause}
-            className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
             aria-label={isPlaying ? "Durdur" : "Oynat"}
           >
             {isPlaying ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="6" y="4" width="4" height="16"/>
                 <rect x="14" y="4" width="4" height="16"/>
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="5 3 19 12 5 21 5 3"/>
               </svg>
             )}
           </button>
           
-          <span className="text-xs text-foreground/70 bg-secondary/30 dark:bg-foreground/10 px-2 py-1 rounded">
+          <span className="text-sm bg-secondary/30 dark:bg-foreground/10 px-4 py-2 rounded-full font-medium">
             {currentIndex + 1} / {galleryImages.length}
           </span>
         </div>
