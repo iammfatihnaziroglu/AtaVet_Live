@@ -82,14 +82,13 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white dark:bg-foreground/5 rounded-2xl overflow-hidden shadow-lg border border-light-gray/10 dark:border-light-gray/5 hover:shadow-xl transition-all duration-300">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
-                <div className="h-80 bg-neutral flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('/images/team-bg.jpg')] bg-cover bg-center opacity-10"></div>
-                  <div className="relative z-10">
-                    <div className="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-primary text-6xl font-bold">TS</span>
-                    </div>
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent z-10"></div>
+                <div className="relative overflow-hidden max-h-[600px] md:max-h-[600px] h-[400px] md:h-[600px]">
+                  <img 
+                    src="/atavet-img/tayfursener.webp"
+                    alt="Veteriner Hekim Tayfur Şener"
+                    className="w-full object-cover object-center md:-mt-[450px] -mt-[150px]"
+                  />
                 </div>
               </div>
               
