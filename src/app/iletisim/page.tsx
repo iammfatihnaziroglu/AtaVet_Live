@@ -51,7 +51,7 @@ export default function ContactPage() {
         <div className="mb-16">
           <div className="bg-secondary p-4 rounded-2xl border border-light-gray h-96 flex items-center justify-center">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4735303961774!2d30.553362677064618!3d37.76526587236629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c5b594c1c2eb63%3A0x96c081b6cef96208!2sIsparta%2C%20Turkey!5e0!3m2!1sen!2sus!4v1684140045650!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.1397410827714!2d30.570474!3d37.7557922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c5b588aece1129%3A0x125daa561440e1da!2sATAVET%20Veteriner%20Klini%C4%9Fi!5e0!3m2!1str!2str!4v1653331234789!5m2!1str!2str" 
               width="100%" 
               height="100%" 
               className="rounded-xl" 
@@ -70,7 +70,7 @@ export default function ContactPage() {
             
             <div className="space-y-6">
               <a 
-                href="https://www.google.com/maps?q=Isparta+Merkez,+Mehmet+Tönge+Cd.+No:15" 
+                href="https://www.google.com.tr/maps/place/ATAVET+Veteriner+Klini%C4%9Fi/@37.7557922,30.570474,17z/data=!3m1!4b1!4m6!3m5!1s0x14c5b588aece1129:0x125daa561440e1da!8m2!3d37.755788!4d30.5730489!16s%2Fg%2F11wj5nch51?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 group hover:text-[#E31E24] transition-colors"
@@ -83,13 +83,13 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">Adres</h3>
-                  <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">Isparta Merkez, Mehmet Tönge Cd. No:15</p>
-                  <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors mt-1">Isparta, 32100</p>
+                  <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">Ayazmana Mah. 124. Cadde No.63-65/1</p>
+                  <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors mt-1">Isparta/Merkez</p>
                 </div>
               </a>
 
               <a 
-                href="tel:+902461234567" 
+                href="tel:+905426011232" 
                 className="flex items-start gap-4 group hover:text-[#E31E24] transition-colors"
               >
                 <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
@@ -100,16 +100,13 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">Telefon</h3>
                   <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">
-                    <a href="tel:+902461234567" className="hover:text-[#E31E24]">+90 246 123 4567</a>
-                  </p>
-                  <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors mt-1">
-                    <a href="tel:+902461234568" className="hover:text-[#E31E24]">+90 246 123 4568</a> (Acil Hat)
+                    <a href="tel:+905426011232" className="hover:text-[#E31E24]">+90 542 601 12 32</a>
                   </p>
                 </div>
               </a>
 
               <a 
-                href="mailto:info@atavet.com" 
+                href="mailto:vettsener@gmail.com" 
                 className="flex items-start gap-4 group hover:text-[#E31E24] transition-colors"
               >
                 <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
@@ -121,10 +118,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">E-posta</h3>
                   <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">
-                    <a href="mailto:info@atavet.com" className="hover:text-[#E31E24]">info@atavet.com</a>
-                  </p>
-                  <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors mt-1">
-                    <a href="mailto:randevu@atavet.com" className="hover:text-[#E31E24]">randevu@atavet.com</a>
+                    <a href="mailto:vettsener@gmail.com" className="hover:text-[#E31E24]">vettsener@gmail.com</a>
                   </p>
                 </div>
               </a>
@@ -138,9 +132,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Çalışma Saatleri</h3>
-                  <p className="text-foreground/70">Pazartesi - Cuma: 09:00 - 18:00</p>
-                  <p className="text-foreground/70">Cumartesi: 09:00 - 14:00</p>
-                  <p className="text-foreground/70">Pazar: Kapalı (Acil durumlarda 24 saat hizmet)</p>
+                  <p className="text-foreground/70">Cumartesi: 09:30 - 20:00</p>
+                  <p className="text-foreground/70">Pazar: 10:00 - 19:00</p>
                 </div>
               </div>
             </div>
@@ -160,15 +153,9 @@ export default function ContactPage() {
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </a>
-                <a href="https://twitter.com/atavet" target="_blank" rel="noopener noreferrer" className="bg-secondary hover:bg-[#E31E24]/10 p-3 rounded-full transition-all duration-300 hover:scale-105 group">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary group-hover:text-[#E31E24] transition-colors">
-                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                  </svg>
-                </a>
-                <a href="https://youtube.com/atavet" target="_blank" rel="noopener noreferrer" className="bg-secondary hover:bg-[#E31E24]/10 p-3 rounded-full transition-all duration-300 hover:scale-105 group">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary group-hover:text-[#E31E24] transition-colors">
-                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                <a href="https://tiktok.com/@ispartaatavet" target="_blank" rel="noopener noreferrer" className="bg-secondary hover:bg-[#E31E24]/10 p-3 rounded-full transition-all duration-300 hover:scale-105 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"  className="text-primary group-hover:text-[#E31E24] transition-colors"></path>
                   </svg>
                 </a>
               </div>
