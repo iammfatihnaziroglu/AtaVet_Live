@@ -22,7 +22,7 @@ Küçük Max, büyük bir savaşı kazandı.
   slug: "maxin-hikayesi",
   categories: ['kopek'],
   primaryCategory: 'kopek',
-  relatedStories: ["patili-dostlarimizin-iyilesme-hikayeleri", "sansin-hikayesi"],
+  relatedStories: ["kakaovefistigin-hikayesi", "lilinin-hikayesi"],
   galleryImages: [
     "/atavet-img/max-2.webp",
     "/atavet-img/max-3.webp",

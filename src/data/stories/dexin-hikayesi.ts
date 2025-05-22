@@ -23,7 +23,7 @@ export const story = {
   slug: "dexin-hikayesi",
   categories: ['kopek'],
   primaryCategory: 'kopek',
-  relatedStories: ["sansin-hikayesi", "klinigimizin-yildizlari"],
+  relatedStories: ["sansin-hikayesi", "kakaovefistigin-hikayesi"],
   galleryImages: [
     "/atavet-img/dex-3.webp",
     "/atavet-img/dex-2.webp",

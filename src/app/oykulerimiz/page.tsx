@@ -94,12 +94,12 @@ function OykulerimizContent() {
     },
     {
       id: 6,
-      title: "Egzotik Hayvan Hikayeleri",
-      description: "Sürüngenlerden küçük memelilere ve kuşlara kadar tüm egzotik dostlarımızın ilginç tedavi süreçleri.",
-      image: "/images/stories/exotic-pets.jpg",
-      link: "/oykulerimiz/egzotik-hayvan-hikayeleri",
-      categories: ['egzotik'],
-      primaryCategory: 'egzotik'
+      title: "Paşa'nın Hikayesi",
+      description: "Paşa’nın Cilt Savaşı: Bir Mantara Karşı Kazanılan Zafer",
+      image: "/atavet-img/pasa-1.webp",
+      link: "/oykulerimiz/pasanin-hikayesi",
+      categories: ['kedi'],
+      primaryCategory: 'kedi'
     }
   ], []);
 
