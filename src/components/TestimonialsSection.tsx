@@ -232,7 +232,7 @@ export default function TestimonialsSection() {
             <span className="text-sm font-medium text-primary">Müşteri Memnuniyeti</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center max-w-3xl">
-            Mutlu Müşterilerimizin <span className="text-primary">Deneyimleri</span>
+            Mutlu Dostlarımızın <span className="text-primary">Deneyimleri</span>
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl text-center mb-12">
             Evcil hayvan sahiplerinin AtaVet deneyimleri hakkında ne söylediklerine bakın

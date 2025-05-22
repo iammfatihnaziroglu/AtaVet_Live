@@ -100,11 +100,11 @@ export default function HeroSection() {
               {/* Main hero image */}
               <div className="relative z-10 animate-float">
                 <Image
-                  src="/images/dog-hero.jpg"
-                  alt="Mutlu ve sağlıklı köpek"
+                  src="/atavet-img/tatlikedi-1.webp"
+                  alt="Sevimli ve sağlıklı kedi"
                   width={600}
                   height={600}
-                  className="object-cover rounded-xl shadow-lg w-full h-auto max-h-[250px] sm:max-h-[350px] md:max-h-none"
+                  className="object-cover rounded-xl shadow-lg w-full h-auto max-h-[275px] sm:max-h-[250px] md:max-h-[450px]"
                   priority
                 />
                 
