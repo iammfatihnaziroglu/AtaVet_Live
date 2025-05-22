@@ -105,7 +105,7 @@ export default function DogsPage() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/dog-hero.jpg"
+                src="/atavet-img/kopekbakimi.webp"
                 alt="Köpek"
                 width={600}
                 height={400}

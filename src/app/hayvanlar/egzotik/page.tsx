@@ -101,8 +101,8 @@ export default function EgzotikPage() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/bird-care.jpg"
-                alt="Kuş"
+                src="/atavet-img/kus-1.webp"
+                alt="Kuş Bakımı"
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"

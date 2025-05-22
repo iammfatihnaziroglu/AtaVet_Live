@@ -105,7 +105,7 @@ export default function CatsPage() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/cat-hero.jpg"
+                src="/atavet-img/kedibakimi.webp"
                 alt="Kedi"
                 width={600}
                 height={400}

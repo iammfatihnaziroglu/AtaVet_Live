@@ -53,7 +53,7 @@ export default function PetCategorySection() {
             <div className="relative aspect-[3/2] overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground/30 group-hover:to-foreground/40 transition-all duration-300 z-10"></div>
               <Image
-                src="/images/cat-hero.jpg"
+                src="/atavet-img/kedibakimi.webp"
                 alt="Kedi Bakımı"
                 width={800}
                 height={500}
@@ -103,7 +103,7 @@ export default function PetCategorySection() {
             <div className="relative aspect-[3/2] overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground/30 group-hover:to-foreground/40 transition-all duration-300 z-10"></div>
               <Image
-                src="/images/dog-hero.jpg"
+                src="/atavet-img/kopekbakimi.webp"
                 alt="Köpek Bakımı"
                 width={800}
                 height={500}
