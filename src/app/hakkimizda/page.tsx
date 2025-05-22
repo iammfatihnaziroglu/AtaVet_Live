@@ -208,7 +208,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Bize Ulaşın</h2>
           <div className="bg-secondary p-4 rounded-2xl border border-light-gray h-96 flex items-center justify-center">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4735303961774!2d30.553362677064618!3d37.76526587236629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c5b594c1c2eb63%3A0x96c081b6cef96208!2sIsparta%2C%20Turkey!5e0!3m2!1sen!2sus!4v1684140045650!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.1397410827714!2d30.570474!3d37.7557922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c5b588aece1129%3A0x125daa561440e1da!2sATAVET%20Veteriner%20Klini%C4%9Fi!5e0!3m2!1str!2str!4v1653331234789!5m2!1str!2str" 
               width="100%" 
               height="100%" 
               className="rounded-xl" 
@@ -220,7 +220,7 @@ export default function AboutPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 mt-8">
             <a 
-              href="https://www.google.com/maps?q=Isparta+Merkez,+Mehmet+Tönge+Cd.+No:15" 
+              href="https://www.google.com.tr/maps/place/ATAVET+Veteriner+Klini%C4%9Fi/@37.7557922,30.570474,17z/data=!3m1!4b1!4m6!3m5!1s0x14c5b588aece1129:0x125daa561440e1da!8m2!3d37.755788!4d30.5730489!16s%2Fg%2F11wj5nch51?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-4 group hover:text-[#E31E24] transition-colors"
@@ -233,11 +233,12 @@ export default function AboutPage() {
               </div>
               <div className="text-center">
                 <h3 className="font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">Adres</h3>
-                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">Isparta Merkez, Mehmet Tönge Cd. No:15</p>
+                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">Ayazmana Mah. 124. Cadde No.63-65/1</p>
+                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">Isparta/Merkez</p>
               </div>
             </a>
             <a 
-              href="tel:+902461234567" 
+              href="tel:+905426011232" 
               className="flex items-center justify-center gap-4 group hover:text-[#E31E24] transition-colors"
             >
               <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
@@ -247,11 +248,11 @@ export default function AboutPage() {
               </div>
               <div className="text-center">
                 <h3 className="font-semibold text-foreground group-hover:text-[#E31E24] transition-colors">Telefon</h3>
-                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">+90 246 123 4567</p>
+                <p className="text-foreground/70 group-hover:text-[#E31E24]/80 transition-colors">+90 542 601 12 32</p>
               </div>
             </a>
             <a 
-              href="mailto:info@atavet.com" 
+              href="mailto:vettsener@gmail.com" 
               className="flex items-center justify-center gap-4 group hover:text-[#E31E24] transition-colors"
             >
               <div className="bg-primary/10 p-3 rounded-full text-primary group-hover:bg-[#E31E24]/10 group-hover:text-[#E31E24] transition-all duration-300 group-hover:scale-105">
