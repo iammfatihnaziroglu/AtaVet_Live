@@ -25,15 +25,15 @@ export const story = {
   primaryCategory: 'kopek',
   relatedStories: ["sansin-hikayesi", "kakaovefistigin-hikayesi"],
   galleryImages: [
-    "/atavet-img/dex-3.webp",
+    "/atavet-img/dex-before.webp",
     "/atavet-img/dex-2.webp",
-    "/atavet-img/dex-4.webp",
+    "/atavet-img/dex-after.webp",
     "/atavet-img/dex-1.webp"
   ],
   beforeAfterImages: [
     { 
-      before: "/atavet-img/dex-2.webp", 
-      after: "/atavet-img/dex-1.webp",
+      before: "/atavet-img/dex-before.webp", 
+      after: "/atavet-img/dex-after.webp",
       caption: "Dex'in tedavi öncesi ve sonrası durumu."
     },
   ],

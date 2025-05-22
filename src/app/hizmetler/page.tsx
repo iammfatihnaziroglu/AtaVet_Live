@@ -192,9 +192,9 @@ function ServicesContent() {
                     service.id === 'muayene' ? 'genelmuayene.webp' :
                     service.id === 'asilar' ? 'asilar.webp' :
                     service.id === 'cerrahi' ? 'operasyon.webp' :
-                    service.id === 'bakim' ? 'bakimvetiras.webp' :
+                    service.id === 'bakim' ? 'kopek-1.webp' :
                     service.id === 'laboratuvar' ? 'labhizmetleri.webp' :
-                    'acil.webp'
+                    'acill.webp'
                   }`}
                   alt={service.title}
                   width={800}
