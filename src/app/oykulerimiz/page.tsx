@@ -143,18 +143,18 @@ function OykulerimizContent() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with full-width background and gradient overlay */}
-      <div className="relative bg-gradient-to-b from-secondary/90 to-background dark:from-secondary/30 dark:to-background pt-20 pb-10 md:pt-32 md:pb-20 overflow-hidden">
+      <div className="relative bg-gradient-to-b from-secondary/90 to-background dark:from-secondary/30 dark:to-background pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-primary/3 dark:bg-primary/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 md:mb-10">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex items-center justify-between mb-8 md:mb-10">
             <div>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary font-pathway">ÖYKÜLERİMİZ</h1>
-              <div className="w-full h-1 bg-gradient-to-l from-transparent via-primary/50 to-transparent brightness-200 mt-2 rounded-full"></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-primary font-pathway">ÖYKÜLERİMİZ</h1>
+              <div className="w-full h-1  bg-gradient-to-l from-transparent via-primary/50 to-transparent brightness-200 mt-2 rounded-full"></div>
             </div>
             <Link 
               href="/iletisim" 
@@ -169,113 +169,60 @@ function OykulerimizContent() {
             </Link>
           </div>
 
-          {/* Mobil Kategori Butonları */}
-          <div className="flex justify-between items-center mb-4 md:hidden">
-            <button
-              onClick={() => setSelectedCategory('hepsi')}
-              className={`px-3 py-2 rounded-lg flex items-center gap-1.5 transition-all duration-300 ${
-                selectedCategory === 'hepsi' 
-                ? `bg-gradient-to-r from-primary to-primary/80 text-white font-medium shadow-sm` 
-                : 'bg-white/90 dark:bg-foreground/10 text-foreground/80 hover:bg-secondary hover:text-foreground'
-              }`}
-            >
-              <div className={`w-5 h-5 rounded-full flex items-center justify-center ${
-                selectedCategory === 'hepsi' ? 'bg-white/20' : 'bg-primary/10'
-              }`}>
-                <span className="text-xs">🐾</span>
-              </div>
-              <span className="text-xs">Tüm Hikayeler</span>
-            </button>
-            
-            <div className="flex gap-1.5">
-              <button
-                onClick={() => setSelectedCategory('kedi')}
-                className={`px-3 py-2 rounded-lg flex items-center gap-1.5 transition-all duration-300 ${
-                  selectedCategory === 'kedi' 
-                  ? `bg-gradient-to-r from-pink-500 to-pink-600 text-white font-medium shadow-sm` 
-                  : 'bg-white/90 dark:bg-foreground/10 text-foreground/80 hover:bg-secondary hover:text-foreground'
-                }`}
-              >
-                <div className={`w-5 h-5 rounded-full flex items-center justify-center ${
-                  selectedCategory === 'kedi' ? 'bg-white/20' : 'bg-pink-500/10'
-                }`}>
-                  <span className="text-xs">🐱</span>
-                </div>
-                <span className="text-xs">Kedi Hikayeleri</span>
-              </button>
-              
-              <button
-                onClick={() => setSelectedCategory('kopek')}
-                className={`px-3 py-2 rounded-lg flex items-center gap-1.5 transition-all duration-300 ${
-                  selectedCategory === 'kopek' 
-                  ? `bg-gradient-to-r from-amber-500 to-amber-600 text-white font-medium shadow-sm` 
-                  : 'bg-white/90 dark:bg-foreground/10 text-foreground/80 hover:bg-secondary hover:text-foreground'
-                }`}
-              >
-                <div className={`w-5 h-5 rounded-full flex items-center justify-center ${
-                  selectedCategory === 'kopek' ? 'bg-white/20' : 'bg-amber-500/10'
-                }`}>
-                  <span className="text-xs">🐶</span>
-                </div>
-                <span className="text-xs">Köpek Hikayeleri</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
+          <div className="flex flex-col-reverse md:flex-row gap-10 items-center">
             <motion.div
-              className="w-full md:w-1/2 order-2 md:order-1"
+              className="w-full md:w-1/2"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 md:mb-4 text-foreground">Patili Dostlarımızın <span className="text-primary">Hikayeleri</span></h2>
-              <p className="text-foreground/80 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-foreground">Patili Dostlarımızın <span className="text-primary">Hikayeleri</span></h2>
+              <p className="text-foreground/80 mb-6 leading-relaxed text-base">
                 AtaVet ailesinin ve patili dostlarımızın hikayelerini keşfedin. 
                 Klinik deneyimlerimizden, hastaların iyileşme süreçlerine, minik dostlarımızın yaşamlarını 
                 değiştiren anlara kadar pek çok duygu dolu hikaye sizi bekliyor.
               </p>
               
-              <div className="p-3 md:p-4 bg-white dark:bg-foreground/5 rounded-lg shadow-sm border border-light-gray/10 dark:border-light-gray/5 mb-4 md:mb-6">
-                <blockquote className="text-xs md:text-sm italic text-foreground/90 border-l-2 border-primary pl-3">
+              <div className="p-4 bg-white dark:bg-foreground/5 rounded-lg shadow-sm border border-light-gray/10 dark:border-light-gray/5 mb-6">
+                <blockquote className="text-sm italic text-foreground/90 border-l-2 border-primary pl-3">
                   &ldquo;Her hayvan bir hikaye, her hikaye bir yaşam.&rdquo;
                   <footer className="text-xs text-foreground/70 mt-1">— AtaVet Ekibi</footer>
                 </blockquote>
               </div>
               
-              <div className="flex flex-wrap gap-3 md:gap-4 items-center">
+              <div className="flex gap-4 items-center">
                 <Link 
                   href="#stories" 
-                  className="py-2 md:py-2.5 px-4 md:px-5 bg-primary text-white text-xs md:text-sm font-medium rounded-lg shadow-sm hover:shadow-md hover:bg-accent transition-all duration-300 flex items-center gap-2"
+                  className="py-2.5 px-5 bg-primary text-white text-sm font-medium rounded-lg shadow-sm hover:shadow-md hover:bg-accent transition-all duration-300 flex items-center gap-2"
                 >
                   <span>Hikayeleri Keşfet</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 5v14M5 12h14" />
                   </svg>
                 </Link>
-                <Link href="/iletisim" className="py-2 md:py-2.5 px-4 md:px-5 bg-white/90 text-primary text-xs md:text-sm font-medium rounded-lg shadow-sm hover:shadow-md hover:bg-secondary/30 dark:hover:bg-foreground/10 transition-all duration-300 md:hidden">
+                <Link href="/iletisim" className="py-2.5 px-5 bg-white/90 text-primary text-sm font-medium rounded-lg shadow-sm hover:shadow-md hover:bg-secondary/30 dark:hover:bg-foreground/10 transition-all duration-300 md:hidden">
                   Hikayeni Paylaş
                 </Link>
               </div>
             </motion.div>
             
             <motion.div
-              className="w-full md:w-1/2 mb-4 md:mb-0 order-1 md:order-2"
+              className="w-full md:w-1/2"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-md md:shadow-lg">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <Image 
                   src="/atavet-img/kopek-1.webp" 
                   alt="Hayvan Hikayeleri" 
-                  className="w-full h-[220px] sm:h-[260px] md:h-[320px] object-cover"
+                  className="w-full h-[280px] md:h-[320px] object-cover"
                   width={800}
                   height={500}
                 />
                 
-                <div className="absolute top-2 md:top-3 right-2 md:right-4">
-                  <div className="bg-white/90 text-primary py-1 md:py-1.5 px-3 md:px-4 rounded-lg font-medium text-xs md:text-sm">
+                <div className="absolute top-3 right-4">
+                  <div className="bg-white/90 text-primary py-1.5 px-4 rounded-lg font-semibold text-sm">
                     &ldquo; Sevgi iyileştirir &rdquo;
                   </div>
                 </div>
@@ -285,18 +232,18 @@ function OykulerimizContent() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 py-10">
-        {/* Categories Navigation Section - Mobil için gizlendi */}
-        <div id="stories" className="mb-8 md:mb-12 hidden md:block">
-          <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-md border border-light-gray/10 dark:border-light-gray/5 p-4 md:p-6 relative overflow-hidden">
+      <div className="container mx-auto px-6 py-10">
+        {/* Categories Navigation Section */}
+        <div id="stories" className="mb-12">
+          <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-md border border-light-gray/10 dark:border-light-gray/5 p-6 relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl"></div>
             
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 md:mb-6">
+            <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-lg md:text-xl font-semibold text-foreground">Öykü Kategorileri</h2>
-                <p className="text-xs md:text-sm text-foreground/70 mt-1">Aşağıdan görmek istediğiniz hikaye türünü seçebilirsiniz</p>
+                <h2 className="text-xl font-semibold text-foreground">Öykü Kategorileri</h2>
+                <p className="text-sm text-foreground/70 mt-1">Aşağıdan görmek istediğiniz hikaye türünü seçebilirsiniz</p>
               </div>
-              <div className={`flex items-center mt-2 sm:mt-0 ${isFilterAnimating ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+              <div className={`flex items-center ${isFilterAnimating ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
                 <div className="flex items-center gap-2 bg-secondary/50 dark:bg-foreground/10 py-1 px-3 rounded-full">
                   <div className="h-1.5 w-6 rounded-full bg-primary/20 relative">
                     <motion.div 
@@ -324,12 +271,12 @@ function OykulerimizContent() {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.97 }}
                   >
-                    <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center ${
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
                       selectedCategory === key ? 'bg-white/20' : 'bg-white/80 dark:bg-foreground/20'
                     }`}>
-                      <span className="text-xs md:text-sm">{categoryIcons[key as Category]}</span>
+                      <span className="text-sm">{categoryIcons[key as Category]}</span>
                     </div>
-                    <span className="text-xs md:text-sm truncate">{label}</span>
+                    <span className="text-sm truncate">{label}</span>
                     {selectedCategory === key && (
                       <motion.div
                         initial={{ scale: 0 }}
@@ -341,20 +288,6 @@ function OykulerimizContent() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-        
-        {/* Mobile için filtreleme durumunu gösteren bildirim */}
-        <div className={`md:hidden mb-4 ${isFilterAnimating ? 'flex' : 'hidden'} items-center justify-center`}>
-          <div className="flex items-center gap-2 bg-secondary/50 dark:bg-foreground/10 py-1 px-3 rounded-full">
-            <div className="h-1.5 w-6 rounded-full bg-primary/20 relative">
-              <motion.div 
-                className="absolute top-0 left-0 h-full w-2.5 bg-primary rounded-full"
-                animate={{ x: [0, 3.5, 0] }}
-                transition={{ repeat: Infinity, duration: 1 }}
-              />
-            </div>
-            <span className="text-xs text-foreground/70">Filtreleniyor</span>
           </div>
         </div>
         
