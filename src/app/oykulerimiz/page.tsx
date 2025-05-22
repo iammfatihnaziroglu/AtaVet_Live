@@ -76,21 +76,21 @@ function OykulerimizContent() {
     },
     {
       id: 4,
-      title: "Lili'nin Sessiz İsyanı",
-      description: "Yavru hayvanlarımızın ilk günlerinden itibaren gelişimlerini anlatan hikayeler.",
-      image: "/images/stories/growing-pets.jpg",
-      link: "/oykulerimiz/minik-dostlarimiz-buyuyor",
-      categories: ['kopek', 'kedi'],
-      primaryCategory: 'kopek'
+      title: "Lili'nin Hikayesi",
+      description: "Lili’nin Sessiz İsyanı: Midesindeki Fırtına",
+      image: "/atavet-img/lili-1.webp",
+      link: "/oykulerimiz/lilinin-hikayesi",
+      categories: ['kedi'],
+      primaryCategory: 'kedi'
     },
     {
       id: 5,
-      title: "Şaşırtıcı Kuş Dostlarımız",
-      description: "Kliniğimize gelen kuş dostlarımızın ilginç ve eğlenceli hikayeleri.",
-      image: "/images/stories/bird-stories.jpg", 
-      link: "/oykulerimiz/sasirtici-kus-dostlarimiz",
-      categories: ['egzotik'],
-      primaryCategory: 'egzotik'
+      title: "Kakao ve Fıstık'ın Hikayesi",
+      description: "Kakao ve Fıstık’ın İlk Kliniği Ziyareti: Sağlıklı Bir Başlangıç",
+      image: "/atavet-img/kakao-1.webp", 
+      link: "/oykulerimiz/kakaovefistigin-hikayesi",
+      categories: ['kopek'],
+      primaryCategory: 'kopek'
     },
     {
       id: 6,
