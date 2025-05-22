@@ -59,7 +59,7 @@ function OykulerimizContent() {
       id: 2,
       title: "Şans'ın Hikayesi",
       description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
-      image: "/images/stories/street-animals.jpg",
+      image: "/atavet-img/sans-1.webp",
       link: "/oykulerimiz/sansin-hikayesi",
       categories: ['kedi', 'kopek'],
       primaryCategory: 'kedi'
@@ -320,7 +320,7 @@ function OykulerimizContent() {
                         <Image 
                           src={story.image} 
                           alt={story.title} 
-                          className={`w-full h-full object-cover transition-all duration-500 ${
+                          className={`w-full h-full object-cover object-top transition-all duration-500 ${
                             hoveredStory === story.id ? 'scale-110' : 'scale-100'
                           }`}
                           width={500}

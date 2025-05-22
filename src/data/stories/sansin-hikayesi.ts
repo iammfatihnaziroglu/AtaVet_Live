@@ -16,8 +16,8 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
 Şans, bize dayanıklılığın ve umudun ne demek olduğunu bir kez daha hatırlattı.
 </p>
     `,
-  image: "/images/stories/street-animals.jpg",
-  heroImage: "/images/stories/street-animals-hero.jpg",
+  image: "/atavet-img/sans-1.webp",
+  heroImage: "/atavet-img/sans-1.webp",
   author: "Tayfur Şener",
   authorImage: "/images/stories/avatar-2.jpg",
   slug: "sansin-hikayesi",
@@ -25,15 +25,15 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
   primaryCategory: 'kedi',
   relatedStories: ["patili-dostlarimizin-iyilesme-hikayeleri", "klinigimizin-yildizlari"],
   galleryImages: [
-    "/images/stories/street-cat-1.jpg",
-    "/images/stories/street-cat-2.jpg",
-    "/images/stories/street-dog-1.jpg",
-    "/images/stories/feeding-program.jpg"
+    "/atavet-img/sans-2.webp",
+    "/atavet-img/sans-3.webp",
+    "/atavet-img/sans-5.webp",
+    "/atavet-img/sans-4.webp"
   ],
   beforeAfterImages: [
     { 
-      before: "/images/stories/umut-before.jpg", 
-      after: "/images/stories/umut-after.jpg",
+      before: "/atavet-img/sans-2.webp", 
+      after: "/atavet-img/sans-3.webp",
       caption: "Şans isimli kedimizin kliniğimize ilk geldiği zamanki ve iyileştikten sonraki halleri."
     }
   ],
@@ -41,6 +41,6 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
     text: "Sevgili Atavet ailesine, Şans’a ikinci bir hayat sundukları için minnettarız. Bu zorlu süreçte gösterdiğiniz ilgi, sabır ve sevgi için sonsuz teşekkür ederiz. İyi ki varsınız.",
     petOwner: "Mehmet ve Selin",
     petName: "Şans",
-    ownerImage: "/images/stories/pet-owner-2.jpg"
+    ownerImage: "/atavet-img/sans-5.webp"
   }
 }; 

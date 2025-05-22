@@ -266,13 +266,16 @@ function StoryDetailContent() {
                   <Image 
                     src={story.heroImage || story.image} 
                     alt={story.title}
-                    className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
+                    className="object-cover w-full h-full transition-transform duration-700 hover:scale-110 origin-top brightness-105 contrast-105"
                     width={1200}
                     height={900}
                     priority
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'top center'
+                    }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  
                 </div>
               </motion.div>
             </div>
@@ -375,20 +378,22 @@ function StoryDetailContent() {
                             <Image 
                               src={item.before} 
                               alt={`${story.title} - Öncesi ${index + 1}`} 
-                              className="w-full h-[280px] object-cover"
+                              className="w-full h-[280px] object-cover object-center transition-transform duration-700 hover:scale-110 origin-top"
                               width={600}
                               height={300}
                             />
+                            <div className="absolute top-2 left-2 bg-red-500/90 text-white text-sm font-medium px-3 py-1 rounded-full">Öncesi</div>
                           </div>
                           
                           <div className="relative group overflow-hidden rounded-lg">
                             <Image 
                               src={item.after} 
                               alt={`${story.title} - Sonrası ${index + 1}`} 
-                              className="w-full h-[280px] object-cover"
+                              className="w-full h-[280px] object-cover object-center transition-transform duration-700 hover:scale-110 origin-top"
                               width={600}
                               height={300}
                             />
+                            <div className="absolute top-2 left-2 bg-emerald-500/90 text-white text-sm font-medium px-3 py-1 rounded-full">Sonrası</div>
                           </div>
                         </div>
                         
@@ -450,12 +455,12 @@ function StoryDetailContent() {
                         <Image 
                           src={img} 
                           alt={`${story.title} - Görsel ${index + 1}`} 
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 brightness-105 contrast-105"
                           width={300}
                           height={300}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                          <div className="text-white text-xs bg-foreground/30 backdrop-blur-sm py-1 px-2 rounded">Görüntüyü büyüt</div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                          <div className="text-white text-xs bg-black/20 backdrop-blur-sm py-1 px-2 rounded">Görüntüyü büyüt</div>
                         </div>
                       </div>
                     ))}
@@ -515,7 +520,7 @@ function StoryDetailContent() {
               {/* Quick Info Card */}
               <div className="bg-white/50 dark:bg-foreground/5 backdrop-blur-sm rounded-2xl shadow-sm p-8 border border-red-100/20 dark:border-red-500/10">
                 <div className="max-w-lg mx-auto">
-                  <h3 className="text-base font-medium text-red-500/70 text-center mb-6">Tedavi Bilgileri</h3>
+                  <h3 className="text-lg text-foreground font-semibold text-center mb-6">Tedavi Bilgileri</h3>
                   
                   <div className="grid grid-cols-2 gap-8">
                     <div className="text-center">
