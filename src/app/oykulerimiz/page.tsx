@@ -60,16 +60,16 @@ function OykulerimizContent() {
       title: "Şans'ın Hikayesi",
       description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
       image: "/images/stories/street-animals.jpg",
-      link: "/oykulerimiz/sokak-hayvanlarina-yardim-elimiz",
+      link: "/oykulerimiz/sansin-hikayesi",
       categories: ['kedi', 'kopek'],
       primaryCategory: 'kedi'
     },
     {
       id: 3,
-      title: "Kliniğimizin Yıldızları",
-      description: "Her ay seçtiğimiz özel hastalarımızın hikayeleri ve onların eğlenceli anıları.",
+      title: "Max'in Hikayesi",
+      description: "Küçük Max, büyük bir savaşı kazandı!",
       image: "/images/stories/clinic-stars.jpg",
-      link: "/oykulerimiz/klinigimizin-yildizlari",
+      link: "/oykulerimiz/maxin-hikayesi",
       categories: ['kedi', 'kopek', 'egzotik'],
       primaryCategory: 'kedi'
     },

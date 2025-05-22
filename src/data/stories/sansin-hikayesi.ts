@@ -18,10 +18,10 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
     `,
   image: "/images/stories/street-animals.jpg",
   heroImage: "/images/stories/street-animals-hero.jpg",
-  author: "Dr. Zeynep Kaya",
+  author: "Kurucu Veteriner Hekim Tayfur Şener",
   authorImage: "/images/stories/avatar-2.jpg",
-  slug: "sokak-hayvanlarina-yardim-elimiz",
-  categories: ['kedi', 'kopek'],
+  slug: "sansin-hikayesi",
+  categories: ['kedi'],
   primaryCategory: 'kedi',
   relatedStories: ["patili-dostlarimizin-iyilesme-hikayeleri", "klinigimizin-yildizlari"],
   galleryImages: [
@@ -34,7 +34,7 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
     { 
       before: "/images/stories/umut-before.jpg", 
       after: "/images/stories/umut-after.jpg",
-      caption: "Umut isimli yavru kedimizin kliniğimize ilk geldiği zamanki ve iyileştikten sonraki halleri."
+      caption: "Şans isimli kedimizin kliniğimize ilk geldiği zamanki ve iyileştikten sonraki halleri."
     }
   ],
   testimonial: {

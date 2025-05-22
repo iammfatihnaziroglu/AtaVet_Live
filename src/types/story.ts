@@ -1,4 +1,4 @@
-export type Category = 'kedi' | 'kopek' | 'kus' | 'balik' | 'kemirgen' | 'egzotik' | 'hepsi';
+export type Category = 'kedi' | 'kopek' | 'egzotik' | 'hepsi';
 
 export interface Story {
   id: number;

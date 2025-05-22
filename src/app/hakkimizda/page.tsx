@@ -6,7 +6,7 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-6">Hakkımızda</h1>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            AtaVet, 2016 yılından bu yana Isparta&apos;da evcil hayvan sağlığı ve refahı için çalışan profesyonel bir veteriner kliniğidir.
+            AtaVet, Isparta&apos;da evcil hayvan sağlığı ve refahı için çalışan, 2024 yılında kurulmuş profesyonel bir veteriner kliniğidir.
           </p>
         </div>
 
@@ -18,10 +18,10 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Hikayemiz</h2>
             <p className="text-foreground/70 mb-4">
-              AtaVet, Kurucu Veteriner Hekim Tayfur Şener tarafından 2016 yılında kurulmuştur. Küçük bir muayenehane olarak başlayan kliniğimiz, sunduğu kaliteli hizmet ve hasta odaklı yaklaşımı sayesinde bölgenin en güvenilir veteriner kliniklerinden biri haline gelmiştir.
+              AtaVet, Veteriner Hekim Tayfur Şener tarafından 2024 yılının Ekim ayında Isparta&apos;da kurulmuştur. Kliniğimiz, kurucumuzun Burdur Mehmet Akif Ersoy Üniversitesi Veteriner Fakültesi&apos;nde aldığı eğitim, Polonya&apos;daki uluslararası deneyimi ve Antalya&apos;daki köklü veteriner kliniklerinde edindiği tecrübelerin bir yansıması olarak hizmet vermektedir.
             </p>
             <p className="text-foreground/70 mb-4">
-              Yıllar içinde ekibimizi genişlettik, modern ekipmanlarla donatılmış yeni binamıza taşındık ve hizmet yelpazemizi geliştirdik. Bugün 3 veteriner hekim ve 5 yardımcı personelle hizmet vermekte ve yılda 5000&apos;den fazla evcil hayvana sağlık hizmeti sunmaktayız.
+              Kurucumuzun Türk Silahlı Kuvvetleri bünyesindeki görevi sırasında edindiği disiplin ve organizasyon anlayışını kliniğimizin hizmet kalitesine yansıtmaktayız. Modern ekipmanlarla donatılmış kliniğimizde, hasta odaklı yaklaşımımız ve kaliteli hizmet anlayışımızla bölgenin güvenilir veteriner kliniklerinden biri olmayı hedefliyoruz.
             </p>
             <p className="text-foreground/70">
               Misyonumuz, evcil hayvanların sağlığını korumak, hastalıklarını tedavi etmek ve sahiplerine en doğru rehberliği sağlamaktır. Vizyonumuz ise Isparta ve çevresinde evcil hayvan sağlığı standartlarını yükseltmek ve her evcil hayvanın kaliteli veteriner hizmetine erişimini sağlamaktır.
@@ -40,7 +40,7 @@ export default function AboutPage() {
             </div>
             <h2 className="text-2xl font-bold mb-4">Misyonumuz</h2>
             <p className="text-foreground/70 mb-4">
-              AtaVet olarak misyonumuz, en yüksek standartlarda veteriner hekimliği hizmeti sunarak evcil hayvanların sağlıklı ve mutlu bir yaşam sürmelerine katkıda bulunmaktır. Bunu gerçekleştirmek için:
+              AtaVet olarak misyonumuz, kurucumuzun yüksek lisans eğitimine devam ettiği Doğum ve Jinekoloji alanındaki akademik bilgisi ve Antalya&apos;daki kliniklerde edindiği pratik tecrübeleri birleştirerek, en yüksek standartlarda veteriner hekimliği hizmeti sunmaktır. Bunu gerçekleştirmek için:
             </p>
             <ul className="list-disc pl-6 text-foreground/70 space-y-2">
               <li>En güncel veteriner tıbbı bilgilerini ve tedavi yöntemlerini uygularız</li>
@@ -60,11 +60,11 @@ export default function AboutPage() {
             </div>
             <h2 className="text-2xl font-bold mb-4">Vizyonumuz</h2>
             <p className="text-foreground/70 mb-4">
-              Vizyonumuz, Isparta ve çevresinde veteriner hekimliği alanında öncü ve referans gösterilen bir kurum olmaktır. Hedeflerimiz:
+              Vizyonumuz, kurucumuzun Polonya&apos;da edindiği uluslararası tecrübe ve Isparta&apos;nın ihtiyaçlarını birleştirerek, bölgemizde veteriner hekimliği alanında öncü ve referans gösterilen bir kurum olmaktır. Hedeflerimiz:
             </p>
             <ul className="list-disc pl-6 text-foreground/70 space-y-2">
               <li>En modern teşhis ve tedavi olanaklarını sunarak teknolojik gelişimleri yakından takip etmek</li>
-              <li>Sürekli eğitim ve gelişimle ekip üyelerimizin uzmanlık alanlarını genişletmek</li>
+              <li>Kurucumuzun akademik çalışmalarıyla paralel olarak sürekli gelişime önem vermek</li>
               <li>Hayvan sağlığı konusunda toplumu bilinçlendirmek için eğitim programları ve etkinlikler düzenlemek</li>
               <li>Bölgemizdeki sahipsiz hayvanlar için destek projeleri geliştirmek</li>
               <li>Genç veteriner hekimlerin mesleki gelişimlerine katkıda bulunacak staj ve eğitim programları oluşturmak</li>

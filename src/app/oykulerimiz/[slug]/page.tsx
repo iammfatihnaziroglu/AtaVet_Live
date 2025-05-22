@@ -280,8 +280,62 @@ function StoryDetailContent() {
           <div className="w-full md:w-2/3">
             <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-md border border-light-gray/10 dark:border-light-gray/5 p-6 md:p-8 mb-8">
               <article className="prose prose-sm md:prose-base lg:prose-lg dark:prose-invert prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-primary prose-a:no-underline hover:prose-a:underline max-w-none">
-                <div dangerouslySetInnerHTML={{ __html: story.fullContent }} />
+                <div className="mb-10">
+                  <div className="relative">
+                    {/* Reading Progress Bar */}
+                    <div className="fixed top-0 left-0 w-full h-1 z-50 invisible md:visible">
+                      <div className="h-full bg-primary" id="reading-progress-bar" style={{width: '0%'}}></div>
+                    </div>
+                    
+                    <div className="prose-headings:font-bold prose-headings:text-foreground prose-headings:border-b prose-headings:border-light-gray/10 prose-headings:pb-2 prose-headings:mb-6 
+                      prose-p:text-foreground/80 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-justify prose-strong:text-primary/90 prose-strong:font-semibold 
+                      prose-a:text-primary prose-a:transition-colors prose-a:duration-300 prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:underline-offset-4
+                      prose-ul:my-6 prose-li:ml-2 prose-li:mb-2 prose-li:text-foreground/80 prose-ul:list-disc
+                      prose-blockquote:bg-secondary/20 dark:prose-blockquote:bg-foreground/5 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:p-4 prose-blockquote:rounded-md prose-blockquote:not-italic prose-blockquote:text-foreground/80 prose-blockquote:my-8
+                      prose-img:rounded-lg prose-img:shadow-md prose-img:my-8
+                      first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:mr-2 first-letter:float-left first-letter:leading-tight"
+                      dangerouslySetInnerHTML={{ __html: story.fullContent }} />
+                  </div>
+                  
+                  {/* Article footer */}
+                  <div className="mt-16 pt-8 border-t border-light-gray/10 dark:border-light-gray/5">
+                    <div className="flex items-start gap-4">
+                      <div className={`w-12 h-12 rounded-full ${categoryTheme.headerBg} flex items-center justify-center flex-shrink-0`}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h4 className="font-semibold">{story.author}</h4>
+                          <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full">Veteriner Hekim</span>
+                        </div>
+                        <p className="text-sm text-foreground/70 mt-1">
+                          AtaVet Veteriner Kliniği uzman kadrosu, evcil dostlarınızın sağlığı için en iyi bakımı sunmaktadır.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </article>
+              
+              {/* Reading Progress Script */}
+              <script dangerouslySetInnerHTML={{
+                __html: `
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const progressBar = document.getElementById('reading-progress-bar');
+                    window.addEventListener('scroll', () => {
+                      const scrollTop = window.scrollY;
+                      const docHeight = document.documentElement.scrollHeight;
+                      const winHeight = window.innerHeight;
+                      const scrollPercent = scrollTop / (docHeight - winHeight);
+                      const position = Math.min(scrollPercent * 100, 100);
+                      progressBar.style.width = position + '%';
+                    });
+                  });
+                `
+              }} />
 
               {/* Before/After Images Section */}
               {story.beforeAfterImages && story.beforeAfterImages.length > 0 && (

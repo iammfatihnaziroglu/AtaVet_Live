@@ -1,7 +1,7 @@
 export const story = {
   id: 3,
   title: "Max'in Hikayesi",
-  description: "Her ay seçtiğimiz özel hastalarımızın hikayeleri ve onların eğlenceli anıları.",
+  description: "Küçük Max, büyük bir savaşı kazandı.",
   fullContent: `
     <p>3 aylık Belçika Malinois cinsi yavru köpek Max, kliniğimize halsizlik ve kanlı ishal şikâyetiyle getirildi. Yapılan kan ve dışkı tahlilleri sonucunda, ölümcül ve bulaşıcı bir hastalık olan Parvoviral Enteritis tanısı kondu. Karma aşısı olmayan yavru köpeklerde sık görülen bu hastalık, Max için hayati bir tehdit oluşturuyordu.</p>
     
@@ -19,10 +19,10 @@ Küçük Max, büyük bir savaşı kazandı.
   heroImage: "/images/stories/clinic-stars-hero.jpg",
   author: "Tayfur Şener",
   authorImage: "/images/stories/avatar-1.jpg",
-  slug: "klinigimizin-yildizlari",
-  categories: ['kedi', 'kopek', 'egzotik'],
+  slug: "maxin-hikayesi",
+  categories: ['kopek'],
   primaryCategory: 'kopek',
-  relatedStories: ["patili-dostlarimizin-iyilesme-hikayeleri", "sokak-hayvanlarina-yardim-elimiz"],
+  relatedStories: ["patili-dostlarimizin-iyilesme-hikayeleri", "sansin-hikayesi"],
   galleryImages: [
     "/images/stories/clinic-star-1.jpg",
     "/images/stories/clinic-star-2.jpg",
