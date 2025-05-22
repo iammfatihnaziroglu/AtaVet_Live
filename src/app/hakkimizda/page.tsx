@@ -6,7 +6,7 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-6">Hakkımızda</h1>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-            AtaVet Veteriner Kliniği, Isparta&apos;da evcil hayvanların sağlığı ve yaşam kalitesini artırmak amacıyla faaliyetlerini sürdüren, modern veteriner hekimliği uygulamalarını benimseyen profesyonel bir sağlık kuruluşudur.
+            AtaVet, 2016 yılından bu yana Isparta&apos;da evcil hayvan sağlığı ve refahı için çalışan profesyonel bir veteriner kliniğidir.
           </p>
         </div>
 
@@ -18,13 +18,13 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Hikayemiz</h2>
             <p className="text-foreground/70 mb-4">
-              AtaVet Veteriner Kliniği, Veteriner Hekim Dr. Tayfur Şener&apos;in klinik direktörlüğünde 2024 yılı Ekim ayında Isparta&apos;da faaliyete başlamıştır. Burdur Mehmet Akif Ersoy Üniversitesi Veteriner Fakültesi&apos;nden mezun olan Dr. Şener, uluslararası standartlardaki veteriner hekimliği uygulamalarını bölgemize kazandırmak amacıyla kuruluşumuzu gerçekleştirmiştir.
+              AtaVet, Kurucu Veteriner Hekim Tayfur Şener tarafından 2016 yılında kurulmuştur. Küçük bir muayenehane olarak başlayan kliniğimiz, sunduğu kaliteli hizmet ve hasta odaklı yaklaşımı sayesinde bölgenin en güvenilir veteriner kliniklerinden biri haline gelmiştir.
             </p>
             <p className="text-foreground/70 mb-4">
-              Polonya&apos;da tamamladığı eğitim süreci ve önde gelen Antalya pet kliniklerindeki mesleki deneyimi, kurumumuzun hizmet kalitesinde belirleyici role sahiptir. Türk Silahlı Kuvvetleri bünyesinde Veteriner Asteğmen olarak görev yaptığı süreçte edindiği disiplinli çalışma prensibi ve organizasyon yapısı, AtaVet&apos;in kurumsal kimliğinin şekillenmesinde önemli etken olmuştur. Kliniğimiz, müşteri memnuniyeti odaklı yaklaşımı ve ileri teknolojik imkanları ile bölgedeki referans veteriner sağlık kuruluşu olma hedefindedir.
+              Yıllar içinde ekibimizi genişlettik, modern ekipmanlarla donatılmış yeni binamıza taşındık ve hizmet yelpazemizi geliştirdik. Bugün 3 veteriner hekim ve 5 yardımcı personelle hizmet vermekte ve yılda 5000&apos;den fazla evcil hayvana sağlık hizmeti sunmaktayız.
             </p>
             <p className="text-foreground/70">
-              Doğum ve Jinekoloji alanında akademik araştırmalarını sürdüren kurucumuzun liderliğinde AtaVet, bilimsel yaklaşımı prensip edinmiş, kanıta dayalı veteriner hekimliği uygulamalarını benimsemiş ve evcil hayvanların yaşam kalitesini yükseltmeyi öncelikli hedef olarak belirlemiştir. Kurumumuz, sürekli gelişim ve yenilik ilkesiyle hizmet standardını korumaktadır.
+              Misyonumuz, evcil hayvanların sağlığını korumak, hastalıklarını tedavi etmek ve sahiplerine en doğru rehberliği sağlamaktır. Vizyonumuz ise Isparta ve çevresinde evcil hayvan sağlığı standartlarını yükseltmek ve her evcil hayvanın kaliteli veteriner hizmetine erişimini sağlamaktır.
             </p>
           </div>
         </div>
@@ -40,14 +40,14 @@ export default function AboutPage() {
             </div>
             <h2 className="text-2xl font-bold mb-4">Misyonumuz</h2>
             <p className="text-foreground/70 mb-4">
-              AtaVet Veteriner Kliniği olarak misyonumuz, akademik bilgi birikimi ve klinik tecrübeyi harmanlayarak pet sahiplerine ve evcil dostlarımıza uluslararası standartlarda veteriner hekimliği hizmeti sunmaktır. Bu misyonu gerçekleştirmek için benimsediğimiz ilkeler:
+              AtaVet olarak misyonumuz, en yüksek standartlarda veteriner hekimliği hizmeti sunarak evcil hayvanların sağlıklı ve mutlu bir yaşam sürmelerine katkıda bulunmaktır. Bunu gerçekleştirmek için:
             </p>
             <ul className="list-disc pl-6 text-foreground/70 space-y-2">
-              <li>Güncel bilimsel yöntemleri ve ileri teknolojik ekipmanları kullanarak yüksek kalitede diagnostik ve terapötik hizmetler sunmaktayız</li>
-              <li>Her hastanın fizyolojik, patolojik ve psikolojik özelliklerini dikkate alarak, kişiselleştirilmiş tedavi protokolleri geliştirmekteyiz</li>
-              <li>Preventif veteriner hekimliği yaklaşımını benimseyerek, hastalıkları oluşmadan önleme prensibiyle çalışmaktayız</li>
-              <li>Hayvan sahiplerinin bilgi ve farkındalığını artırmaya yönelik eğitim programları düzenleyerek, evcil hayvanların yaşam standardını yükseltmeyi hedeflemekteyiz</li>
-              <li>Profesyonel etik kurallarına bağlı kalarak, şeffaf ve güvene dayalı hasta sahipleri ilişkisi kurmaktayız</li>
+              <li>En güncel veteriner tıbbı bilgilerini ve tedavi yöntemlerini uygularız</li>
+              <li>Her hastaya özel, bireyselleştirilmiş bakım planları geliştiririz</li>
+              <li>Hayvan sahiplerini eğiterek bilinçli pet sahipliğini teşvik ederiz</li>
+              <li>Şefkat ve profesyonellikle her hastaya yaklaşırız</li>
+              <li>Toplum içinde hayvan sağlığı ve refahını destekleyen projeler geliştiririz</li>
             </ul>
           </div>
 
@@ -60,14 +60,14 @@ export default function AboutPage() {
             </div>
             <h2 className="text-2xl font-bold mb-4">Vizyonumuz</h2>
             <p className="text-foreground/70 mb-4">
-              Vizyonumuz, Isparta ve çevre illerde veteriner hekimliği alanında inovatif yaklaşımları ve bilimsel metodolojileri uygulayan, ulusal ve uluslararası standartlarda tanınan bir sağlık kuruluşu olmaktır. Stratejik hedeflerimiz:
+              Vizyonumuz, Isparta ve çevresinde veteriner hekimliği alanında öncü ve referans gösterilen bir kurum olmaktır. Hedeflerimiz:
             </p>
             <ul className="list-disc pl-6 text-foreground/70 space-y-2">
-              <li>Sürekli eğitim programları ve akademik işbirlikleri ile veteriner hekimliğindeki güncel gelişmeleri takip ederek, kurumsal bilgi birikimimizi zenginleştirmek</li>
-              <li>Doğum ve Jinekoloji başta olmak üzere, çeşitli veteriner hekimliği disiplinlerinde uzmanlaşarak, multidisipliner yaklaşımla kapsamlı sağlık hizmeti sunmak</li>
-              <li>Veteriner hekimliği etiği çerçevesinde, hayvan refahını ön planda tutan toplumsal farkındalık projeleri geliştirmek</li>
-              <li>Bilimsel araştırma ve klinik uygulama tecrübelerimizi, meslek içi eğitim programları aracılığıyla veteriner hekimliği camiasıyla paylaşmak</li>
-              <li>Avrupa ve Türkiye&apos;deki profesyonel deneyimlerimizi entegre ederek, bölgesel ihtiyaçlara cevap veren, uluslararası kalite standartlarında diagnostik ve terapötik hizmetler sunmak</li>
+              <li>En modern teşhis ve tedavi olanaklarını sunarak teknolojik gelişimleri yakından takip etmek</li>
+              <li>Sürekli eğitim ve gelişimle ekip üyelerimizin uzmanlık alanlarını genişletmek</li>
+              <li>Hayvan sağlığı konusunda toplumu bilinçlendirmek için eğitim programları ve etkinlikler düzenlemek</li>
+              <li>Bölgemizdeki sahipsiz hayvanlar için destek projeleri geliştirmek</li>
+              <li>Genç veteriner hekimlerin mesleki gelişimlerine katkıda bulunacak staj ve eğitim programları oluşturmak</li>
             </ul>
           </div>
         </div>
@@ -107,20 +107,20 @@ export default function AboutPage() {
 
                 <div className="prose prose-sm dark:prose-invert max-w-none">
                   <p className="text-foreground/80 leading-relaxed">
-                    Dr. Tayfur Şener, 1999 yılında Isparta&apos;da doğmuş olup, 2017 yılında Burdur Mehmet Akif Ersoy Üniversitesi Veteriner Fakültesi&apos;nde lisans eğitimine başlamıştır. Akademik süreçte üniversitenin sosyal sorumluluk projelerinde aktif rol üstlenmiş ve çeşitli mesleki araştırma çalışmalarına katılmıştır. 2018-2019 eğitim-öğretim yılında uluslararası değişim programı kapsamında Polonya&apos;da eğitim görmüştür.
-                  </p>
+                    1999 yılında Isparta doğumlu Tayfur Şener, 2017 yılında lisans eğitimine Burdur Mehmet Akif Ersoy Üniversitesi Veteriner Fakültesinde başladı. Bu süreçte üniversitenin sosyal dayanışma topluluklarında rol oynamış, birçok mesleki çalışmada aktif olarak görev almıştır. 2018-2019 yılları arasında eğitim sürecini Polonya&apos;da tamamlamıştır.
+                    </p>
                   <p className="text-foreground/80 leading-relaxed mt-4">
-                    Covid-19 pandemisi sürecinde 2.5 yıl süreyle Antalya bölgesinde faaliyet gösteren bir veteriner kliniğinde profesyonel deneyim kazanmış ve 2022 yılında fakültesinden 4&apos;lük sistemde 3,2 akademik ortalama ile mezuniyet derecesi elde etmiştir.
-                  </p>
-                  <p className="text-foreground/80 leading-relaxed mt-4">
-                    Mezuniyeti müteakiben Antalya&apos;nın köklü veteriner sağlık kuruluşlarından birinde klinik hekim olarak görev almıştır. 2023-2024 döneminde Türk Silahlı Kuvvetleri bünyesinde Hava Kuvvetleri Komutanlığı&apos;na bağlı Erzurum Hava Meydan Komutanlığı&apos;nda Veteriner Asteğmen rütbesiyle milli görevini ifa etmiştir.
-                  </p>
-                  <p className="text-foreground/80 leading-relaxed mt-4">
-                    Dr. Şener, 2024 yılı Ekim ayında veteriner hekimliği alanındaki kapsamlı akademik altyapısı ve klinik tecrübesiyle, modern tıbbi yaklaşımları ve kalite odaklı hizmet anlayışını yansıtan AtaVet Veteriner Kliniği&apos;ni kurmuştur.
-                  </p>
-                  <p className="text-foreground/80 leading-relaxed mt-4">
-                    Halen Burdur Mehmet Akif Ersoy Üniversitesi Sağlık Bilimleri Enstitüsü Doğum ve Jinekoloji Anabilim Dalı&apos;nda yüksek lisans eğitimine devam etmekte ve akademik çalışmalarını sürdürmektedir.
-                  </p>
+                   Pandemi sürecinde 2.5 yıl boyunca Antalya&apos;da pet hizmetleri veren bir klinikte görev almış olup, 2022 yılında 4&apos;lük sistemden 3,2 ortalama ile mezun olmuştur.
+                    </p>
+                    <p className="text-foreground/80 leading-relaxed mt-4">
+                      Mezuniyetinden sonra 1 yıl süre ile Antalya&apos;nın ilk açılan hastanelerinden birisinde veteriner hekim olarak görev almıştır. 2023-2024 yılları arasında vatani görevini Hava Kuvvetleri Komutanlığı bünyesinde olan Erzurum Hava Meydan Komutanlığı&apos;nda Veteriner Asteğmen olarak tamamlamıştır.
+                    </p>
+                    <p className="text-foreground/80 leading-relaxed mt-4">
+                    2024 yılının Ekim ayında, veteriner alanındaki derin bilgi birikimi ve mesleki tecrübesiyle, sağlık hizmetlerinde mükemmeliyet vizyonunu hayata geçirmek üzere AtaVet Veteriner Kliniği&apos;nin kuruluşunu gerçekleştirmiştir.
+                    </p>
+                    <p className="text-foreground/80 leading-relaxed mt-4">
+                      Hali hazırda Burdur Mehmet Akif Ersoy Üniversitesi Sağlık Bilimleri Enstitüsünde Doğum ve Jinekoloji anabilim dalında yüksek lisans eğitimine devam etmektedir.
+                    </p>
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-4 justify-center">
