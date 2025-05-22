@@ -18,7 +18,7 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
     `,
   image: "/images/stories/street-animals.jpg",
   heroImage: "/images/stories/street-animals-hero.jpg",
-  author: "Kurucu Veteriner Hekim Tayfur Şener",
+  author: "Tayfur Şener",
   authorImage: "/images/stories/avatar-2.jpg",
   slug: "sansin-hikayesi",
   categories: ['kedi'],

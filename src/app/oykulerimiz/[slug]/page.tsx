@@ -74,7 +74,7 @@ function StoryDetailContent() {
             slug: "azmanin-inanilmaz-iyilesme-hikayesi",
             description: "Ağır bir trafik kazası geçiren Azman'ın tedavi sürecinde yaşadığı mucizevi iyileşme.",
             image: "/images/stories/dog-recovery.jpg",
-            author: "Dr. Mehmet Yılmaz",
+            author: "Tayfur Şener",
             fullContent: "",
             heroImage: "",
             categories: ["kopek", "ortopedi"],
@@ -87,7 +87,7 @@ function StoryDetailContent() {
             slug: "minnosun-goz-ameliyati",
             description: "Katarakt nedeniyle görüşünü kaybeden Minnoş'un başarılı göz ameliyatı sonrası yeni hayatı.",
             image: "/images/stories/cat-eye-surgery.jpg",
-            author: "Dr. Ayşe Demir",
+            author: "Tayfur Şener",
             fullContent: "",
             heroImage: "",
             categories: ["kedi", "göz"],
@@ -100,7 +100,7 @@ function StoryDetailContent() {
             slug: "karamelin-dis-tedavisi",
             description: "Ciddi diş ve diş eti problemleri yaşayan Karamel'in kapsamlı diş tedavisi ve sonrasında yaşadığı değişim.",
             image: "/images/stories/dental-care.jpg",
-            author: "Dr. Canan Yıldız",
+            author: "Tayfur Şener",
             fullContent: "",
             heroImage: "",
             categories: ["kopek", "diş"],
@@ -190,72 +190,89 @@ function StoryDetailContent() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className={`relative bg-gradient-to-b ${categoryTheme.heroGradient} dark:bg-gradient-to-b dark:${categoryTheme.darkHeroGradient} pt-28 pb-16 md:pt-32 md:pb-20 overflow-hidden`}>
+      <div className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-red-500/30 via-red-500/40 to-background overflow-hidden mt-14">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 -right-40 w-96 h-96 bg-primary/10 dark:bg-primary/5 rounded-full blur-3xl opacity-40"></div>
-          <div className="absolute bottom-0 -left-40 w-96 h-96 bg-secondary/10 dark:bg-accent/5 rounded-full blur-3xl opacity-30"></div>
-          <div className="absolute w-full h-full bg-noise opacity-[0.02] mix-blend-soft-light"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/80 opacity-40"></div>
         </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="mb-10">
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10 py-20">
+          <div className="max-w-7xl mx-auto">
+            {/* Back Button */}
             <Link 
               href="/oykulerimiz" 
-              className="inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors duration-300 mb-4 group bg-white/10 dark:bg-foreground/5 backdrop-blur-sm py-1.5 px-3 rounded-lg"
+              className="inline-flex items-center gap-2 text-red-600 hover:text-foreground/90 transition-colors duration-300 mb-8 group"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 group-hover:scale-110 transition-transform duration-300">
                 <path d="M19 12H5M5 12L12 19M5 12L12 5"/>
               </svg>
-              <span>Tüm Hikayeler</span>
+              <span className="font-medium group-hover:scale-110">Tüm Hikayeler</span>
             </Link>
-            
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="w-full md:w-1/2 lg:w-3/5">
-                <div className="flex mb-4">
-                  <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium shadow-sm bg-gradient-to-r ${categoryTheme.gradient} text-white`}>
-                    <span>{categoryTheme.icon}</span>
-                    <span>{categoryTheme.label}</span>
+
+            <div className="grid lg:grid-cols-2 gap-2 items-center">
+              {/* Content Side */}
+              <div className="order-2 lg:order-1">
+                <div className="space-y-5">
+                  {/* Category Badge */}
+                  <div className="flex items-center gap-2">
+                    <div className=" -mt-24 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-red-600 to-red-700 text-white shadow-sm">
+                      <span>{categoryTheme.icon}</span>
+                      <span>{categoryTheme.label}</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white drop-shadow-red-800/60 text-shadow-2xs text-shadow-red-950 drop-shadow-2xl tracking-tight -mt-1">
+                    {story.title}
+                  </h1>
+
+                  {/* Description */}
+                  <p className="text-lg md:text-xl text-foreground/75 tracking-tight leading-relaxed mt-3 ml-1 italic">
+                    {story.description}
+                  </p>
+
+                  {/* Author Info */}
+                  <div className="flex items-center gap-2.5 pt-2">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-emerald-600 border-2 border-white dark:border-gray-900 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className='drop-shadow-md drop-shadow-red-800/25'>
+                      <div className="text-xl font-semibold text-gray-900 dark:text-white text-shadow-2xs text-shadow-red-950/50">{story.author}</div>
+                      <div className="text-sm text-red-600 dark:text-red-500 font-medium">Kurucu Veteriner Hekim</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400 mt-1 ">AtaVet Veteriner Kliniği</div>
+                    </div>
                   </div>
                 </div>
-                
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                  {story.title}
-                </h1>
-                
-                <div className="flex items-center gap-3 mb-5">
-                  <div className={`w-10 h-10 rounded-full ${categoryTheme.headerBg} ${categoryTheme.color} flex items-center justify-center`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
-                  <div>
-                    <span className="block text-sm font-medium text-foreground">{story.author}</span>
-                    <span className="text-xs text-foreground/60">Veteriner Hekim</span>
-                  </div>
-                </div>
-                
-                <p className={`text-foreground/80 leading-relaxed text-base md:text-lg max-w-3xl bg-white/5 dark:bg-foreground/5 backdrop-blur-sm p-4 rounded-lg border-l-2 ${categoryTheme.accentColor}`}>
-                  {story.description}
-                </p>
               </div>
-              
+
+              {/* Image Side */}
               <motion.div
-                className="w-full md:w-1/2 lg:w-2/5 mt-6 md:mt-0"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7 }}
+                className="order-1 lg:order-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <div className="relative rounded-xl overflow-hidden shadow-xl border border-light-gray/10 dark:border-light-gray/5 group h-[280px] md:h-[360px] lg:h-[400px]">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                   <Image 
                     src={story.heroImage || story.image} 
-                    alt={story.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    width={800}
-                    height={600}
+                    alt={story.title}
+                    className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
+                    width={1200}
+                    height={900}
+                    priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  
                 </div>
               </motion.div>
             </div>
@@ -300,7 +317,7 @@ function StoryDetailContent() {
                   {/* Article footer */}
                   <div className="mt-16 pt-8 border-t border-light-gray/10 dark:border-light-gray/5">
                     <div className="flex items-start gap-4">
-                      <div className={`w-12 h-12 rounded-full ${categoryTheme.headerBg} flex items-center justify-center flex-shrink-0`}>
+                      <div className={`w-12 h-12 rounded-full bg-red-50 dark:bg-red-500/10 flex items-center justify-center flex-shrink-0`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                           <circle cx="12" cy="7" r="4"></circle>
@@ -496,69 +513,31 @@ function StoryDetailContent() {
               </div>
               
               {/* Quick Info Card */}
-              <div className="bg-white dark:bg-foreground/5 rounded-xl shadow-md p-6 border border-light-gray/10 dark:border-light-gray/5">
-                <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={categoryTheme.color}>
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                  </svg>
-                  <span>Hızlı Bilgiler</span>
-                </h3>
-                
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3 pb-2 border-b border-gray-100 dark:border-foreground/10">
-                    <div className={`w-8 h-8 rounded-full ${categoryTheme.headerBg} flex items-center justify-center flex-shrink-0`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="block text-xs text-foreground/60">Veteriner Hekim</span>
-                      <span className="block text-sm font-medium text-foreground">{story.author}</span>
-                    </div>
-                  </div>
+              <div className="bg-white/50 dark:bg-foreground/5 backdrop-blur-sm rounded-2xl shadow-sm p-8 border border-red-100/20 dark:border-red-500/10">
+                <div className="max-w-lg mx-auto">
+                  <h3 className="text-base font-medium text-red-500/70 text-center mb-6">Tedavi Bilgileri</h3>
                   
-                  <div className="flex items-start gap-3 pb-2 border-b border-gray-100 dark:border-foreground/10">
-                    <div className={`w-8 h-8 rounded-full ${categoryTheme.headerBg} flex items-center justify-center flex-shrink-0`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
+                  <div className="grid grid-cols-2 gap-8">
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-50 dark:bg-red-500/10 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </div>
+                      <span className="block text-xs text-red-500/70 mb-1.5">Kurucu Veteriner Hekim</span>
+                      <span className="block text-base font-medium text-foreground">{story.author}</span>
                     </div>
-                    <div>
-                      <span className="block text-xs text-foreground/60">Tedavi Süresi</span>
-                      <span className="block text-sm font-medium text-foreground">{story.treatmentDuration || 'Belirtilmemiş'}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 pb-2 border-b border-gray-100 dark:border-foreground/10">
-                    <div className={`w-8 h-8 rounded-full ${categoryTheme.headerBg} flex items-center justify-center flex-shrink-0`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="block text-xs text-foreground/60">Tedavi Yeri</span>
-                      <span className="block text-sm font-medium text-foreground">{story.treatmentLocation || 'AtaVet Kliniği'}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <div className={`w-8 h-8 rounded-full ${categoryTheme.headerBg} flex items-center justify-center flex-shrink-0`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                      </svg>
-                    </div>
-                    <div>
-                      <span className="block text-xs text-foreground/60">Tanı</span>
-                      <span className="block text-sm font-medium text-foreground">{story.diagnosis || 'Detaylı bilgi içerikte'}</span>
+                    
+                    <div className="text-center">
+                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-50 dark:bg-red-500/10 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
+                          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                      </div>
+                      <span className="block text-xs text-red-500/70 mb-1.5">Tedavi Yeri</span>
+                      <span className="block text-base font-medium text-foreground">{story.treatmentLocation || 'AtaVet Kliniği'}</span>
                     </div>
                   </div>
                 </div>
@@ -654,7 +633,19 @@ function StoryDetailContent() {
                 
                 <div className="grid grid-cols-3 gap-3">
                   <a 
-                    href="https://instagram.com/atavet" 
+                    href="https://www.facebook.com/people/Atavet-Veteriner-Klini%C4%9FiIsparta/61567290032914/?locale=tr#" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex flex-col items-center gap-1 py-3 px-2 bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white rounded-lg transition-colors group"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    <span className="text-xs font-medium">Facebook</span>
+                  </a>
+                  
+                  <a 
+                    href="https://instagram.com/atavetisparta" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="flex flex-col items-center gap-1 py-3 px-2 bg-[#E1306C]/10 hover:bg-gradient-to-r from-[#405DE6] via-[#E1306C] to-[#FFDC80] text-[#E1306C] hover:text-white rounded-lg transition-colors group"
@@ -668,28 +659,13 @@ function StoryDetailContent() {
                   </a>
                   
                   <a 
-                    href="https://facebook.com/atavet" 
+                    href="https://tiktok.com/@ispartaatavet" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex flex-col items-center gap-1 py-3 px-2 bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white rounded-lg transition-colors group"
+                    className="flex flex-col items-center gap-1 py-3 px-2 bg-[#FF0855]/90 hover:bg-[#000000] text-[#000000] dark:text-white hover:text-white rounded-lg transition-colors group"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                    </svg>
-                    <span className="text-xs font-medium">Facebook</span>
-                  </a>
-                  
-                  <a 
-                    href="https://youtube.com/atavet" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex flex-col items-center gap-1 py-3 px-2 bg-[#FF0000]/10 hover:bg-[#FF0000] text-[#FF0000] hover:text-white rounded-lg transition-colors group"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                    </svg>
-                    <span className="text-xs font-medium">YouTube</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">                      <path d="M19.321 5.562a5.124 5.124 0 0 1-0.443-0.258 6.228 6.228 0 0 1-2.137-3.253v-0.001h-3.895v13.534c0 1.924-1.539 3.488-3.432 3.488-1.892 0-3.431-1.564-3.431-3.488 0-1.924 1.539-3.487 3.431-3.487 0.359 0 0.705 0.056 1.03 0.16v-3.996a7.597 7.597 0 0 0-1.03-0.069c-4.134 0-7.488 3.399-7.488 7.392 0 3.994 3.354 7.393 7.488 7.393 4.134 0 7.488-3.399 7.488-7.393l0.015-8.548a10.221 10.221 0 0 0 5.93 1.896v-3.87a6.225 6.225 0 0 1-3.526-0.99z"/>                    </svg>
+                    <span className="text-xs font-medium">TikTok</span>
                   </a>
                 </div>
               </div>
