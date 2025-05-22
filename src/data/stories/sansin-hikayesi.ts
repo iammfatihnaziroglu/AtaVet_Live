@@ -1,7 +1,7 @@
 export const story = {
   id: 2,
   title: "Şans'ın Hikayesi",
-  description: "Bir adım ölümden, bir ömür sevgiye: Şans’ın ikinci şansı...",
+  description: "Bir adım ölümden, bir ömür sevgiye: Şans'ın ikinci şansı...",
   fullContent: `
     <p>Şans, 4. kattan düşerek kliniğimize getirildiğinde durumu çok ciddiydi. Damak yarığı, solunum depresyonu, beyin ve akciğer ödemi vardı. Hemen yoğun bakıma alındı. Solunum desteği sağlandı, beslenme sondası takılarak sıvı gıdalarla beslendi.
 </p>
@@ -23,7 +23,7 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
   slug: "sansin-hikayesi",
   categories: ['kedi'],
   primaryCategory: 'kedi',
-  relatedStories: ["dexin-hikayesi", "klinigimizin-yildizlari"],
+  relatedStories: ["dexin-hikayesi"],
   galleryImages: [
     "/atavet-img/sans-2.webp",
     "/atavet-img/sans-3.webp",
@@ -38,7 +38,7 @@ Küçük bedeni büyük bir mücadele verdi. Tedavisinin sonunda sağlığına k
     }
   ],
   testimonial: {
-    text: "Sevgili Atavet ailesine, Şans’a ikinci bir hayat sundukları için minnettarız. Bu zorlu süreçte gösterdiğiniz ilgi, sabır ve sevgi için sonsuz teşekkür ederiz. İyi ki varsınız.",
+    text: "Sevgili Atavet ailesine, Şans'a ikinci bir hayat sundukları için minnettarız. Bu zorlu süreçte gösterdiğiniz ilgi, sabır ve sevgi için sonsuz teşekkür ederiz. İyi ki varsınız.",
     petOwner: "Mehmet Bey ve Selin Hanım",
     petName: "Şans",
     ownerImage: "/atavet-img/sans-5.webp"
