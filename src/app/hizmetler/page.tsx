@@ -4,6 +4,7 @@ import { useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { scrollToSection } from './smoothScroll';
+import Image from 'next/image';
 
 function ServicesContent() {
   const searchParams = useSearchParams();
@@ -185,8 +186,21 @@ function ServicesContent() {
                   </ul>
                 </div>
               </div>
-              <div className={`${index % 2 !== 0 ? 'md:col-start-1' : ''} h-64 md:h-96 bg-primary/10 rounded-2xl flex items-center justify-center`}>
-                <div className="text-7xl font-bold text-primary/30">AtaVet</div>
+              <div className={`${index % 2 !== 0 ? 'md:col-start-1' : ''} h-64 md:h-96 bg-primary/10 rounded-2xl flex items-center justify-center overflow-hidden`}>
+                <Image
+                  src={`/atavet-img/${
+                    service.id === 'muayene' ? 'genelmuayene.webp' :
+                    service.id === 'asilar' ? 'asilar.webp' :
+                    service.id === 'cerrahi' ? 'operasyon.webp' :
+                    service.id === 'bakim' ? 'bakimvetiras.webp' :
+                    service.id === 'laboratuvar' ? 'labhizmetleri.webp' :
+                    'acil.webp'
+                  }`}
+                  alt={service.title}
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           ))}
@@ -199,9 +213,6 @@ function ServicesContent() {
             Evcil hayvanınızın sağlığı ve mutluluğu için profesyonel ekibimizle hizmetinizdeyiz. Hemen randevu alın veya sorularınız için bize ulaşın.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/randevu" className="btn-primary">
-              Randevu Al
-            </Link>
             <Link href="/iletisim" className="btn-secondary">
               Bizimle İletişime Geçin
             </Link>
@@ -220,7 +231,7 @@ function ServicesContent() {
                 <span className="text-foreground/70 text-xs sm:text-base">Google Değerlendirmeleri (120+ Yorum)</span>
               </div>
               <a 
-                href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK" 
+                href="https://www.google.com/search?sca_esv=806b124b1fa22633&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RRMbnT25VScYJctPG27l8g4vBVpHnsx8jJRCvp8MXdytXqqAIWnKsKR7-eqkr5Eb-IrdcfTUWcqWwtao_b24WllV6U_6ZOBrM93yxy27RXjN45JFjeN_6gTuFeVSn7XoNT5W07PQRXYB2ANh3H4gOSLKQp6PDECHhNpWkvB284GvUPQeS-&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzS7gVZmq-M8G-_TJRflsegl5nvaBHWmd4J0X4isGq6as-nBj49O62vuaWlVYyIY_3InJUFU%3D&q=ATAVET+Veteriner+Klini%C4%9Fi+Yorumlar&sa=X&ved=2ahUKEwjurP7w87eNAxXaSvEDHb4-C2cQ3PALegQIPxAF&biw=1368&bih=777&dpr=2" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary font-medium hover:underline text-sm sm:text-base"

@@ -220,6 +220,9 @@ export default function ContactSection() {
                   <p className="text-sm md:text-base text-foreground/70">
                     Pazar: 10:00 - 19:00
                   </p>
+                  <p className="text-sm md:text-base text-primary">
+                    Acil durumlar için 7/24 hizmet alabilirsiniz.
+                  </p>
                 </div>
               </div>
             </div>
