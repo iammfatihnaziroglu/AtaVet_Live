@@ -214,7 +214,7 @@ function OykulerimizContent() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <Image 
-                  src="/images/stories/pet-stories-hero.jpg" 
+                  src="/atavet-img/kopek-1.webp" 
                   alt="Hayvan Hikayeleri" 
                   className="w-full h-[280px] md:h-[320px] object-cover"
                   width={800}
@@ -504,7 +504,7 @@ function OykulerimizContent() {
             <div className="md:w-1/2">
               <div className="relative h-[200px] md:h-full min-h-[280px] hidden md:block">
                 <Image 
-                  src="/images/stories/share-story.jpg" 
+                  src="/atavet-img/tatlikedi-1.webp" 
                   alt="Hikayeni Paylaş" 
                   className="w-full h-full object-cover"
                   width={800}
