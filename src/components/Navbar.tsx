@@ -12,12 +12,14 @@ export default function Navbar() {
   useEffect(() => {
     // Check if user has a preference stored
     const savedTheme = localStorage.getItem('atavet-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Set initial theme based on saved preference or system preference
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    // Set initial theme based on saved preference, defaulting to light
+    if (savedTheme === 'dark') {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark-theme');
+    } else {
+      setIsDarkMode(false);
+      localStorage.setItem('atavet-theme', 'light');
     }
 
     // Add scroll event listener with debounce for better performance
