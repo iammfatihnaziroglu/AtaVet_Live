@@ -23,15 +23,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AtaVet | Isparta Veteriner Kliniği",
+  title: "Isparta AtaVet Veteriner Kliniği",
   description: "AtaVet, Isparta'nın güvenilir veteriner kliniği. Kedi, köpek ve diğer evcil hayvanlarınızın sağlığı için profesyonel veteriner hizmetleri sunuyoruz.",
   icons: {
     icon: [
       {
-        url: '/favicon.svg',
+        url: '/atavetLogo.svg',
         type: 'image/svg+xml',
+        sizes: 'any',
+      },
+      {
+        url: '/atavetLogo.svg',
+        type: 'image/svg+xml',
+        sizes: '16x16',
+      },
+      {
+        url: '/atavetLogo.svg',
+        type: 'image/svg+xml',
+        sizes: '32x32',
+      },
+      {
+        url: '/atavetLogo.svg',
+        type: 'image/svg+xml',
+        sizes: '48x48',
       },
     ],
+    apple: [
+      {
+        url: '/atavetLogo.svg',
+        type: 'image/svg+xml',
+        sizes: '180x180',
+      },
+    ],
+    shortcut: '/atavetLogo.svg',
   },
 };
 

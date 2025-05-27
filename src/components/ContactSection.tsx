@@ -428,9 +428,18 @@ export default function ContactSection() {
                       value={formData.date}
                       onChange={handleChange}
                       min={today}
-                      className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full px-4 py-2 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-background disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                       required={formData.subject === 'Randevu'}
                       disabled={formData.subject !== 'Randevu'}
+                      onClick={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        if (formData.subject === 'Randevu' && target.showPicker) {
+                          try {
+                            target.showPicker();
+                          } catch {
+                          }
+                        }
+                      }}
                     />
                     {formData.subject !== 'Randevu' && (
                       <div className="absolute -bottom-5 left-7 text-xs text-foreground/30">
