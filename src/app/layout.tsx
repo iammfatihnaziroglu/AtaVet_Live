@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Isparta AtaVet Veteriner Kliniği",
+  title: "Isparta | AtaVet Veteriner Kliniği",
   description: "AtaVet, Isparta'nın güvenilir veteriner kliniği. Kedi, köpek ve diğer evcil hayvanlarınızın sağlığı için profesyonel veteriner hizmetleri sunuyoruz.",
   icons: {
     icon: [
